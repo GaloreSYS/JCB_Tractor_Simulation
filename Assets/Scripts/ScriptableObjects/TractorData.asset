@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab2d594b00704e24b329ab16fff8faa, type: 3}
+  m_Name: TractorData
+  m_EditorClassIdentifier: 
+  VehicleName: Tractor
+  MotorForce:
+  - 4000
+  - 6000
+  - 9000
+  SpeedRange:
+  - 10
+  - 21
+  - 30
+  - 40
+  BreakForce: 6000
+  MaxSpeed: 40
+  ParkingBreak: 10000
+  CreeperSpeed: 5
+  FuelminAngle: -119.84
+  FuelmasAngle: 8.47
+  FuelMaxValue: 0
+  FuelMinValue: 100
+  FuelCurrentValue: 100
+  FuelConsumptionRatio: 0.01
+  FuelDifferenceRatio: 1
+  TempminAngle: 93.8
+  TempmasAngle: 201.6
+  TempMaxValue: 110
+  TempMinValue: 20
+  TempCurrentValue: 20
+  TempConsumptionRatio: 0.05
+  TempDifferenceRatio: 0
