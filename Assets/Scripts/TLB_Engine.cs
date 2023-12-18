@@ -19,7 +19,7 @@ public class TLB_Engine : MonoBehaviour
     public static bool isIgnition = false;
     public static bool isNeutral = true;
     public static bool isForward = true;
-
+    public bool Breaks;
     //[SerializeField] ConfigurableJoint _backArmHingeJoint;
     //[SerializeField] ConfigurableJoint _backArmHingeJoint2;
     //[SerializeField] ConfigurableJoint _backArmHingeJoint3;
@@ -100,14 +100,12 @@ public class TLB_Engine : MonoBehaviour
     {
         isParkingBreak = false;
         wCManager.ApplyBrake(0);
-        Debug.LogError("Vehical is Parked..");
     }
 
     public void DetectParkingValueON()
     {
         isParkingBreak = true;
         wCManager.ApplyBrake(maxTorque * 10);
-        Debug.LogError("Vehical is Moving..");
     }
     private void InteractParkingLever(TurnableObject obj)
     {
@@ -157,7 +155,7 @@ public class TLB_Engine : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        Breaks = isParkingBreak;
         SpeedText.text = ((int)(VehicleRB.velocity.magnitude * 3.6)).ToString();
         RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
         //ThrottleInput = UnityEngine.Input.GetAxis("Vertical");
@@ -310,7 +308,7 @@ public class TLB_Engine : MonoBehaviour
     }
     private void ReflectIgnition(TurnableObject obj)
     {
-        if (obj.value > 20 && obj.value<30)
+        if (obj.value > 10 && obj.value<35)
         {
             IgnitionIndicator.color = standBy;
         }

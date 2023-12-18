@@ -48,7 +48,7 @@ public class JCPMovementTriggers : MonoBehaviour
         switch (mech)
         {
             case Type.Acc:
-                wCManager.ApplyTorue(1 * (30000 * 3));
+                wCManager.ApplyTorue(1 * (30000 * 3) * Time.deltaTime);
                 break;
             case Type.Break:
                 wCManager.ApplyBrake(2000);
