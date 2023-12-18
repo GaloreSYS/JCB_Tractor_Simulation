@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
 using Manus.Interaction;
 using System;
+using Vehicle.Engine;
+
 
 public class TLB_Engine : MonoBehaviour
 {
+   
     [SerializeField] int maxTorque, maxRPM = 2200, engineBraking = 500, idleRPM = 950, rpm; //= 516
     [SerializeField] private float ThrottleInput;
     [SerializeField] AnimationCurve torqueCurve;
@@ -19,7 +22,9 @@ public class TLB_Engine : MonoBehaviour
     public static bool isIgnition = false;
     public static bool isNeutral = true;
     public static bool isForward = true;
-    public bool Breaks;
+    public bool Breaks, Parking;
+
+
     //[SerializeField] ConfigurableJoint _backArmHingeJoint;
     //[SerializeField] ConfigurableJoint _backArmHingeJoint2;
     //[SerializeField] ConfigurableJoint _backArmHingeJoint3;
@@ -98,14 +103,23 @@ public class TLB_Engine : MonoBehaviour
 
     public void DetectParkingLeverValueOFF()
     {
-        isParkingBreak = false;
-        wCManager.ApplyBrake(0);
+        if (Parking = false)
+        {
+            isParkingBreak = true;
+            wCManager.ApplyBrake(maxTorque * 10);
+        }
     }
-
+    
     public void DetectParkingValueON()
     {
-        isParkingBreak = true;
-        wCManager.ApplyBrake(maxTorque * 10);
+       
+
+
+        if (Parking = true)
+        {
+            isParkingBreak = false;
+            wCManager.ApplyBrake(0);
+        }
     }
     private void InteractParkingLever(TurnableObject obj)
     {
@@ -346,6 +360,40 @@ public class TLB_Engine : MonoBehaviour
         }
         else if (turnableObject.value > -13 && turnableObject.value < 13)
             isNeutral = true;
+
+    }
+
+    public void Forwordandbackword(int value)
+    {
+        if(value == 0)
+        {
+            isNeutral = true;
+            isForward = false;
+        }
+
+
+        if (value == 1)
+        {
+            isNeutral = false;
+            isForward = true;
+        }
+
+        Debug.LogError(value.ToString());
+    }
+
+
+    private void Update()
+    {
+        
+       if (EngineManager.CurrentEngineState == EngineState.ON)
+        {
+            Parking = true;
+        }
+       else
+        {
+            Parking = false;
+        }
+
 
     }
 

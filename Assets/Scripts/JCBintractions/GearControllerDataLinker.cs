@@ -215,5 +215,11 @@ public class GearControllerDataLinker : MonoBehaviour
         }
 
     }
+
+
+    public void GEAR(int value)
+    {
+        ControllData.gearValue = value;
+    }
 }
 

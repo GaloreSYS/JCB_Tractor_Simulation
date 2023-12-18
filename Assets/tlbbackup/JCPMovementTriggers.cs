@@ -11,7 +11,9 @@ public class JCPMovementTriggers : MonoBehaviour
     //public Transform RHand;
     public Vector3 TurnAxis = Vector3.forward;
     public Transform Pedal;
+    public int GearValue;
 
+    public ArmDataJCB GearData; 
     public enum Type
     {
         Acc,
@@ -25,6 +27,12 @@ public class JCPMovementTriggers : MonoBehaviour
         FRLeft,
         FRRight,
         FRRotation
+    }
+
+
+    public void Update()
+    {
+      GearValue  = GearData.gearValue;
     }
 
     public static bool forward = true;
@@ -45,74 +53,87 @@ public class JCPMovementTriggers : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        switch (mech)
+        GameObject go = other.gameObject;
+
+        if(go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
         {
-            case Type.Acc:
-                wCManager.ApplyTorue(1 * (30000 * 3) * Time.deltaTime);
-                break;
-            case Type.Break:
-                wCManager.ApplyBrake(2000);
-                break;
-            case Type.Back:
-                wCManager.ApplyTorue(1 * (30000 * 3));
-                break;
-            case Type.BackRotation:
-                BackRotation();
-                break;
-            case Type.Up:
-                tlbEngine.BackForeArmUpAndMove(0);
-                break;
-            case Type.Down:
-                tlbEngine.BackForeArmUpAndMove(1);
-                break;
-            case Type.Left:
-                tlbEngine.BackArmLeftandRightMove(0);
-                break;
-            case Type.Right:
-                tlbEngine.BackArmLeftandRightMove(1);
-                break;
-            case Type.FRLeft:
-                tlbEngine.FrontArmUpAndMove(0);
-                break;
-            case Type.FRRight:
-                tlbEngine.FrontArmUpAndMove(1);
-                break;
-            case Type.FRRotation:
-                FRRotation();
-                break;
-            default:
-                break;
+            Debug.Log("Collision detected");
+            switch (mech)
+            {
+                case Type.Acc:
+                    wCManager.ApplyTorue(1 * (10000 * GearValue));
+                    break;
+                case Type.Break:
+                    wCManager.ApplyBrake(2000);
+                    break;
+                case Type.Back:
+                    wCManager.ApplyTorue(1 * (30000 * 3));
+                    break;
+                case Type.BackRotation:
+                    BackRotation();
+                    break;
+                case Type.Up:
+                    tlbEngine.BackForeArmUpAndMove(0);
+                    break;
+                case Type.Down:
+                    tlbEngine.BackForeArmUpAndMove(1);
+                    break;
+                case Type.Left:
+                    tlbEngine.BackArmLeftandRightMove(0);
+                    break;
+                case Type.Right:
+                    tlbEngine.BackArmLeftandRightMove(1);
+                    break;
+                case Type.FRLeft:
+                    tlbEngine.FrontArmUpAndMove(0);
+                    break;
+                case Type.FRRight:
+                    tlbEngine.FrontArmUpAndMove(1);
+                    break;
+                case Type.FRRotation:
+                    FRRotation();
+                    break;
+                default:
+                    break;
+            }
         }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-
-        //if (TurnAxis == Vector3.forward && mech == Type.Break)
-        //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
-
-        //else if (TurnAxis == Vector3.forward)
-        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
-
-        //else if (TurnAxis == Vector3.right)
-        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
-
-        //else if (TurnAxis == Vector3.up)
-        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
-        switch (mech)
+        GameObject go = other.gameObject;
+        if (go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
         {
-            case Type.Acc:
-                wCManager.ApplyTorue(0);
-                break;
-            case Type.Break:
-                wCManager.ApplyBrake(0);
-                break;
-            case Type.Back:
-                wCManager.ApplyTorue(0);
-                break;
-            default:
-                break;
+
+            switch (mech)
+            {
+                case Type.Acc:
+                    wCManager.ApplyTorue(0);
+                    break;
+                case Type.Break:
+                    wCManager.ApplyBrake(0);
+                    break;
+                case Type.Back:
+                    wCManager.ApplyTorue(0);
+                    break;
+                default:
+                    break;
+            }
+
         }
+            //if (TurnAxis == Vector3.forward && mech == Type.Break)
+            //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
+
+            //else if (TurnAxis == Vector3.forward)
+            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
+
+            //else if (TurnAxis == Vector3.right)
+            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
+
+            //else if (TurnAxis == Vector3.up)
+            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
+        
     }
 
     public void SeatRotation()

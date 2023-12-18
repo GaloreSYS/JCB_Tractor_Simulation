@@ -6,6 +6,8 @@ namespace Vehicle.Engine
 
     public class EngineManager : MonoBehaviour
     {
+        public bool Onstatus;
+
         public VehicleData _vehicleData;
         protected DrivingMode driveMode;
         protected EngineState engineState;

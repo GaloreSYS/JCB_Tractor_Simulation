@@ -37,4 +37,6 @@ public class ArmDataJCB : ScriptableObject
     [Header("JCB_Right_Leg")]
     public float valueRL;
     public bool EnableRightLeg, DisableRightLeg;
+
+    public int gearValue;
 }
