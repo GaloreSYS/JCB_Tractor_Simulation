@@ -23,12 +23,12 @@ public class VehicleMovements : EngineManager
     public Transform SterringXPosition;
     public Transform Plow;
 
-    public TurnableObject ShuttleGear;
-    public TurnableObject ParkingBreak;
+    //public TurnableObject ShuttleGear;
+    //public TurnableObject ParkingBreak;
     public TurnableObject DiffLock;
     public TurnableObject HandThrottle;
     public TurnableObject CreeperSpeed;
-    public TurnableObject TransmissionMainShiftLever;
+   // public TurnableObject TransmissionMainShiftLever;
     public TurnableObject TransmissionRangeShiftLever;
     public TurnableObject PTOEngageLever;
     public TurnableObject PTOSpeedLever;
@@ -56,12 +56,12 @@ public class VehicleMovements : EngineManager
            
         });
 
-        ShuttleGear.onValueChanged += ReflectShuttleLever;
-        ParkingBreak.onValueChanged += ParkingBrakeTriggered;
+        //ShuttleGear.onValueChanged += ReflectShuttleLever;
+        //ParkingBreak.onValueChanged += ParkingBrakeTriggered;
         //DiffLock.onValueChanged += TriggeredDiffLock;
         HandThrottle.onValueChanged += HandThrottleTriggered;
         CreeperSpeed.onValueChanged += CreeperSpeedTriggered;
-        TransmissionMainShiftLever.onValueChanged += ReflectGearChange;
+        //TransmissionMainShiftLever.onValueChanged += ReflectGearChange;
         TransmissionRangeShiftLever.onValueChanged += ReflectRangeShift;
         PTOEngageLever.onValueChanged += ReflectPTOEngage;
         PTOSpeedLever.onValueChanged += ReflectPTOSpeed;
@@ -71,12 +71,12 @@ public class VehicleMovements : EngineManager
 
     private void OnDestroy()
     {
-        ShuttleGear.onValueChanged -= ReflectShuttleLever;
-        ParkingBreak.onValueChanged -= ParkingBrakeTriggered;
+        //ShuttleGear.onValueChanged -= ReflectShuttleLever;
+        //ParkingBreak.onValueChanged -= ParkingBrakeTriggered;
         //DiffLock.onValueChanged -= TriggeredDiffLock;
         HandThrottle.onValueChanged -= HandThrottleTriggered;
         CreeperSpeed.onValueChanged -= CreeperSpeedTriggered;
-        TransmissionMainShiftLever.onValueChanged -= ReflectGearChange;
+        //TransmissionMainShiftLever.onValueChanged -= ReflectGearChange;
         TransmissionRangeShiftLever.onValueChanged -= ReflectRangeShift;
         PTOEngageLever.onValueChanged -= ReflectPTOEngage;
         PTOSpeedLever.onValueChanged -= ReflectPTOSpeed;

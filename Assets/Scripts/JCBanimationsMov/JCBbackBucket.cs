@@ -43,7 +43,7 @@ public class JCBbackBucket : MonoBehaviour
             }
         }
 
-
+        ArmDataJCb.ValueRLJCBB = ValueRL;
         AnimRL.SetFloat("BBuck", ValueRL);
     }
 }
