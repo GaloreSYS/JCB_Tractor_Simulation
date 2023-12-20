@@ -17,7 +17,7 @@ public class TLB_Engine : MonoBehaviour
     [SerializeField] AnimationCurve torqueCurve;
     public float torque;
     public TLB_WCManager wCManager;
-    public float speed, MaxSpeed;
+    public float speed, MaxSpeed, VehmagnitudeValue;
     public static bool isParkingBreak = true;
     public static bool isIgnition = false;
     public static bool isNeutral = true;
@@ -173,7 +173,7 @@ public class TLB_Engine : MonoBehaviour
         SpeedText.text = ((int)(VehicleRB.velocity.magnitude * 3.6)).ToString();
         RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
         //ThrottleInput = UnityEngine.Input.GetAxis("Vertical");
-        speed = VehicleRB.velocity.magnitude * 3.6f;
+        speed = VehicleRB.velocity.magnitude * VehmagnitudeValue;
         //torque = torqueCurve.Evaluate(rpm / (float)maxRPM) * maxTorque;
         //if (ThrottleInput > 0 || ThrottleInput < 0)
         //{

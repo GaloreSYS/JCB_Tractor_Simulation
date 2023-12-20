@@ -19,10 +19,10 @@ public class SpawnRockPrefabs : MonoBehaviour
     {
         GameObject go = other.gameObject;
         Debug.Log("SpawnRock");
-        if (go.name == "ColliderRock")
+        if (go.name == "bu0420020")
         {
             Debug.Log("SpawnRock");
-            if(ArmDataBB.ValueRLJCBB <= -0.53f)
+            if(ArmDataBB.ValueRLJCBB <= -0.43f)
             {
                 Instantiate(RockPrefab, SpawnPlace.transform.position, Quaternion.identity);
             }
