@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnRockPrefabs : MonoBehaviour
 {
-   public GameObject RockPrefab, SpawnPlace;
+   public GameObject RockPrefab, RockPrefab1, RockPrefab2, SpawnPlace1, SpawnPlace2, SpawnPlace3;
     public Transform BucketRotation;
     public Vector3 V3;
 
@@ -24,7 +24,9 @@ public class SpawnRockPrefabs : MonoBehaviour
             Debug.Log("SpawnRock");
             if(ArmDataBB.ValueRLJCBB <= -0.43f)
             {
-                Instantiate(RockPrefab, SpawnPlace.transform.position, Quaternion.identity);
+                Instantiate(RockPrefab, SpawnPlace1.transform.position, Quaternion.identity);
+                Instantiate(RockPrefab, SpawnPlace2.transform.position, Quaternion.identity);
+                Instantiate(RockPrefab, SpawnPlace3.transform.position, Quaternion.identity);
             }
         }
     }
