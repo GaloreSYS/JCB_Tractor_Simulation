@@ -37,10 +37,17 @@ public class Tractor_Engine_New : MonoBehaviour
     {
         CurrentSpeed = rb.velocity.magnitude * 3.6f;
 
+
         ApplySteering();
         ApplyTorque();
         ApplyBrake();
-
+        if(GasInput==0)
+        {
+            FL.brakeTorque = 2500;
+            FR.brakeTorque = 2500;
+            RL.brakeTorque = 2500;
+            RR.brakeTorque = 2500;
+        }
         UpdateWheelPose(FL, FLT);
         UpdateWheelPose(FR, FRT);
         UpdateWheelPose(RL, RLT);
