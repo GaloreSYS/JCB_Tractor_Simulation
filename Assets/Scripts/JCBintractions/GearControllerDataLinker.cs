@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using fourtyfourty.gearController;
 
+
 public class GearControllerDataLinker : MonoBehaviour
 {
     [Header("Put scriptable Controller here")]

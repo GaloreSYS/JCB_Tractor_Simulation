@@ -19,6 +19,8 @@ namespace Manus.Interaction
 
         private void Start()
         {
+			if (!transform.parent.GetComponent<GearController>()) return;
+
 			objectGrabbed.AddListener(() => { var cases = transform.parent.GetComponent<GearController>().isGrabbed = true; });
             objectDropped.AddListener(() => { var cases = transform.parent.GetComponent<GearController>().isGrabbed = false; });
         }
@@ -127,9 +129,9 @@ namespace Manus.Interaction
 			{
 				p_Object.rigidBody.velocity = Vector3.zero;
 				p_Object.rigidBody.angularVelocity = Vector3.zero;
-				//p_Object.rigidBody.MovePosition( t_Pos );
-				p_Object.rigidBody.MoveRotation(Quaternion.Euler(t_Rot.eulerAngles.x, t_Rot.eulerAngles.y, 0) );
-				p_Object.rigidBody.MovePosition(new Vector3(t_Pos.x,0,t_Pos.z));
+				p_Object.rigidBody.MovePosition( t_Pos );
+				//p_Object.rigidBody.MoveRotation(Quaternion.Euler(t_Rot.eulerAngles.x, t_Rot.eulerAngles.y, 0) );
+				//p_Object.rigidBody.MovePosition(new Vector3(t_Pos.x,0,t_Pos.z));
 			}
 			else
 			{
