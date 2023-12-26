@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class JCPMovementTriggers : MonoBehaviour
@@ -33,27 +31,33 @@ public class JCPMovementTriggers : MonoBehaviour
     public void Update()
     {
       GearValue  = GearData.gearValue;
+    
+    }
+
+    public void keyBoardController()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            wCManager.ApplyTorue(1 * (10000 * GearValue));
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(2000);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            wCManager.ApplyTorue(1 * (30000 * 3));
+        }
     }
 
     public static bool forward = true;
     public Type mech;
-    public void OnTriggerEnter()
-    {
-        //if (TurnAxis == Vector3.forward && mech == Type.Break)
-        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
 
-        //else if (TurnAxis == Vector3.forward)
-        //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
-
-        //else if (TurnAxis == Vector3.right)
-        //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
-
-        //else if (TurnAxis == Vector3.up)
-        //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
-    }
     private void OnTriggerStay(Collider other)
     {
-        GameObject go = other.gameObject;
+        var go = other.gameObject;
 
         if(go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
         {

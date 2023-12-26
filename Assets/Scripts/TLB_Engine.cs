@@ -112,9 +112,6 @@ public class TLB_Engine : MonoBehaviour
     
     public void DetectParkingValueON()
     {
-       
-
-
         if (Parking = true)
         {
             isParkingBreak = false;

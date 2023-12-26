@@ -10,6 +10,7 @@ using UnityEngine;
 //}
 public class TLB_WCManager : MonoBehaviour
 {
+    public bool developmentMode;
     // public DrivingMode TLB_DrivingMode;
     [SerializeField] private WheelCollider[] WheelColliders;
     public Transform[] WheelTransform;
@@ -34,19 +35,23 @@ public class TLB_WCManager : MonoBehaviour
     {
        
     }
+    
+    
     private void FixedUpdate()
     {
         UpdateWheelMovements();
         
     }
+    
     public void Steering(float Steerinput)
     {
         WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
         WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
     }
+    
     public void ApplyTorue(float torque)
     {
-        if (!TLB_Engine.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.isNeutral)
+        if (!TLB_Engine.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.isNeutral || developmentMode )
         {
             torque = TLB_Engine.isForward ? -torque : torque;
             for (int i = 0; i < WheelColliders.Length; i++)

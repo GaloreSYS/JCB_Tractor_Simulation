@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.43596905, g: 0.55358094, b: 0.5430385, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -952,6 +952,11 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.005228067
       objectReference: {fileID: 0}
+    - target: {fileID: 9022824744844811201, guid: 9a439949f34072548a7898aac4e13847,
+        type: 3}
+      propertyPath: developmentMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9061991061242792348, guid: 9a439949f34072548a7898aac4e13847,
         type: 3}
       propertyPath: m_Height
@@ -1355,8 +1360,6 @@ MonoBehaviour:
   target: {fileID: 1177931509}
   myPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  backAxis: 0
-  current: 0
 --- !u!1 &1088825113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7702167477588374584, guid: 9a439949f34072548a7898aac4e13847,
