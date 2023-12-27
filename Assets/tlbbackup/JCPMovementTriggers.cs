@@ -31,7 +31,7 @@ public class JCPMovementTriggers : MonoBehaviour
     public void Update()
     {
       GearValue  = GearData.gearValue;
-    
+      keyBoardController();
     }
 
     public void keyBoardController()
@@ -40,15 +40,28 @@ public class JCPMovementTriggers : MonoBehaviour
         {
             wCManager.ApplyTorue(1 * (10000 * GearValue));
         }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            wCManager.ApplyTorue(0);
+        }
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
             wCManager.ApplyBrake(2000);
         }
         
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(0);
+        }
+        
         if (Input.GetKeyDown(KeyCode.S))
         {
-            wCManager.ApplyTorue(1 * (30000 * 3));
+            wCManager.ApplyTorue(-1 * (10000));
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            wCManager.ApplyTorue(0);
         }
     }
 

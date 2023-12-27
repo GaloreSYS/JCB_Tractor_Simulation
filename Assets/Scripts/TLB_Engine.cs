@@ -103,7 +103,7 @@ public class TLB_Engine : MonoBehaviour
 
     public void DetectParkingLeverValueOFF()
     {
-        if (Parking = false)
+        if (Parking == false)
         {
             isParkingBreak = true;
             wCManager.ApplyBrake(maxTorque * 10);

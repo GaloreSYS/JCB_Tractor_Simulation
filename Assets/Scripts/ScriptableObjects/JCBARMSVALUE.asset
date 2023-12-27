@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50d0c66b06e986449649d20604bce34, type: 3}
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
-  valuearms: 1.021053
+  valuearms: 0.54746294
   enabledown: 0
   enableup: 0
   valuebucket: 0
@@ -27,9 +27,9 @@ MonoBehaviour:
   ValueRLJCUD: 0
   enabledownJCB: 0
   enableupJCB: 0
-  ValueRLJCBB: -1.0000768
+  ValueRLJCBB: 1.0112965
   enableupJCBB: 0
-  enabledownJCBB: 1
+  enabledownJCBB: 0
   ValueRLJCBRLB: 0
   EnableLeftLeg: 0
   DisableLeftLeg: 0
