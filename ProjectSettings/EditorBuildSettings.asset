@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
-    guid: 6e5e63668fb194629a46e83baf37d854
+    guid: 929317b9b8dea4b1cacef002495ada1d
   - enabled: 1
     path: Assets/Scenes/TractorSimulation.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/JcbSimulation.unity
     guid: c2f92dee0069846b3b71944155d7eb1d
   m_configObjects:
