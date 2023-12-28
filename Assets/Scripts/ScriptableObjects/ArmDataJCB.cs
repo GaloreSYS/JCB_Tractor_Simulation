@@ -39,4 +39,9 @@ public class ArmDataJCB : ScriptableObject
     public bool EnableRightLeg, DisableRightLeg;
 
     public int gearValue;
+
+
+    [Header("JCB_ForkLift")]
+    public float valueFork;
+    public bool ForkLiftUp, ForkLiftDown;
 }

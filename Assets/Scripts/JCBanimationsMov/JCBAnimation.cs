@@ -16,7 +16,6 @@ public class JCBAnimation : MonoBehaviour
     public void Start()
     {
         ValueArms = 0;
-        
     }
 
 
