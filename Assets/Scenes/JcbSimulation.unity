@@ -325,6 +325,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ArmDatajvb: {fileID: 11400000, guid: 57318cbcf72f9c247b9bf29baa8d0903, type: 2}
   anim: {fileID: 1020012399}
+  ValueForks: 0
+  ForkUp: 0
+  ForkDown: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1481,11 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.018197345
       objectReference: {fileID: 0}
+    - target: {fileID: 1204080351993297874, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1494054818729313343, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Layer
@@ -1576,7 +1584,7 @@ PrefabInstance:
     - target: {fileID: 4747129315414008103, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4864854975558630871, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -1933,6 +1941,11 @@ PrefabInstance:
       propertyPath: whenGearIsOnNeutral.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196709878}
+    - target: {fileID: 8108077840298487265, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8164734364556589998, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Height
