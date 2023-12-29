@@ -423,26 +423,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &521710031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7491128458288592026, guid: 297a5ac22e293bd47868088553927b10,
-    type: 3}
-  m_PrefabInstance: {fileID: 5215371218016747046}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &521710034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521710031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240e26714ca259847946efa7f304d7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AllChildrenMeshRendrers: []
-  isEnable: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,26 +949,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2109966907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4747129315414008103, guid: 297a5ac22e293bd47868088553927b10,
-    type: 3}
-  m_PrefabInstance: {fileID: 5215371218016747046}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2109966909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109966907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240e26714ca259847946efa7f304d7a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AllChildrenMeshRendrers: []
-  isEnable: 0
 --- !u!1 &2116890446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,11 +1397,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TLB_Vehicle_main
       objectReference: {fileID: 0}
-    - target: {fileID: 3401035413351414367, guid: 297a5ac22e293bd47868088553927b10,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5077633961592625360, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: liverReachedZ_A.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1575,15 +1530,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4747129315414008103, guid: 297a5ac22e293bd47868088553927b10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2109966909}
-    - targetCorrespondingSourceObject: {fileID: 7491128458288592026, guid: 297a5ac22e293bd47868088553927b10,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 521710034}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 297a5ac22e293bd47868088553927b10, type: 3}
 --- !u!114 &5806232354707570822
 MonoBehaviour:
