@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50d0c66b06e986449649d20604bce34, type: 3}
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
-  valuearms: 1.0316857
+  valuearms: -0.39531866
   enabledown: 0
-  enableup: 1
+  enableup: 0
   valuebucket: 0
   enableBUdown: 0
-  enableBUup: 1
+  enableBUup: 0
   valueRLback: 0
-  enableRLBdown: 1
+  enableRLBdown: 0
   enableRLBup: 0
   ValuerightandleftRL: 0
   enableRLdown: 0
   enableRLup: 0
   ValueRLJCUD: 0
   enabledownJCB: 0
-  enableupJCB: 1
-  ValueRLJCBB: 1.022417
-  enableupJCBB: 1
+  enableupJCB: 0
+  ValueRLJCBB: -0.9455109
+  enableupJCBB: 0
   enabledownJCBB: 0
   ValueRLJCBRLB: 0
   EnableLeftLeg: 0
   DisableLeftLeg: 0
   valueRL: 0
   EnableRightLeg: 0
-  DisableRightLeg: 1
+  DisableRightLeg: 0
   gearValue: 2
-  valueFork: 1.0064038
+  valueFork: 0
   ForkLiftUp: 0
-  ForkLiftDown: 1
+  ForkLiftDown: 0
