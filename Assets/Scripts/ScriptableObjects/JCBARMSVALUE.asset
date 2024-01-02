@@ -27,7 +27,7 @@ MonoBehaviour:
   ValueRLJCUD: 0
   enabledownJCB: 0
   enableupJCB: 0
-  ValueRLJCBB: 1
+  ValueRLJCBB: 0
   enableupJCBB: 0
   enabledownJCBB: 0
   ValueRLJCBRLB: 0
@@ -36,14 +36,10 @@ MonoBehaviour:
   valueRL: 0
   EnableRightLeg: 0
   DisableRightLeg: 0
-  gearValue: 2
+  gearValue: 0
   valueFork: 0
   ForkLiftUp: 0
-<<<<<<< Updated upstream
   ForkLiftDown: 0
-=======
-  ForkLiftDown: 1
-  valueTractor: 1.0073144
+  valueTractor: -1.0113533
   TractorPlowUP: 0
   TractorPlowDown: 0
->>>>>>> Stashed changes
