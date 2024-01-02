@@ -14,8 +14,7 @@ public class JCBackArmUpAndDown : MonoBehaviour
 
     public void Start()
     {
-        ValueRL = 0;
-
+        ValueRL = -1;
     }
 
 

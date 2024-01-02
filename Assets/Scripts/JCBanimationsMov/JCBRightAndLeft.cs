@@ -13,7 +13,7 @@ public class JCBRig : MonoBehaviour
 
     public void Start()
     {
-        ValueRL = 0;
+        ValueRL = 0f;
 
     }
 

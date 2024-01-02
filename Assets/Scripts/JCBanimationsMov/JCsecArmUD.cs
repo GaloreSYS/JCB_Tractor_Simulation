@@ -14,7 +14,7 @@ public class JCsecArmUD : MonoBehaviour
 
     public void Start()
     {
-        ValueRL = 1;
+        ValueRL = 1.0f;
 
     }
 

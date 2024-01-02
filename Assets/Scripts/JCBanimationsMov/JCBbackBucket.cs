@@ -11,9 +11,9 @@ public class JCBbackBucket : MonoBehaviour
 
     public bool enableDown, enableUp;
     public ArmDataJCB ArmDataJCb;
-    public void Start()
+    public void Awake()
     {
-        ValueRL = 1;
+        ValueRL = -1f;
 
     }
 
