@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,94 @@ public class GearControllerDataLinker : MonoBehaviour
     [Header("Put scriptable Controller here")]
     public ArmDataJCB ControllData;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ControllData.enableupJCBB = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            ControllData.enableupJCBB = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ControllData.enabledownJCBB = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.O))
+        {
+            ControllData.enabledownJCBB = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            ControllData.enabledownJCB = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.I))
+        {
+            ControllData.enabledownJCB = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            ControllData.enableupJCB = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.U))
+        {
+            ControllData.enableupJCB = false;
+        }
+        
+        
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ControllData.enableRLdown = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            ControllData.enableRLdown = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            ControllData.enableRLup = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            ControllData.enableRLup = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            ControllData.enableRLBup = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            ControllData.enableRLBup = false;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            ControllData.enableRLBdown = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            ControllData.enableRLBdown = false;
+        }
+    }
 
     public void FrontAArm(int value)
     {
         var state = (GearControllerStateExtension.GearState)value;
-       
+
 
         switch (state)
         {
@@ -32,13 +116,11 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enabledown = true;
                 ControllData.enableup = false;
                 break;
-
         }
-
     }
 
-    public void FrontBucket(int value) { 
-
+    public void FrontBucket(int value)
+    {
         var state = (GearControllerStateExtension.GearState)value;
         switch (state)
         {
@@ -57,10 +139,8 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enableBUdown = true;
                 ControllData.enableBUup = false;
                 break;
-
         }
     }
-
 
 
     public void BackArmUpAndDown(int value)
@@ -84,15 +164,13 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enableRLBdown = true;
                 ControllData.enableRLBup = false;
                 break;
-
         }
-
     }
 
 
     public void BackArmLeftAndRight(int value)
     {
-          var state = (GearControllerStateExtension.GearState)value;
+        var state = (GearControllerStateExtension.GearState)value;
 
         switch (state)
         {
@@ -111,14 +189,12 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enableRLdown = true;
                 ControllData.enableRLup = false;
                 break;
-
         }
-
     }
 
     public void BackSecondArm(int value)
     {
-          var state = (GearControllerStateExtension.GearState)value;
+        var state = (GearControllerStateExtension.GearState)value;
 
         switch (state)
         {
@@ -137,13 +213,12 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enabledownJCB = true;
                 ControllData.enableupJCB = false;
                 break;
-
         }
     }
 
     public void BackBucket(int value)
     {
-          var state = (GearControllerStateExtension.GearState)value;
+        var state = (GearControllerStateExtension.GearState)value;
 
         switch (state)
         {
@@ -162,13 +237,12 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.enabledownJCBB = true;
                 ControllData.enableupJCBB = false;
                 break;
-
         }
     }
 
     public void JCB_Left_leg(int value)
     {
-          var state = (GearControllerStateExtension.GearState)value;
+        var state = (GearControllerStateExtension.GearState)value;
 
         switch (state)
         {
@@ -187,13 +261,12 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.EnableLeftLeg = false;
                 ControllData.DisableLeftLeg = true;
                 break;
-
         }
     }
 
     public void JCB_Right_leg(int value)
     {
-          var state = (GearControllerStateExtension.GearState)value;
+        var state = (GearControllerStateExtension.GearState)value;
 
         switch (state)
         {
@@ -212,9 +285,7 @@ public class GearControllerDataLinker : MonoBehaviour
                 ControllData.EnableRightLeg = false;
                 ControllData.DisableLeftLeg = true;
                 break;
-
         }
-
     }
 
 
@@ -223,4 +294,3 @@ public class GearControllerDataLinker : MonoBehaviour
         ControllData.gearValue = value;
     }
 }
-
