@@ -44,4 +44,9 @@ public class ArmDataJCB : ScriptableObject
     [Header("JCB_ForkLift")]
     public float valueFork;
     public bool ForkLiftUp, ForkLiftDown;
+
+    [Header("This Variable for Tractor Sim.")]
+    [Header("Tractor PlowHandel")]
+    public float valueTractor;
+    public bool TractorPlowUP,TractorPlowDown;
 }

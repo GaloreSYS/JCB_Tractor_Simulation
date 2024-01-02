@@ -311,6 +311,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293874896}
   m_CullTransparentMesh: 1
+--- !u!1001 &385916214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -249.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 68.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67372227
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7389847
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 95.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108265203430423147, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650333547352163081, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690149946340465648, guid: daaea42f472b96a49ada38bffbcd30e0,
+        type: 3}
+      propertyPath: m_Name
+      value: 'Tractor '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: daaea42f472b96a49ada38bffbcd30e0, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1615,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: TLB_Vehicle_main
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 757109445696271442, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1792,6 +1866,13 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5ae432ba48aae2943aa8991cbf6ab527, type: 2}
+=======
+    - target: {fileID: 737804736898607559, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 5077633961592625360, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: liverReachedZ_A.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2700,4 +2781,8 @@ SceneRoots:
   - {fileID: 2077002420}
   - {fileID: 1976437043}
   - {fileID: 8001790071750742939}
+<<<<<<< Updated upstream
   - {fileID: 5215371218016747046}
+=======
+  - {fileID: 385916214}
+>>>>>>> Stashed changes

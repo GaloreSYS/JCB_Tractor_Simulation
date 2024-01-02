@@ -39,4 +39,11 @@ MonoBehaviour:
   gearValue: 2
   valueFork: 0
   ForkLiftUp: 0
+<<<<<<< Updated upstream
   ForkLiftDown: 0
+=======
+  ForkLiftDown: 1
+  valueTractor: 1.0073144
+  TractorPlowUP: 0
+  TractorPlowDown: 0
+>>>>>>> Stashed changes
