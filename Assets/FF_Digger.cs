@@ -41,11 +41,16 @@ public class FF_Digger : MonoBehaviour
         }
     }
 
+    public int count;
     void SpawnRock()
     {
-    // var s=     Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
-    // float size = 5;
-    // s.transform.localScale = new Vector3(size,size,size);
+        if(count<=10)
+        {
+            var s = Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
+            float size = 5;
+            s.transform.localScale = new Vector3(size, size, size);
+            count++;
+        }
     }
     private void Update()
     {
@@ -74,6 +79,7 @@ public class FF_Digger : MonoBehaviour
         {
             canDig = true;
             InvokeRepeating(nameof(SpawnRock),1,0.1f);
+            GetComponent<MeshRenderer>().enabled = false;
         }
     }
     
@@ -83,6 +89,8 @@ public class FF_Digger : MonoBehaviour
         {
             canDig = false;
             CancelInvoke(nameof(SpawnRock));
+            GetComponent<MeshRenderer>().enabled = true;
+
         }
     }
 }

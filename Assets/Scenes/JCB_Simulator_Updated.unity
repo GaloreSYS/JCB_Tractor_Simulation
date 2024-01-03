@@ -2040,7 +2040,7 @@ Transform:
   m_GameObject: {fileID: 26292653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0.327, z: -0.803}
+  m_LocalPosition: {x: -1.59, y: -0.07, z: -0.81}
   m_LocalScale: {x: 0.351, y: 6.2628217, z: 6.496245}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27648,6 +27648,7 @@ MonoBehaviour:
   stonePrefab: {fileID: 1945580683114727584, guid: df6a5f0f71493db4c864e2a7b8a472b9,
     type: 3}
   stonePos: {fileID: 1204212986}
+  count: 0
 --- !u!1001 &776325771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69983,7 +69984,7 @@ Transform:
   m_GameObject: {fileID: 1999908567}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7158769, y: 0.032261573, z: 0.06278304, w: 0.69464946}
-  m_LocalPosition: {x: 2.089, y: -1.316, z: -0.761}
+  m_LocalPosition: {x: 1.58, y: -2.35, z: -0.77}
   m_LocalScale: {x: 4.70008, y: 6.2628217, z: 0.33130848}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77627,7 +77628,7 @@ PrefabInstance:
     - target: {fileID: 1830038061516382387, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2541011587544385162, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
