@@ -92,6 +92,18 @@ public class GearControllerDataLinker : MonoBehaviour
         {
             ControllData.enableRLBdown = false;
         }
+        
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            ControllData.EnableRightLeg = true;
+            ControllData.EnableLeftLeg = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            ControllData.EnableRightLeg = false;
+            ControllData.EnableLeftLeg = false;
+        }
     }
 
     public void FrontAArm(int value)

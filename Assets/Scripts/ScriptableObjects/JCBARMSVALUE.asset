@@ -27,17 +27,17 @@ MonoBehaviour:
   ValueRLJCUD: 0
   enabledownJCB: 0
   enableupJCB: 0
-  ValueRLJCBB: -0.7130241
+  ValueRLJCBB: -0.4775145
   enableupJCBB: 0
   enabledownJCBB: 0
   ValueRLJCBRLB: 0
   EnableLeftLeg: 0
-  DisableLeftLeg: 0
+  DisableLeftLeg: 1
   valueRL: 0
   EnableRightLeg: 0
-  DisableRightLeg: 0
+  DisableRightLeg: 1
   gearValue: 0
-  valueFork: 0
+  valueFork: -1.0715269
   ForkLiftUp: 0
   ForkLiftDown: 0
   valueTractor: -1.0113533
