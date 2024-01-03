@@ -30,6 +30,7 @@ public class FF_Digger : MonoBehaviour
     public Rigidbody tlb;
     public GameObject stonePrefab;
     public Transform stonePos;
+    public float timmer = 0f;
     private void Start()
     {
         diggerMasterRuntime = FindObjectOfType<DiggerMasterRuntime>();
@@ -54,6 +55,21 @@ public class FF_Digger : MonoBehaviour
     }
     private void Update()
     {
+
+        if(canDig == true)
+        {
+            timmer += Time.deltaTime;
+
+            if(timmer > 2f)
+            {
+                canDig = false;
+            }
+        }
+        else
+        {
+            timmer = 0f;
+        }
+
         if(!canDig)
         {
           //  tlb.constraints = RigidbodyConstraints.None;
@@ -75,11 +91,14 @@ public class FF_Digger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.name == "Digger")
         {
-            canDig = true;
-            InvokeRepeating(nameof(SpawnRock),1,0.1f);
-            GetComponent<MeshRenderer>().enabled = false;
+           
+                canDig = true;
+                //InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
+                GetComponent<MeshRenderer>().enabled = false;
+               
         }
     }
     
@@ -90,6 +109,7 @@ public class FF_Digger : MonoBehaviour
             canDig = false;
             CancelInvoke(nameof(SpawnRock));
             GetComponent<MeshRenderer>().enabled = true;
+            timmer = 0;
 
         }
     }
