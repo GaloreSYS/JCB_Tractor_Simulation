@@ -32,7 +32,10 @@ public class SpawnRocksAndPile : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not Colliding with rock");
+           if(BucketPassedValue > 0)
+            {
+                PrefabPileInBucket.SetActive(false);
+            }
         }
         
     }
