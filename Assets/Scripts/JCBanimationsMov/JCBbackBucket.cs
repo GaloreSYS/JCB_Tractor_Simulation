@@ -14,7 +14,6 @@ public class JCBbackBucket : MonoBehaviour
     public void Awake()
     {
         ValueRL = -1f;
-
     }
 
 
