@@ -19,7 +19,7 @@ public class FF_Digger : MonoBehaviour
     [Range(0, 7)] public int textureIndex;
     [Range(0.5f, 10f)] public float size = 4f;
     [Range(0f, 1f)] public float opacity = 0.5f;
-
+    public float countdown = 2;
     private DiggerMasterRuntime diggerMasterRuntime;
 
     public bool canDig;
@@ -52,6 +52,18 @@ public class FF_Digger : MonoBehaviour
             s.transform.localScale = new Vector3(size, size, size);
             count++;
         }
+
+
+        if (countdown != 0)
+        {
+            countdown -= Time.deltaTime;
+        }
+        else
+        {
+            count = 0;
+            countdown = 2;
+        }
+
     }
     private void Update()
     {
@@ -63,6 +75,7 @@ public class FF_Digger : MonoBehaviour
             if(timmer > 2f)
             {
                 canDig = false;
+                countdown = 0;
             }
         }
         else
@@ -112,5 +125,11 @@ public class FF_Digger : MonoBehaviour
             timmer = 0;
 
         }
+    }
+
+
+    public void Spawnstones()
+    {
+        InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
     }
 }

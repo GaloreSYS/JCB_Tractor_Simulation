@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnRocksAndPile : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class SpawnRocksAndPile : MonoBehaviour
     public GameObject PrefabPileInBucket;
     public float BucketPassedValue;
     public bool Collision;
-
+    public UnityEvent EventTriggerToSPawnRock;
     public void Start()
     {
         PrefabPileInBucket.SetActive(false);
@@ -19,7 +20,7 @@ public class SpawnRocksAndPile : MonoBehaviour
     public void Update()
     {
         BucketPassedValue = Armdata.ValueRLJCBB;
-        if(Collision == true)
+        if (Collision == true)
         {
             if (BucketPassedValue < -0.5)
             {
@@ -32,12 +33,13 @@ public class SpawnRocksAndPile : MonoBehaviour
         }
         else
         {
-           if(BucketPassedValue > 0)
+            if (BucketPassedValue > 0)
             {
                 PrefabPileInBucket.SetActive(false);
+                EventTriggerToSPawnRock.Invoke();
             }
         }
-        
+
     }
 
     public void OnTriggerStay(Collider other)
