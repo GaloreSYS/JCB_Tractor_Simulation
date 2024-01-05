@@ -7,6 +7,7 @@ using UnityEngine.Windows;
 using Manus.Interaction;
 using System;
 using Vehicle.Engine;
+using Input = UnityEngine.Input;
 
 
 public class TLB_Engine : MonoBehaviour
@@ -18,11 +19,11 @@ public class TLB_Engine : MonoBehaviour
     public float torque;
     public TLB_WCManager wCManager;
     public float speed, MaxSpeed;
-    public static bool isParkingBreak = true;
+    public  bool isParkingBreak = true;
     public static bool isIgnition = false;
-    public static bool isNeutral = true;
-    public static bool isForward = true;
-    public static bool isReverse = true;
+    public  bool isNeutral ;
+    public  bool isForward ;
+    public  bool isReverse ;
     public bool Breaks, Parking;
 
 
@@ -415,6 +416,43 @@ public class TLB_Engine : MonoBehaviour
         else
         {
             Parking = false;
+        }
+        
+        keyBoardController();
+    }
+    
+    public void keyBoardController()
+    {
+      var  GearValue = 1;
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (TLB_Engine.Instance.isForward)
+            {
+                wCManager.ApplyTorue(1 * (10000 * 1));
+            }
+            else if (TLB_Engine.Instance.isReverse)
+            {
+                wCManager.ApplyTorue(1 * (5000));
+            }
+            else
+            {
+                Debug.Log("NEUTRAL");
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            wCManager.ApplyTorue(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(2000);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(0);
         }
     }
 }

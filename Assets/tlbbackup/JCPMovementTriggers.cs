@@ -34,34 +34,10 @@ public class JCPMovementTriggers : MonoBehaviour
     public void Update()
     {
         GearValue = GearData.gearValue;
-        keyBoardController();
+      //  keyBoardController();
     }
 
-    public void keyBoardController()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            if (TLB_Engine.isForward)
-                wCManager.ApplyTorue(1 * (10000 * GearValue));
-            if (TLB_Engine.isReverse)
-                wCManager.ApplyTorue(-1 * (5000));
-        }
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            wCManager.ApplyTorue(0);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            wCManager.ApplyBrake(2000);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            wCManager.ApplyBrake(0);
-        }
-    }
+ 
 
     public static bool forward = true;
     public Type mech;
@@ -71,14 +47,23 @@ public class JCPMovementTriggers : MonoBehaviour
         var go = other.gameObject;
 
 
-        Debug.Log("Collision detected");
+        Debug.Log("Collision detected", gameObject);
         switch (mech)
         {
             case Type.Acc:
-                if (TLB_Engine.isForward)
-                    wCManager.ApplyTorue(1 * 10000 * GearValue);
-                if (TLB_Engine.isReverse)
-                    wCManager.ApplyTorue(-1 * 5000);
+                if (TLB_Engine.Instance.isForward)
+                {
+                    Debug.Log("F");
+                    wCManager.ApplyTorue(1 * (10000 ));
+                }
+                else if (TLB_Engine.Instance.isReverse)
+                { Debug.Log("R");
+                    wCManager.ApplyTorue(1 * (5000));
+                }
+                else
+                {
+                    Debug.Log("NEUTRAL");
+                }
                 break;
             case Type.Break:
                 wCManager.ApplyBrake(2000);

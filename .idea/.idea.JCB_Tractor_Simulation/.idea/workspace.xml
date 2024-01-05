@@ -7,17 +7,13 @@
     <list default="true" id="da1c77fa-736f-4178-8d22-8aabb1d4d6c6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/4040/MainUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/MainUI.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/NodySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/NodySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIButtonIdDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIButtonIdDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIViewIdDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIViewIdDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Runtime/UIManager/Ids/UIViewIdExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Runtime/UIManager/Ids/UIViewIdExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Read Me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Read Me.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_WCManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_WCManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/DiggerData/1dca89747da628d4ea7563702d33a6c9.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +115,7 @@
       <workItem from="1704368856863" duration="7136000" />
       <workItem from="1704451731585" duration="2411000" />
       <workItem from="1704462198350" duration="1349000" />
+      <workItem from="1704476796941" duration="2185000" />
     </task>
     <servers />
   </component>

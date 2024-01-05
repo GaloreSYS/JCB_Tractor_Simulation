@@ -24,7 +24,7 @@ public class SpawnRocksAndPile : MonoBehaviour
         {
             if (BucketPassedValue < -0.5)
             {
-                FF_Digger.Instance.Spawnstones();
+//                FF_Digger.Instance.Spawnstones();
                 PrefabPileInBucket.SetActive(true);
             }
             else

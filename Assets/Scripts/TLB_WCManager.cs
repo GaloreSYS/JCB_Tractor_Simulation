@@ -48,10 +48,10 @@ public class TLB_WCManager : MonoBehaviour
     }
     
     public void ApplyTorue(float torque)
-    {
-        if (!TLB_Engine.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.isNeutral || developmentMode )
+    {   
+        if (!TLB_Engine.Instance.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.Instance.isNeutral || developmentMode )
         {
-            torque = TLB_Engine.isForward ? -torque : torque;
+            torque = TLB_Engine.Instance.isForward ? -torque : torque;
             for (int i = 0; i < WheelColliders.Length; i++)
             {
                 //if (TLB_DrivingMode == DrivingMode.FourWheelDrive)
