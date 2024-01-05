@@ -5,13 +5,16 @@ public class JCPMovementTriggers : MonoBehaviour
     public TLB_WCManager wCManager;
     public TLB_Engine tlbEngine;
     public Transform VRCamera;
+
     public Transform Seat;
+
     //public Transform RHand;
     public Vector3 TurnAxis = Vector3.forward;
     public Transform Pedal;
     public int GearValue;
 
-    public ArmDataJCB GearData; 
+    public ArmDataJCB GearData;
+
     public enum Type
     {
         Acc,
@@ -30,38 +33,33 @@ public class JCPMovementTriggers : MonoBehaviour
 
     public void Update()
     {
-      GearValue  = GearData.gearValue;
-      keyBoardController();
+        GearValue = GearData.gearValue;
+        keyBoardController();
     }
 
     public void keyBoardController()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            wCManager.ApplyTorue(1 * (10000* GearValue));
+            if (TLB_Engine.isForward)
+                wCManager.ApplyTorue(1 * (10000 * GearValue));
+            if (TLB_Engine.isReverse)
+                wCManager.ApplyTorue(-1 * (5000));
         }
+
         if (Input.GetKeyUp(KeyCode.W))
         {
             wCManager.ApplyTorue(0);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             wCManager.ApplyBrake(2000);
         }
-        
+
         if (Input.GetKeyUp(KeyCode.Space))
         {
             wCManager.ApplyBrake(0);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            wCManager.ApplyTorue(-1 * (5000));
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            wCManager.ApplyTorue(0);
         }
     }
 
@@ -72,49 +70,49 @@ public class JCPMovementTriggers : MonoBehaviour
     {
         var go = other.gameObject;
 
-        if(go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
+
+        Debug.Log("Collision detected");
+        switch (mech)
         {
-            Debug.Log("Collision detected");
-            switch (mech)
-            {
-                case Type.Acc:
-                    wCManager.ApplyTorue(1 * (10000 * GearValue));
-                    break;
-                case Type.Break:
-                    wCManager.ApplyBrake(2000);
-                    break;
-                case Type.Back:
-                    wCManager.ApplyTorue(1 * (30000 * 3));
-                    break;
-                case Type.BackRotation:
-                    BackRotation();
-                    break;
-                case Type.Up:
-                    tlbEngine.BackForeArmUpAndMove(0);
-                    break;
-                case Type.Down:
-                    tlbEngine.BackForeArmUpAndMove(1);
-                    break;
-                case Type.Left:
-                    tlbEngine.BackArmLeftandRightMove(0);
-                    break;
-                case Type.Right:
-                    tlbEngine.BackArmLeftandRightMove(1);
-                    break;
-                case Type.FRLeft:
-                    tlbEngine.FrontArmUpAndMove(0);
-                    break;
-                case Type.FRRight:
-                    tlbEngine.FrontArmUpAndMove(1);
-                    break;
-                case Type.FRRotation:
-                    FRRotation();
-                    break;
-                default:
-                    break;
-            }
+            case Type.Acc:
+                if (TLB_Engine.isForward)
+                    wCManager.ApplyTorue(1 * 10000 * GearValue);
+                if (TLB_Engine.isReverse)
+                    wCManager.ApplyTorue(-1 * 5000);
+                break;
+            case Type.Break:
+                wCManager.ApplyBrake(2000);
+                break;
+            case Type.Back:
+                wCManager.ApplyTorue(-1 * (5000));
+                break;
+            case Type.BackRotation:
+                BackRotation();
+                break;
+            case Type.Up:
+                tlbEngine.BackForeArmUpAndMove(0);
+                break;
+            case Type.Down:
+                tlbEngine.BackForeArmUpAndMove(1);
+                break;
+            case Type.Left:
+                tlbEngine.BackArmLeftandRightMove(0);
+                break;
+            case Type.Right:
+                tlbEngine.BackArmLeftandRightMove(1);
+                break;
+            case Type.FRLeft:
+                tlbEngine.FrontArmUpAndMove(0);
+                break;
+            case Type.FRRight:
+                tlbEngine.FrontArmUpAndMove(1);
+                break;
+            case Type.FRRotation:
+                FRRotation();
+                break;
+            default:
+                break;
         }
-        
     }
 
     private void OnTriggerExit(Collider other)
@@ -122,7 +120,6 @@ public class JCPMovementTriggers : MonoBehaviour
         GameObject go = other.gameObject;
         if (go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
         {
-
             switch (mech)
             {
                 case Type.Acc:
@@ -137,20 +134,18 @@ public class JCPMovementTriggers : MonoBehaviour
                 default:
                     break;
             }
-
         }
-            //if (TurnAxis == Vector3.forward && mech == Type.Break)
-            //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
+        //if (TurnAxis == Vector3.forward && mech == Type.Break)
+        //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
 
-            //else if (TurnAxis == Vector3.forward)
-            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
+        //else if (TurnAxis == Vector3.forward)
+        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
 
-            //else if (TurnAxis == Vector3.right)
-            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
+        //else if (TurnAxis == Vector3.right)
+        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
 
-            //else if (TurnAxis == Vector3.up)
-            //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
-        
+        //else if (TurnAxis == Vector3.up)
+        //    Pedal.localRotation = Quaternion.AngleAxis(-10, TurnAxis);
     }
 
     public void SeatRotation()
@@ -159,6 +154,7 @@ public class JCPMovementTriggers : MonoBehaviour
         Quaternion Value =  Quaternion.Euler(-0.057f, -89.705f, 0.032f);
         VRCamera.rotation = Value;*/
     }
+
     public void BackRotation()
     {
         //Seat.position = new Vector3(VRCamera.position.x, VRCamera.position.y, VRCamera.position.z);

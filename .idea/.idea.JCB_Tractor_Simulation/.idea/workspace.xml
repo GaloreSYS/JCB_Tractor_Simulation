@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da1c77fa-736f-4178-8d22-8aabb1d4d6c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Stones/closeup-macro-view-red-dirt-mud-pile-soil-from-agriculture-land-soil-background_722237-1864.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Stones/closeup-macro-view-red-dirt-mud-pile-soil-from-agriculture-land-soil-background_722237-1864.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/StreamIdDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/StreamIdDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/MainUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/MainUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/NodySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/NodySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIButtonIdDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIButtonIdDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIViewIdDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/UIViewIdDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Doozy/Runtime/UIManager/Ids/UIViewIdExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Runtime/UIManager/Ids/UIViewIdExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FF_Digger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FF_Digger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Prefabs/Button/Basic/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Prefabs/Button/Basic/Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Motion Titles Pack/Prefabs/12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Motion Titles Pack/Prefabs/12.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Motion Titles Pack/Prefabs/3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Motion Titles Pack/Prefabs/3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Materials/Rock-Texture-Surface.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Materials/Rock-Texture-Surface.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modern UI Pack/Read Me.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modern UI Pack/Read Me.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging TlbRemovedDuplicates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TlbRemovedDuplicates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../TLB Build\URP_Simulation.exe" />
@@ -122,7 +117,8 @@
       <option name="presentableId" value="Default" />
       <updated>1704368850158</updated>
       <workItem from="1704368856863" duration="7136000" />
-      <workItem from="1704451731585" duration="1756000" />
+      <workItem from="1704451731585" duration="2411000" />
+      <workItem from="1704462198350" duration="1349000" />
     </task>
     <servers />
   </component>

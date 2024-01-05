@@ -11,6 +11,7 @@ using Vehicle.Engine;
 
 public class TLB_Engine : MonoBehaviour
 {
+    public static TLB_Engine Instance;
     [SerializeField] int maxTorque, maxRPM = 2200, engineBraking = 500, idleRPM = 950, rpm; //= 516
     [SerializeField] private float ThrottleInput;
     [SerializeField] AnimationCurve torqueCurve;
@@ -21,6 +22,7 @@ public class TLB_Engine : MonoBehaviour
     public static bool isIgnition = false;
     public static bool isNeutral = true;
     public static bool isForward = true;
+    public static bool isReverse = true;
     public bool Breaks, Parking;
 
 
@@ -73,6 +75,10 @@ public class TLB_Engine : MonoBehaviour
     private Color32 on = new Color32(26, 219, 0, 255);
     private Color32 standBy = new Color32(218, 182, 0, 255);
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -377,6 +383,8 @@ public class TLB_Engine : MonoBehaviour
         {
             isNeutral = true;
             isForward = false;
+            isReverse = false;
+
         }
 
 
@@ -384,6 +392,14 @@ public class TLB_Engine : MonoBehaviour
         {
             isNeutral = false;
             isForward = true;
+            isReverse = false;
+        }
+
+        if (value == 2)
+        {
+            isNeutral = false;
+            isForward = false;
+            isReverse = true;
         }
 
         Debug.LogError(value.ToString());

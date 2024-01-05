@@ -16,10 +16,16 @@ MonoBehaviour:
     Items:
     - Category: CourseTLB
       Name: Back
+    - Category: CourseTLB
+      Name: Digging
     - Category: CourseTractor
       Name: Back
+    - Category: CourseTractor
+      Name: Plowing
     - Category: None
       Name: None
+    - Category: OnBoarding
+      Name: Back
     - Category: OnBoarding
       Name: BackVehicle
     - Category: OnBoarding

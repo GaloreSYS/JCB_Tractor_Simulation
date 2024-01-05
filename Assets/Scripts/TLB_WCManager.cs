@@ -42,7 +42,7 @@ public class TLB_WCManager : MonoBehaviour
     
     public void Steering(float Steerinput)
     {
-        Debug.Log(Steerinput);
+//        Debug.Log(Steerinput);
         WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
         WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
     }

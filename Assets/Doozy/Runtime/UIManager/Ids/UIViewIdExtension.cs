@@ -37,6 +37,7 @@ namespace Doozy.Runtime.UIManager
         {
             CourseSelectionTLB,
             CourseSelectionTractor,
+            LoadingScreen,
             Login,
             Splash,
             VehicleSelection

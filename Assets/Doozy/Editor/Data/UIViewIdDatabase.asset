@@ -23,6 +23,8 @@ MonoBehaviour:
     - Category: OnBoarding
       Name: CourseSelectionTractor
     - Category: OnBoarding
+      Name: LoadingScreen
+    - Category: OnBoarding
       Name: Login
     - Category: OnBoarding
       Name: Splash
