@@ -2074,7 +2074,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26292653}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21380,19 +21380,7 @@ MonoBehaviour:
   Collision: 0
   EventTriggerToSPawnRock:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 773248714}
-        m_TargetAssemblyTypeName: FF_Digger, Assembly-CSharp
-        m_MethodName: Spawnstones
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &579004800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26651,13 +26639,14 @@ GameObject:
   - component: {fileID: 748958887}
   - component: {fileID: 748958886}
   - component: {fileID: 748958885}
+  - component: {fileID: 748958888}
   m_Layer: 0
   m_Name: 2_D_Sector1
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &748958883
 Transform:
   m_ObjectHideFlags: 0
@@ -26792,6 +26781,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &748958888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748958882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &749273227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27762,6 +27795,7 @@ MonoBehaviour:
   textureIndex: 3
   size: 0.5
   opacity: 1
+  countdown: 2
   canDig: 0
   dust: {fileID: 1357385990}
   diggerObject: {fileID: 577645489}
@@ -45633,7 +45667,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286808402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -68622,7 +68656,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963780654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -70146,7 +70180,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999908567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -77758,6 +77792,11 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1830038061516382387, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2541011587544385162, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Height
@@ -77767,6 +77806,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.x
       value: -0.015618161
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142395195257499265, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142395195257499265, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 3291569572675053719, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -77782,6 +77831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.x
       value: -0.0051121255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899065669174493630, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: developmentMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5077633961592625360, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -77963,7 +78017,8 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.00777282
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2952854581477704501, guid: 297a5ac22e293bd47868088553927b10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8591730090919044140, guid: 297a5ac22e293bd47868088553927b10,

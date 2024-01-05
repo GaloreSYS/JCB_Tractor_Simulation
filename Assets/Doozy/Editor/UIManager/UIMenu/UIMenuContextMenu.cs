@@ -522,6 +522,318 @@ namespace Doozy.Editor.UIManager.UIMenu
                 [MenuItem(CATEGORY_MENU_PATH + "Flow Controller", false, MENU_ITEM_PRIORITY)]
                 public static void CreateFlowController(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "FlowController");
             }
+        }
+
+        public static class AnimatedTitles
+        {
+            private const string TYPE_NAME = "Animated Titles";
+            private const string TYPE_MENU_PATH = MENU_PATH + "/" + TYPE_NAME + "/";
+
+            public static class Minimalist1
+            {
+                private const string CATEGORY_NAME = "Minimalist 1";
+                private const string CATEGORY_MENU_PATH = TYPE_MENU_PATH + CATEGORY_NAME + "/";
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 001", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title001(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title001");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 002", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title002(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title002");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 003", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title003(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title003");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 004", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title004(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title004");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 005", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title005(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title005");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 006", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title006(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title006");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 007", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title007(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title007");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 008", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title008(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title008");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 009", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title009(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title009");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 010", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title010(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title010");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 011", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title011(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title011");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 012", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title012(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title012");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 013", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title013(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title013");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 014", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title014(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title014");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 015", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title015(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title015");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 016", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title016(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title016");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 017", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title017(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title017");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 018", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title018(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title018");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 019", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title019(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title019");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 020", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title020(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title020");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 021", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title021(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title021");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 022", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title022(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title022");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 023", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title023(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title023");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 024", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title024(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title024");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 025", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title025(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title025");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 026", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title026(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title026");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 027", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title027(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title027");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 028", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title028(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title028");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 029", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title029(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title029");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 030", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title030(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title030");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 031", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title031(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title031");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 032", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title032(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title032");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 033", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title033(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title033");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 034", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title034(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title034");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 035", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title035(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title035");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 036", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title036(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title036");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 037", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title037(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title037");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 038", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title038(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title038");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 039", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title039(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title039");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 040", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title040(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title040");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 041", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title041(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title041");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 042", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title042(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title042");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 043", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title043(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title043");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 044", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title044(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title044");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 045", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title045(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title045");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 046", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title046(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title046");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 047", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title047(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title047");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 048", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title048(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title048");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 049", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title049(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title049");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 050", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title050(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title050");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 051", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title051(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title051");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 052", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title052(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title052");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 053", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title053(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title053");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 054", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title054(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title054");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 055", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title055(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title055");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 056", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title056(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title056");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 057", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title057(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title057");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 058", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title058(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title058");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 059", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title059(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title059");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 060", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title060(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title060");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 061", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title061(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title061");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 062", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title062(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title062");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 063", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title063(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title063");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 064", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title064(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title064");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 065", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title065(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title065");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 066", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title066(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title066");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 067", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title067(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title067");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 068", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title068(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title068");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 069", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title069(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title069");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 070", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title070(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title070");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 071", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title071(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title071");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 072", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title072(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title072");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 073", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title073(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title073");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 074", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title074(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title074");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 075", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title075(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title075");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 076", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title076(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title076");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 077", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title077(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title077");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 078", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title078(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title078");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 079", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title079(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title079");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 080", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title080(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title080");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 081", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title081(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title081");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 082", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title082(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title082");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 083", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title083(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title083");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 084", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title084(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title084");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 085", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title085(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title085");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 086", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title086(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title086");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 087", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title087(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title087");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 088", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title088(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title088");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 089", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title089(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title089");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 090", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title090(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title090");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 091", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title091(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title091");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 092", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title092(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title092");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 093", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title093(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title093");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 094", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title094(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title094");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 095", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title095(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title095");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 096", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title096(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title096");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 097", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title097(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title097");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 098", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title098(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title098");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 099", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title099(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title099");
+
+                [MenuItem(CATEGORY_MENU_PATH + "M1 Title 100", false, MENU_ITEM_PRIORITY)]
+                public static void CreateM1Title100(MenuCommand command) => UIMenuUtils.AddToScene(TYPE_NAME, CATEGORY_NAME, "M1Title100");
+            }
         }        
     }
 }

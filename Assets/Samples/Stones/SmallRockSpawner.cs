@@ -34,13 +34,14 @@ public class SmallRockSpawner : MonoBehaviour
 
         if(IsGrounded == true)
         {
-            if(Timer < 2f)
+            if(Timer < 10f)
             {
                 Timer += Time.deltaTime;
             }
             else
             {
                 Timer = 0f;
+                FF_Digger.Instance.count--;
                 Destroy(this.gameObject);
             }
             

@@ -10,6 +10,8 @@ using Random = UnityEngine.Random;
 
 public class FF_Digger : MonoBehaviour
 {
+    public static FF_Digger Instance;
+    
     [Header("Async parameters")]
     [Tooltip("Enable to edit the terrain asynchronously and avoid impacting the frame rate too much.")]
     public bool editAsynchronously = true;
@@ -31,6 +33,12 @@ public class FF_Digger : MonoBehaviour
     public GameObject stonePrefab;
     public Transform stonePos;
     public float timmer = 0f;
+
+    private void Awake()
+    {
+        Instance = this;    
+    }
+
     private void Start()
     {
         diggerMasterRuntime = FindObjectOfType<DiggerMasterRuntime>();
@@ -64,6 +72,11 @@ public class FF_Digger : MonoBehaviour
             countdown = 2;
         }
 
+    }
+
+    public void AddTerrain(Transform digger,float s)
+    {
+        diggerMasterRuntime.Modify(digger.position, brush, ActionType.Add, textureIndex, opacity, s);
     }
     private void Update()
     {

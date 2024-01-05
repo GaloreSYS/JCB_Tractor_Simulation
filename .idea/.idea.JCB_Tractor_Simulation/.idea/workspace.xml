@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da1c77fa-736f-4178-8d22-8aabb1d4d6c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModels/MUDinBucket/mud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/MUDinBucket/mud.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Scenes/Standard/01BruteForceGrass.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Scenes/Standard/01BruteForceGrass.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Common/Editor/_LayoutGroup_Common.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Common/Editor/_LayoutGroup_Common.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Common/Editor/_StyleGroup_Common.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Common/Editor/_StyleGroup_Common.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Dashboard/Editor/_LayoutGroup_Dashboard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Dashboard/Editor/_LayoutGroup_Dashboard.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Dashboard/Editor/_StyleGroup_Dashboard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Dashboard/Editor/_StyleGroup_Dashboard.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataColorDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataColorDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataSelectableColorDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataSelectableColorDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataSpriteSheetDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataSpriteSheetDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataTextureDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Data/EditorDataTextureDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/Editor/_LayoutGroup_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/Editor/_LayoutGroup_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/Editor/_StyleGroup_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/Editor/_StyleGroup_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorColors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorSelectableColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorSelectableColors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorSpriteSheets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorSpriteSheets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorTextures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/EditorTextures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Arrows/_SpriteSheetGroup_Arrows_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Arrows/_SpriteSheetGroup_Arrows_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Components/_SpriteSheetGroup_Components_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Components/_SpriteSheetGroup_Components_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Icons/_SpriteSheetGroup_Icons_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Icons/_SpriteSheetGroup_Icons_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Placeholders/_SpriteSheetGroup_Placeholders_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Placeholders/_SpriteSheetGroup_Placeholders_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Widgets/_SpriteSheetGroup_Widgets_EditorUI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/EditorUI/SpriteSheets/Widgets/_SpriteSheetGroup_Widgets_EditorUI.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/Editor/_LayoutGroup_Mody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/Editor/_LayoutGroup_Mody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/Editor/_StyleGroup_Mody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/Editor/_StyleGroup_Mody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/SpriteSheets/Effects/_SpriteSheetGroup_Effects_Mody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/SpriteSheets/Effects/_SpriteSheetGroup_Effects_Mody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Mody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Mody/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Mody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Editor/_LayoutGroup_Nody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Editor/_LayoutGroup_Nody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Editor/_StyleGroup_Nody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/Editor/_StyleGroup_Nody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/SpriteSheets/Effects/_SpriteSheetGroup_Effects_Nody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/SpriteSheets/Effects/_SpriteSheetGroup_Effects_Nody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Nody.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Nody/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Nody.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/Editor/_LayoutGroup_Reactor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/Editor/_LayoutGroup_Reactor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/Editor/_StyleGroup_Reactor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/Editor/_StyleGroup_Reactor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Reactor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Reactor/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Reactor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/SceneManagement/SpriteSheets/Icons/_SpriteSheetGroup_Icons_SceneManagement.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/SceneManagement/SpriteSheets/Icons/_SpriteSheetGroup_Icons_SceneManagement.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/Editor/_LayoutGroup_Signals.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/Editor/_LayoutGroup_Signals.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/Editor/_StyleGroup_Signals.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/Editor/_StyleGroup_Signals.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Signals.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/SpriteSheets/Icons/_SpriteSheetGroup_Icons_Signals.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/SpriteSheets/Placeholders/_SpriteSheetGroup_Placeholders_Signals.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/Signals/SpriteSheets/Placeholders/_SpriteSheetGroup_Placeholders_Signals.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIDesigner/SpriteSheets/Icons/_SpriteSheetGroup_Icons_UIDesigner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIDesigner/SpriteSheets/Icons/_SpriteSheetGroup_Icons_UIDesigner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/Editor/_LayoutGroup_UIManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/Editor/_LayoutGroup_UIManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/Editor/_StyleGroup_UIManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/Editor/_StyleGroup_UIManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/SpriteSheets/Icons/_SpriteSheetGroup_Icons_UIManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/SpriteSheets/Icons/_SpriteSheetGroup_Icons_UIManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/SpriteSheets/UIMenu/_SpriteSheetGroup_UIMenu_UIManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/SpriteSheets/UIMenu/_SpriteSheetGroup_UIMenu_UIManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/UIMenu/UIMenuContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Editor/UIManager/UIMenu/UIMenuContextMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FF_Digger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FF_Digger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolyWorkshop_RoadConstructionSite/Scenes_Settings/Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolyWorkshop_RoadConstructionSite/Scenes_Settings/Terrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Materials/Rock-Texture-Surface.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Materials/Rock-Texture-Surface.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Rock-Texture-Surface.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Rock-Texture-Surface.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/SmallRockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/SmallRockSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_WCManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_WCManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SplashVideoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SplashVideoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AddMud.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2aUMkaTDimSrFBuc7n0J4Sfa90C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "TlbRemovedDuplicates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../TLB Build\URP_Simulation.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="U:\TLB Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath U:\JCB_Tractor_Simulation -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\JCB_Tractor_Simulation" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath U:\JCB_Tractor_Simulation -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="U:\JCB_Tractor_Simulation" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da1c77fa-736f-4178-8d22-8aabb1d4d6c6" name="Changes" comment="" />
+      <created>1704368850158</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704368850158</updated>
+      <workItem from="1704368856863" duration="4332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
