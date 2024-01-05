@@ -22,7 +22,7 @@ public class FF_Digger : MonoBehaviour
     public float countdown = 2;
     private DiggerMasterRuntime diggerMasterRuntime;
 
-    public bool canDig;
+    public bool canDig, resetStones;
     public ParticleSystem dust;
 
     [FormerlySerializedAs("cubde")] public Transform diggerObject;
@@ -45,34 +45,26 @@ public class FF_Digger : MonoBehaviour
     public int count;
     void SpawnRock()
     {
-        if(count<=10)
+        if (resetStones == false)
         {
-            var s = Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
-            float size = 5;
-            s.transform.localScale = new Vector3(size, size, size);
-            count++;
-        }
-
-
-        if (countdown != 0)
-        {
-            countdown -= Time.deltaTime;
-        }
-        else
-        {
-            count = 0;
-            countdown = 2;
+            if (count <= 5)
+            {
+                var s = Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
+                float size = 5;
+                s.transform.localScale = new Vector3(size, size, size);
+                count++;
+            }
         }
 
     }
     private void Update()
     {
 
-        if(canDig == true)
+        if (canDig == true)
         {
             timmer += Time.deltaTime;
 
-            if(timmer > 2f)
+            if (timmer > 2f)
             {
                 canDig = false;
                 countdown = 0;
@@ -83,38 +75,39 @@ public class FF_Digger : MonoBehaviour
             timmer = 0f;
         }
 
-        if(!canDig)
+        if (!canDig)
         {
-          //  tlb.constraints = RigidbodyConstraints.None;
-            dust.gameObject.SetActive(false); 
+            //  tlb.constraints = RigidbodyConstraints.None;
+            dust.gameObject.SetActive(false);
             return;
         }
         tlb.constraints = RigidbodyConstraints.FreezeAll;
-        dust.gameObject.SetActive(true); 
-                if (editAsynchronously)
-                {
-                    diggerMasterRuntime.ModifyAsyncBuffured(diggerObject.position, brush, action, textureIndex, opacity,
-                        size);
-                }
-                else
-                {
-                    diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
-                }
+        dust.gameObject.SetActive(true);
+        if (editAsynchronously)
+        {
+            diggerMasterRuntime.ModifyAsyncBuffured(diggerObject.position, brush, action, textureIndex, opacity,
+                size);
+        }
+        else
+        {
+            diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
         if (other.gameObject.name == "Digger")
         {
-           
-                canDig = true;
-                //InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
-                GetComponent<MeshRenderer>().enabled = false;
-               
+
+            canDig = true;
+            //InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
+            GetComponent<MeshRenderer>().enabled = false;
+            resetStones = true;
+            count = 0;
         }
     }
-    
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "Digger")
@@ -123,7 +116,7 @@ public class FF_Digger : MonoBehaviour
             CancelInvoke(nameof(SpawnRock));
             GetComponent<MeshRenderer>().enabled = true;
             timmer = 0;
-
+            resetStones = false;
         }
     }
 
