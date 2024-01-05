@@ -13,4 +13,24 @@ MonoBehaviour:
   m_Name: UIButtonIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: CourseTLB
+      Name: Back
+    - Category: CourseTractor
+      Name: Back
+    - Category: None
+      Name: None
+    - Category: OnBoarding
+      Name: BackVehicle
+    - Category: OnBoarding
+      Name: Continue
+    - Category: OnBoarding
+      Name: TLBButton
+    - Category: OnBoarding
+      Name: TractorButton
+    - Category: VehicleSelection
+      Name: Back
+    - Category: VehicleSelection
+      Name: TLB
+    - Category: VehicleSelection
+      Name: Tractor

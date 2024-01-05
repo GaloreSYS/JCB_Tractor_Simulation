@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Database:
     Items:
+    - Category: CourseSelectionTractor
+      Name: CourseSelectionTractor
     - Category: None
       Name: None
+    - Category: OnBoarding
+      Name: CourseSelectionTLB
+    - Category: OnBoarding
+      Name: CourseSelectionTractor
     - Category: OnBoarding
       Name: Login
     - Category: OnBoarding
       Name: Splash
+    - Category: OnBoarding
+      Name: VehicleSelection

@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: StreamIdDatabase
   m_EditorClassIdentifier: 
   Database:
-    Items: []
+    Items:
+    - Category: None
+      Name: None
+    - Category: OnBoarding
+      Name: BackVehicle
+    - Category: OnBoarding
+      Name: Continue
+    - Category: OnBoarding
+      Name: SplashVideoComplete

@@ -14,6 +14,10 @@ namespace Doozy.Runtime.UIManager.Containers
 {
     public partial class UIView
     {
+        public static IEnumerable<UIView> GetViews(UIViewId.CourseSelectionTractor id) => GetViews(nameof(UIViewId.CourseSelectionTractor), id.ToString());
+        public static void Show(UIViewId.CourseSelectionTractor id, bool instant = false) => Show(nameof(UIViewId.CourseSelectionTractor), id.ToString(), instant);
+        public static void Hide(UIViewId.CourseSelectionTractor id, bool instant = false) => Hide(nameof(UIViewId.CourseSelectionTractor), id.ToString(), instant);
+
         public static IEnumerable<UIView> GetViews(UIViewId.OnBoarding id) => GetViews(nameof(UIViewId.OnBoarding), id.ToString());
         public static void Show(UIViewId.OnBoarding id, bool instant = false) => Show(nameof(UIViewId.OnBoarding), id.ToString(), instant);
         public static void Hide(UIViewId.OnBoarding id, bool instant = false) => Hide(nameof(UIViewId.OnBoarding), id.ToString(), instant);
@@ -24,10 +28,18 @@ namespace Doozy.Runtime.UIManager
 {
     public partial class UIViewId
     {
+        public enum CourseSelectionTractor
+        {
+            CourseSelectionTractor
+        }
+
         public enum OnBoarding
         {
+            CourseSelectionTLB,
+            CourseSelectionTractor,
             Login,
-            Splash
+            Splash,
+            VehicleSelection
         }    
     }
 }
