@@ -1,15 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class JCBStandsLeftAndRight : MonoBehaviour
 {
+    public static JCBStandsLeftAndRight Instance;
     public Animator AnimArms;
 
     public bool enableLeftDown, enableLeftUp, enablerightLegdown, enableRightlegup;
     public float ValueArmsLeft, ValueArmsRight;
 
     public ArmDataJCB _ArmDataJCB;
+
+    public bool LeftSupportOn, RightSupportOn;
     public enum SelectedLeg
     {
         Left,
@@ -17,6 +21,11 @@ public class JCBStandsLeftAndRight : MonoBehaviour
     }
 
     public SelectedLeg _selectedLeg;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -37,20 +46,34 @@ public class JCBStandsLeftAndRight : MonoBehaviour
 
             if (enableLeftDown == true)
             {
-                if (ValueArmsLeft >= -1)
+                if (ValueArmsLeft >= -0.95)
                 {
                     ValueArmsLeft -= Time.deltaTime;
                     enableLeftUp = false;
+                }
+                else
+                {
+                    enableLeftDown = false;
+                    _ArmDataJCB.EnableLeftLeg = false;
+                    LeftSupportOn = false;
+                    FF_Digger.Instance.rightLegOn = false;
                 }
             }
 
 
             if (enableLeftUp == true)
             {
-                if (ValueArmsLeft <= 1)
+                if (ValueArmsLeft <= 0.95)
                 {
                     ValueArmsLeft += Time.deltaTime;
                     enableLeftDown = false;
+                }
+                else
+                {
+                    enableLeftUp = false;
+                    _ArmDataJCB.DisableLeftLeg = false;
+                    LeftSupportOn = true;
+                    FF_Digger.Instance.leftLegOn = true;
                 }
             }
 
@@ -63,20 +86,34 @@ public class JCBStandsLeftAndRight : MonoBehaviour
 
             if (enablerightLegdown == true)
             {
-                if (ValueArmsRight >= -1)
+                if (ValueArmsRight >= -0.95f)
                 {
                     ValueArmsRight -= Time.deltaTime;
                     enableRightlegup = false;
+                }
+                else
+                {
+                    enablerightLegdown = false;
+                    _ArmDataJCB.EnableRightLeg = false;
+                    RightSupportOn = false;
+                    FF_Digger.Instance.rightLegOn = false;
                 }
             }
 
 
             if (enableRightlegup == true)
             {
-                if (ValueArmsRight <= 1)
+                if (ValueArmsRight <= 0.95)
                 {
                     ValueArmsRight += Time.deltaTime;
                     enablerightLegdown = false;
+                }
+                else
+                {
+                    enableRightlegup = false;
+                    _ArmDataJCB.DisableRightLeg = false;
+                    RightSupportOn = true;
+                    FF_Digger.Instance.rightLegOn = true;
                 }
             }
 
@@ -84,7 +121,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
             
         }
 
-
+  
 
         AnimArms.SetFloat("UPL", ValueArmsLeft);
         AnimArms.SetFloat("UPR", ValueArmsRight);

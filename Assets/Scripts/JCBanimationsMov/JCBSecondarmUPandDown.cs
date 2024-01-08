@@ -21,10 +21,15 @@ public class JCBSecondarmUPandDown : MonoBehaviour
     public void Update()
     {
         //for front bucket arms
+        if (!JCBStandsLeftAndRight.Instance.LeftSupportOn || !JCBStandsLeftAndRight.Instance.RightSupportOn)
+        {
+            Debug.Log("NOT ALLOWED");
+            return;
+        }
 
        
 
-        if (enableR == true)
+        if (enableR == true &&!SpawnRocksAndPile.Instance.ground)
         {
             if (ValueUD >= -1)
             {

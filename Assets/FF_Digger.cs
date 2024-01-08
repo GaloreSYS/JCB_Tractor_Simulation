@@ -1,14 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Digger.Modules.Core.Sources;
 using Digger.Modules.Runtime.Sources;
-using JetBrains.Annotations;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
-
 
 public class FF_Digger : MonoBehaviour
 {
@@ -84,9 +77,16 @@ public class FF_Digger : MonoBehaviour
     }
     private void Update()
     {
+        if (leftLegOn && rightLegOn)
+        {
+            turnOffRB();
+        }
+        else
+        {
+            turnOnRB();
+        }
         if (Bucket.GetComponent<JCBbackBucket>().ValueRL<1.06f && Bucket.GetComponent<JCBbackBucket>().ValueRL>0f  )
         {
-            
             Debug.LogError("decreasing function called");
             ScoopMud(false);
             IsScooped = false;
@@ -108,11 +108,10 @@ public class FF_Digger : MonoBehaviour
 
         if (!canDig)
         {
-            //  tlb.constraints = RigidbodyConstraints.None;
+             
             dust.gameObject.SetActive(false);
             return;
         }
-       // tlb.constraints = RigidbodyConstraints.FreezeAll;
         dust.gameObject.SetActive(true);
         if (editAsynchronously)
         {
@@ -123,7 +122,21 @@ public class FF_Digger : MonoBehaviour
         {
             diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
         }
-       
+
+    
+    }
+
+    public bool leftLegOn;
+    public bool rightLegOn;
+    public void turnOnRB()
+    {
+        tlb.constraints = RigidbodyConstraints.None;
+    }
+
+    public void turnOffRB()
+    {
+        Debug.Log("HERE ");
+        tlb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -133,7 +146,7 @@ public class FF_Digger : MonoBehaviour
         {
 
             canDig = true;
-            //InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
+            SpawnRocksAndPile.Instance.ground = false;
             GetComponent<MeshRenderer>().enabled = false;
             resetStones = true;
             count = 0;

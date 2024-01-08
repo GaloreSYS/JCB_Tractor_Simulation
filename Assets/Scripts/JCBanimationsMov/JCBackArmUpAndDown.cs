@@ -20,6 +20,12 @@ public class JCBackArmUpAndDown : MonoBehaviour
 
     public void Update()
     {
+        // if (!JCBStandsLeftAndRight.Instance.LeftSupportOn || !JCBStandsLeftAndRight.Instance.RightSupportOn)
+        // {
+        //     Debug.Log("NOT ALLOWED");
+        //     return;
+        // }
+        
         enableDown = Bucketarm.enableRLBdown;
         enableUp = Bucketarm.enableRLBup;
 
@@ -34,7 +40,7 @@ public class JCBackArmUpAndDown : MonoBehaviour
         }
 
 
-        if (enableUp == true)
+        if (enableUp == true && !SpawnRocksAndPile.Instance.ground)
         {
             if (ValueRL <= 1)
             {

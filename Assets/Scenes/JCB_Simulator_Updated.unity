@@ -21386,6 +21386,8 @@ MonoBehaviour:
   EventTriggerToSPawnRock:
     m_PersistentCalls:
       m_Calls: []
+  ground: 0
+  hitGorund: {fileID: 8300000, guid: 31a6d00e43389f14695e0380772a128e, type: 3}
 --- !u!1001 &579004800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27817,6 +27819,8 @@ MonoBehaviour:
   IsScooped: 0
   Bucket: {fileID: 1385001240}
   count: 0
+  leftLegOn: 0
+  rightLegOn: 0
 --- !u!1001 &776325771
 PrefabInstance:
   m_ObjectHideFlags: 0

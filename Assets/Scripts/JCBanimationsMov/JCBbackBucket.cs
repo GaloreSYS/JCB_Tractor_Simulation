@@ -19,11 +19,12 @@ public class JCBbackBucket : MonoBehaviour
 
     public void Update()
     {
+        
         //for front bucket arms
         enableDown = ArmDataJCb.enabledownJCBB;
         enableUp = ArmDataJCb.enableupJCBB;
 
-        if (enableDown == true)
+        if (enableDown == true && !SpawnRocksAndPile.Instance.ground)
         {
             if (ValueRL >= -1)
             {
@@ -45,4 +46,6 @@ public class JCBbackBucket : MonoBehaviour
         ArmDataJCb.ValueRLJCBB = ValueRL;
         AnimRL.SetFloat("BBuck", ValueRL);
     }
+    
+    
 }

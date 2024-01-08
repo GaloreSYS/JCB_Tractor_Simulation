@@ -9,6 +9,8 @@ public class EngineStartAudioManger : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public bool isOn;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -16,9 +18,10 @@ public class EngineStartAudioManger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& !isOn)
         {
             PlayAudio1();
+            isOn = true;
         }
 
        
