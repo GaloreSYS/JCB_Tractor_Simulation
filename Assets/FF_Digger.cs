@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Digger.Modules.Core.Sources;
 using Digger.Modules.Runtime.Sources;
+using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -33,6 +35,14 @@ public class FF_Digger : MonoBehaviour
     public GameObject stonePrefab;
     public Transform stonePos;
     public float timmer = 0f;
+    [Header("Mud properties")]
+    public GameObject mud;
+    public Vector3 maxLimit;
+    public Vector3 minLimit;
+    public float saclingSpeed;
+    public bool IsScooped=false;
+    public GameObject Bucket;
+    
 
     private void Awake()
     {
@@ -48,6 +58,8 @@ public class FF_Digger : MonoBehaviour
             Debug.LogWarning(
                 "DiggerRuntimeUsageExample component requires DiggerMasterRuntime component to be setup in the scene. DiggerRuntimeUsageExample will be disabled.");
         }
+
+        mud.transform.localScale = new Vector3(0, 0, 0);
     }
 
     public int count;
@@ -72,7 +84,13 @@ public class FF_Digger : MonoBehaviour
     }
     private void Update()
     {
-
+        if (Bucket.GetComponent<JCBbackBucket>().ValueRL<1.06f && Bucket.GetComponent<JCBbackBucket>().ValueRL>0f  )
+        {
+            
+            Debug.LogError("decreasing function called");
+            ScoopMud(false);
+            IsScooped = false;
+        }
         if (canDig == true)
         {
             timmer += Time.deltaTime;
@@ -94,7 +112,7 @@ public class FF_Digger : MonoBehaviour
             dust.gameObject.SetActive(false);
             return;
         }
-        tlb.constraints = RigidbodyConstraints.FreezeAll;
+       // tlb.constraints = RigidbodyConstraints.FreezeAll;
         dust.gameObject.SetActive(true);
         if (editAsynchronously)
         {
@@ -105,6 +123,7 @@ public class FF_Digger : MonoBehaviour
         {
             diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
         }
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -133,7 +152,42 @@ public class FF_Digger : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Digger")
+        {
+            Debug.LogError("scale is increasing");
+            mud.gameObject.SetActive(true);
+            if (Bucket.GetComponent<JCBbackBucket>().ValueRL<=0.5 && Bucket.GetComponent<JCBbackBucket>().ValueRL>=-2f )
+            {
+               ScoopMud(true);
+            }
+            else
+            {
+                ScoopMud(false);
+            }
 
+            if (mud.transform.localScale==maxLimit)
+            {
+                IsScooped = true;
+            }
+            
+        }
+    }
+
+    public void ScoopMud(bool scoop)
+    {
+        if (scoop==true)
+        {
+            mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, maxLimit, saclingSpeed * Time.deltaTime);
+            //mud.transform.localScale = maxLimit;
+        }
+        else
+        {
+            mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, minLimit, saclingSpeed * Time.deltaTime);
+        }
+        
+    }
     public void Spawnstones()
     {
         InvokeRepeating(nameof(SpawnRock), 1, 0.1f);

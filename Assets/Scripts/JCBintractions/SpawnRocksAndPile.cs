@@ -38,7 +38,7 @@ public class SpawnRocksAndPile : MonoBehaviour
             {
                 if(PrefabPileInBucket.activeSelf)
                 {
-                    FF_Digger.Instance.Spawnstones();
+//                    FF_Digger.Instance.Spawnstones();
                 }
                 PrefabPileInBucket.SetActive(false);
                 EventTriggerToSPawnRock.Invoke();
