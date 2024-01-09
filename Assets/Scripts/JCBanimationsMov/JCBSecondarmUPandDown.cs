@@ -9,17 +9,17 @@ public class JCBSecondarmUPandDown : MonoBehaviour
 
     public float ValueUD;
 
-    public bool enableR, enableL;
+    public bool enableR, enableL, CheckEngine;
     public ArmDataJCB armDataJCb;
     public void Start()
     {
         ValueUD = 0;
-
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
+        CheckEngine = armDataJCb.CheckEngine;
         //for front bucket arms
         if (!JCBStandsLeftAndRight.Instance.LeftSupportOn || !JCBStandsLeftAndRight.Instance.RightSupportOn)
         {
@@ -27,28 +27,31 @@ public class JCBSecondarmUPandDown : MonoBehaviour
             return;
         }
 
-       
-
-        if (enableR == true &&!SpawnRocksAndPile.Instance.ground)
+       if(CheckEngine == true)
         {
-            if (ValueUD >= -1)
+            if (enableR == true && !SpawnRocksAndPile.Instance.ground)
             {
-                ValueUD -= Time.deltaTime;
-                enableL = false;
+                if (ValueUD >= -1)
+                {
+                    ValueUD -= Time.deltaTime;
+                    enableL = false;
+                }
             }
+
+
+            if (enableL == true)
+            {
+                if (ValueUD <= 1)
+                {
+                    ValueUD += Time.deltaTime;
+                    enableR = false;
+                }
+            }
+
+
+            AnimUD.SetFloat("RL", ValueUD);
         }
 
-
-        if (enableL == true)
-        {
-            if (ValueUD <= 1)
-            {
-                ValueUD += Time.deltaTime;
-                enableR = false;
-            }
-        }
-
-
-        AnimUD.SetFloat("RL", ValueUD);
+        
     }
 }

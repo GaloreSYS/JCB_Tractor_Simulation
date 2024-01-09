@@ -7,7 +7,7 @@ public class JCBForkLift : MonoBehaviour
     public ArmDataJCB ArmDatajvb;
     public Animator anim;
     public float ValueForks;
-    public bool ForkUp, ForkDown;
+    public bool ForkUp, ForkDown, CheckEngine;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,32 +15,37 @@ public class JCBForkLift : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        ArmDatajvb.valueFork = ValueForks;
-        ForkUp = ArmDatajvb.ForkLiftUp;
-        ForkDown = ArmDatajvb.ForkLiftDown;
-        //for front bucket arms
-        if (ForkUp == true)
+        CheckEngine = ArmDatajvb.CheckEngine;
+
+        if(CheckEngine == true)
         {
-            if (ValueForks >= -1)
+            ArmDatajvb.valueFork = ValueForks;
+            ForkUp = ArmDatajvb.ForkLiftUp;
+            ForkDown = ArmDatajvb.ForkLiftDown;
+            //for front bucket arms
+            if (ForkUp == true)
             {
-                ValueForks -= Time.deltaTime;
-                ForkDown = false;
+                if (ValueForks >= -1)
+                {
+                    ValueForks -= Time.deltaTime;
+                    ForkDown = false;
+                }
             }
-        }
 
 
-        if (ForkDown == true)
-        {
-            if (ValueForks <= 1)
+            if (ForkDown == true)
             {
-                ValueForks += Time.deltaTime;
-                ForkUp = false;
+                if (ValueForks <= 1)
+                {
+                    ValueForks += Time.deltaTime;
+                    ForkUp = false;
+                }
             }
+
+
+            anim.SetFloat("ForkLift", ValueForks);
         }
-
-
-        anim.SetFloat("ForkLift", ValueForks);
     }
 }
