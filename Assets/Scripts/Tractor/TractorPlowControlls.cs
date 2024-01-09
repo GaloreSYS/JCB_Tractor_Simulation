@@ -25,7 +25,7 @@ public class TractorPlowControlls : MonoBehaviour
         {
             if (ValueTractor >= -1)
             {
-                ValueTractor -= Time.deltaTime;
+                ValueTractor -= Time.deltaTime * Tractor.TractorPlow;
                 EnableUp = false;
             }
         }
@@ -35,7 +35,7 @@ public class TractorPlowControlls : MonoBehaviour
         {
             if (ValueTractor <= 1)
             {
-                ValueTractor += Time.deltaTime;
+                ValueTractor += Time.deltaTime * Tractor.TractorPlow;
                 EnableDown = false;
             }
         }

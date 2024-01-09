@@ -31,7 +31,7 @@ public class JCBbackBucket : MonoBehaviour
             {
                 if (ValueRL >= -1)
                 {
-                    ValueRL -= Time.deltaTime;
+                    ValueRL -= Time.deltaTime * ArmDataJCb.backbucket;
                     enableUp = false;
                 }
             }
@@ -41,7 +41,7 @@ public class JCBbackBucket : MonoBehaviour
             {
                 if (ValueRL <= 1)
                 {
-                    ValueRL += Time.deltaTime;
+                    ValueRL += Time.deltaTime * ArmDataJCb.backbucket;
                     enableDown = false;
                 }
             }

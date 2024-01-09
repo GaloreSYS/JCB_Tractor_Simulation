@@ -36,7 +36,7 @@ public class JCBackArmUpAndDown : MonoBehaviour
             {
                 if (ValueRL >= -1)
                 {
-                    ValueRL -= Time.deltaTime;
+                    ValueRL -= Time.deltaTime * Bucketarm.BackHand;
                     enableUp = false;
                 }
             }
@@ -46,7 +46,7 @@ public class JCBackArmUpAndDown : MonoBehaviour
             {
                 if (ValueRL <= 1)
                 {
-                    ValueRL += Time.deltaTime;
+                    ValueRL += Time.deltaTime * Bucketarm.BackHand;
                     enableDown = false;
                 }
             }

@@ -51,7 +51,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                 {
                     if (ValueArmsLeft >= -0.95)
                     {
-                        ValueArmsLeft -= Time.deltaTime;
+                        ValueArmsLeft -= Time.deltaTime * _ArmDataJCB.LeftLeg;
                         enableLeftUp = false;
                     }
                     else
@@ -68,7 +68,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                 {
                     if (ValueArmsLeft <= 0.95)
                     {
-                        ValueArmsLeft += Time.deltaTime;
+                        ValueArmsLeft += Time.deltaTime * _ArmDataJCB.LeftLeg;
                         enableLeftDown = false;
                     }
                     else
@@ -91,7 +91,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                 {
                     if (ValueArmsRight >= -0.95f)
                     {
-                        ValueArmsRight -= Time.deltaTime;
+                        ValueArmsRight -= Time.deltaTime * _ArmDataJCB.RightLeg;
                         enableRightlegup = false;
                     }
                     else
@@ -108,7 +108,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                 {
                     if (ValueArmsRight <= 0.95)
                     {
-                        ValueArmsRight += Time.deltaTime;
+                        ValueArmsRight += Time.deltaTime * _ArmDataJCB.RightLeg;
                         enablerightLegdown = false;
                     }
                     else

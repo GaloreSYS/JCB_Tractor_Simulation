@@ -33,7 +33,7 @@ public class JCBAnimation : MonoBehaviour
             {
                 if (ValueArms >= -1)
                 {
-                    ValueArms -= Time.deltaTime;
+                    ValueArms -= Time.deltaTime * JCBArmData.FrontArm;
                     enableUp = false;
                 }
             }
@@ -43,7 +43,7 @@ public class JCBAnimation : MonoBehaviour
             {
                 if (ValueArms <= 1)
                 {
-                    ValueArms += Time.deltaTime;
+                    ValueArms += Time.deltaTime * JCBArmData.FrontArm;
                     enableDown = false;
                 }
             }

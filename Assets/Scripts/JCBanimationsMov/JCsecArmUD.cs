@@ -31,7 +31,7 @@ public class JCsecArmUD : MonoBehaviour
             {
                 if (ValueRL >= -1)
                 {
-                    ValueRL -= Time.deltaTime;
+                    ValueRL -= Time.deltaTime * armDataJCb.backbucketArm;
                     enableUp = false;
                 }
             }
@@ -41,7 +41,7 @@ public class JCsecArmUD : MonoBehaviour
             {
                 if (ValueRL <= 1)
                 {
-                    ValueRL += Time.deltaTime;
+                    ValueRL += Time.deltaTime * armDataJCb.backbucketArm;
                     enableDown = false;
                 }
             }

@@ -51,4 +51,29 @@ public class ArmDataJCB : ScriptableObject
     [Header("Tractor PlowHandel")]
     public float valueTractor;
     public bool TractorPlowUP,TractorPlowDown;
+
+
+
+    [Header("Slider speed Values")]
+
+    [Range(0.01f,5f)]
+    public float FrontArm;
+    [Range(0.01f, 5f)]
+    public float FrontBucket;
+    [Range(0.01f, 5f)]
+    public float BackArm;
+    [Range(0.01f, 5f)]
+    public float BackHand;
+    [Range(0.01f, 5f)]
+    public float backbucketArm;
+    [Range(0.01f, 5f)]
+    public float backbucket;
+    [Range(0.01f, 5f)]
+    public float LeftLeg;
+    [Range(0.01f, 5f)]
+    public float RightLeg;
+    [Range(0.01f, 5f)]
+    public float Forklift;
+    [Range(0.01f, 5f)]
+    public float TractorPlow;
 }

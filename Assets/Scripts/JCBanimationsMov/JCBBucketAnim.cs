@@ -27,7 +27,7 @@ public class JCBBucketAnim : MonoBehaviour
             {
                 if (ValueBucket >= -1)
                 {
-                    ValueBucket -= Time.deltaTime;
+                    ValueBucket -= Time.deltaTime * JCbarmdata.FrontBucket;
                     enableUp = false;
                 }
             }
@@ -36,7 +36,7 @@ public class JCBBucketAnim : MonoBehaviour
             {
                 if (ValueBucket <= 1)
                 {
-                    ValueBucket += Time.deltaTime;
+                    ValueBucket += Time.deltaTime * JCbarmdata.FrontBucket;
                     enableDown = false;
                 }
             }

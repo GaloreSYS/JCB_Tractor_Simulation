@@ -32,7 +32,7 @@ public class JCBRig : MonoBehaviour
             {
                 if (ValueRL >= -1)
                 {
-                    ValueRL -= Time.deltaTime;
+                    ValueRL -= Time.deltaTime * JCBarmdata.BackArm;
                     enableUp = false;
                 }
             }
@@ -42,7 +42,7 @@ public class JCBRig : MonoBehaviour
             {
                 if (ValueRL <= 1)
                 {
-                    ValueRL += Time.deltaTime;
+                    ValueRL += Time.deltaTime * JCBarmdata.BackArm;
                     enableDown = false;
                 }
             }

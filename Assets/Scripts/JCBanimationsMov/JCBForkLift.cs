@@ -29,7 +29,7 @@ public class JCBForkLift : MonoBehaviour
             {
                 if (ValueForks >= -1)
                 {
-                    ValueForks -= Time.deltaTime;
+                    ValueForks -= Time.deltaTime * ArmDatajvb.Forklift;
                     ForkDown = false;
                 }
             }
@@ -39,7 +39,7 @@ public class JCBForkLift : MonoBehaviour
             {
                 if (ValueForks <= 1)
                 {
-                    ValueForks += Time.deltaTime;
+                    ValueForks += Time.deltaTime * ArmDatajvb.Forklift;
                     ForkUp = false;
                 }
             }
