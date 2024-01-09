@@ -251,7 +251,7 @@ MonoBehaviour:
   AllowSceneActivation: 1
   SceneActivationDelay: 0.5
   SceneBuildIndex: 0
-  SceneName: JCB_Simulator_Updated
+  SceneName: JCB_Simulator_Welcome
   WaitForSceneToLoad: 1
   PreventLoadingSameScene: 1
   ConnectProgressor: 0
@@ -369,8 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: MainUI
   m_EditorClassIdentifier: 
-  EditorPosition: {x: 225.33333, y: 155.33333, z: 0}
-  EditorScale: {x: 0.16252795, y: 0.16252795, z: 1}
+  EditorPosition: {x: -66, y: 243.33333, z: 0}
+  EditorScale: {x: 0.32690176, y: 0.32690176, z: 1}
   Id: 5f72ca37-e611-4d1a-9872-d3c971674846
   GraphName: Flow Graph
   GraphDescription: 
