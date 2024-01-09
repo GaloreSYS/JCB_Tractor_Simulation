@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,12 @@ public class TouchSceneChanger : MonoBehaviour
 {
     public int sceneIndex;
     public FadeEffect fadeEffect;
+
+    [Button]
+    public void GoToSimulator()
+    {
+        StartCoroutine(changeScene());
+    }
     
     public void OnTriggerEnter(Collider other)
     {
