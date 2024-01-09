@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "JCBARMSVALUE", menuName = "Vehicle/JCBArmData")]
 public class ArmDataJCB : ScriptableObject
 {
+    [Header("Master - Checks Engien is on or not..")]
+    public bool CheckEngine;
 
     [Header("JCBanimation")]
     public float valuearms;

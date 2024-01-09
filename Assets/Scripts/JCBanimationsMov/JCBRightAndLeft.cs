@@ -9,7 +9,7 @@ public class JCBRig : MonoBehaviour
     public ArmDataJCB JCBarmdata;
     public float ValueRL;
 
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckEngine;
 
     public void Start()
     {
@@ -18,33 +18,39 @@ public class JCBRig : MonoBehaviour
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
-        enableDown = JCBarmdata.enableRLdown;
-        enableUp = JCBarmdata.enableRLup;
+        CheckEngine = JCBarmdata.CheckEngine;
 
-        //for front bucket arms
-        if (enableDown == true)
+        if(CheckEngine)
         {
-            if (ValueRL >= -1)
+            enableDown = JCBarmdata.enableRLdown;
+            enableUp = JCBarmdata.enableRLup;
+
+            //for front bucket arms
+            if (enableDown == true)
             {
-                ValueRL -= Time.deltaTime;
-                enableUp = false;
+                if (ValueRL >= -1)
+                {
+                    ValueRL -= Time.deltaTime;
+                    enableUp = false;
+                }
             }
-        }
 
 
-        if (enableUp == true)
-        {
-            if (ValueRL <= 1)
+            if (enableUp == true)
             {
-                ValueRL += Time.deltaTime;
-                enableDown = false;
+                if (ValueRL <= 1)
+                {
+                    ValueRL += Time.deltaTime;
+                    enableDown = false;
+                }
             }
+
+
+            AnimRL.SetFloat("RL", ValueRL);
         }
-
-
-        AnimRL.SetFloat("RL", ValueRL);
+        
 
     }
 }

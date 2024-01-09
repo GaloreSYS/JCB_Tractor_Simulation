@@ -9,7 +9,7 @@ public class JCBbackBucket : MonoBehaviour
 
     public float ValueRL;
 
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckEngine;
     public ArmDataJCB ArmDataJCb;
     public void Awake()
     {
@@ -17,34 +17,39 @@ public class JCBbackBucket : MonoBehaviour
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
-        
+        CheckEngine = ArmDataJCb.CheckEngine;
         //for front bucket arms
-        enableDown = ArmDataJCb.enabledownJCBB;
-        enableUp = ArmDataJCb.enableupJCBB;
 
-        if (enableDown == true && !SpawnRocksAndPile.Instance.ground)
+        if(CheckEngine == true )
         {
-            if (ValueRL >= -1)
+            enableDown = ArmDataJCb.enabledownJCBB;
+            enableUp = ArmDataJCb.enableupJCBB;
+
+            if (enableDown == true && !SpawnRocksAndPile.Instance.ground)
             {
-                ValueRL -= Time.deltaTime;
-                enableUp = false;
+                if (ValueRL >= -1)
+                {
+                    ValueRL -= Time.deltaTime;
+                    enableUp = false;
+                }
             }
-        }
 
 
-        if (enableUp == true)
-        {
-            if (ValueRL <= 1)
+            if (enableUp == true)
             {
-                ValueRL += Time.deltaTime;
-                enableDown = false;
+                if (ValueRL <= 1)
+                {
+                    ValueRL += Time.deltaTime;
+                    enableDown = false;
+                }
             }
-        }
 
-        ArmDataJCb.ValueRLJCBB = ValueRL;
-        AnimRL.SetFloat("BBuck", ValueRL);
+            ArmDataJCb.ValueRLJCBB = ValueRL;
+            AnimRL.SetFloat("BBuck", ValueRL);
+        }
+        
     }
     
     
