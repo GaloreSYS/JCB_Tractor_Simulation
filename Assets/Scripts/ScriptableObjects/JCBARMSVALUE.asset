@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50d0c66b06e986449649d20604bce34, type: 3}
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  CheckEngine: 1
-  valuearms: 0.13999994
-=======
   CheckEngine: 0
-  valuearms: 0
->>>>>>> 293fc414602e54d827d8e2a91c8df44a59183dc2
+  valuearms: 0.101999946
   enabledown: 0
   enableup: 0
   valuebucket: 0
@@ -33,7 +28,7 @@ MonoBehaviour:
   ValueRLJCUD: 0
   enabledownJCB: 0
   enableupJCB: 0
-  ValueRLJCBB: -1.002
+  ValueRLJCBB: -0.8660017
   enableupJCBB: 0
   enabledownJCBB: 0
   ValueRLJCBRLB: 0
@@ -43,10 +38,10 @@ MonoBehaviour:
   EnableRightLeg: 0
   DisableRightLeg: 0
   gearValue: 0
-  valueFork: 0.107999936
+  valueFork: -0.019999996
   ForkLiftUp: 0
   ForkLiftDown: 0
-  valueTractor: -1.0113533
+  valueTractor: 0
   TractorPlowUP: 0
   TractorPlowDown: 0
   FrontArm: 0.1
