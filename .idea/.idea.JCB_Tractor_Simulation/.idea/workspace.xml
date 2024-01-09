@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37ba4b7-62d2-467f-a5e7-033a52450bc2" name="Changes" comment="">
+    <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Doozy/_Extras/Prefabs/Components/Button/General/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/_Extras/Prefabs/Components/Button/General/Key.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FF_Digger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FF_Digger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Quiz.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Quiz.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBSecondarmUPandDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBSecondarmUPandDown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBStandsLeftAndRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBStandsLeftAndRight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBackArmUpAndDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBackArmUpAndDown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBbackBucket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBbackBucket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HotReload/Resources/HotReloadSettingsObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HotReload/Resources/HotReloadSettingsObject.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,15 +26,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/QuizManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneTrasnsitionManger.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2aafbIymqi0n0Cd1TKM9E11hvCk" />
+  <component name="ProjectId" id="2aiFjzlq1cpetILEvFVaBf9VmYC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,14 +95,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a37ba4b7-62d2-467f-a5e7-033a52450bc2" name="Changes" comment="" />
-      <created>1704561685526</created>
+      <changelist id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="" />
+      <created>1704793633350</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1704561685526</updated>
-      <workItem from="1704561688986" duration="16490000" />
-      <workItem from="1704712996504" duration="1643000" />
-      <workItem from="1704715575636" duration="3706000" />
+      <updated>1704793633350</updated>
+      <workItem from="1704793639426" duration="542000" />
+      <workItem from="1704800080308" duration="273000" />
     </task>
     <servers />
   </component>

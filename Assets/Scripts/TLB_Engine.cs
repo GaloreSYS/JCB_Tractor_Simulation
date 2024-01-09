@@ -341,15 +341,18 @@ public class TLB_Engine : MonoBehaviour
         if (obj.value > 10 && obj.value < 35)
         {
             IgnitionIndicator.color = standBy;
+            EngineStartAudioManger.Instance.StopAudio();
         }
         else if (obj.value < 7)
         {
             IgnitionIndicator.color = off;
+            EngineStartAudioManger.Instance.PlayAudio1();
             isIgnition = false;
         }
         else if (obj.value <= 45 && obj.value >= 30)
         {
             IgnitionIndicator.color = on;
+            EngineStartAudioManger.Instance.PlayAudio2();
             isIgnition = true;
         }
     }
