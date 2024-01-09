@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - Position
   - ManusHand
+  - DigItem
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - FrontArmBucket
   - FrontArm
   - DigArea
-  - 
+  - DigItem
   - 
   - 
   - 

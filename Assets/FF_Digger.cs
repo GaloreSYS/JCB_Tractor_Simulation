@@ -147,7 +147,7 @@ public class FF_Digger : MonoBehaviour
 
             canDig = true;
             SpawnRocksAndPile.Instance.ground = false;
-            GetComponent<MeshRenderer>().enabled = false;
+          
             resetStones = true;
             count = 0;
         }
@@ -159,7 +159,7 @@ public class FF_Digger : MonoBehaviour
         {
             canDig = false;
             CancelInvoke(nameof(SpawnRock));
-            GetComponent<MeshRenderer>().enabled = true;
+          
             timmer = 0;
             resetStones = false;
         }

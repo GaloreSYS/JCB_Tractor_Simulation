@@ -346,12 +346,14 @@ public class TLB_Engine : MonoBehaviour
         else if (obj.value < 7)
         {
             IgnitionIndicator.color = off;
+            GearControllerDataLinker.Instance.ControllData.CheckEngine = false;
             EngineStartAudioManger.Instance.PlayAudio1();
             isIgnition = false;
         }
         else if (obj.value <= 45 && obj.value >= 30)
         {
             IgnitionIndicator.color = on;
+            GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
             EngineStartAudioManger.Instance.PlayAudio2();
             isIgnition = true;
         }

@@ -6,17 +6,60 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/_Extras/Prefabs/Components/Button/General/Key.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/_Extras/Prefabs/Components/Button/General/Key.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HotReload/Resources/HotReloadSettingsObject.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HotReload/Resources/HotReloadSettingsObject.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/BlueTractor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/BlueTractor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/GrassParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/GrassParticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/GreenOpaque.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/GreenOpaque.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/MowingParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/MowingParticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/SimpleDiffuse03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Tractor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/Standard/Tractor.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Digger/Misc/Reticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Digger/Misc/Reticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FF_Digger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FF_Digger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Blue_Mat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Blue_Mat 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Blue_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Blue_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GreyBlue_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GreyBlue_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridBlue_01_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridBlue_01_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridOrange_01_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridWhite_01_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zibra/Common/Samples/Assets/BRP/GridWhite_01_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/3806d2512bada664ab3e3fc1d26581b4.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/3806d2512bada664ab3e3fc1d26581b4.userdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MicroSplat-Digger/3.9.0/Decals Integration Example/MicroSplatData/MicroSplat_propdata.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MicroSplat-Digger/3.9.0/Decals Integration Example/MicroSplatData/MicroSplat_propdata.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/GearControllerDataLinker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/GearControllerDataLinker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Resources/Resources/SteamVR_Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HotReload_BuildInfo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/HotReload_BuildInfo.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Emission Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Emission Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Green Bright.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Green Bright.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey Dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey Light Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey Light Dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 160 x 160.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 160 x 160.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 80 x 80.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 80 x 80.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Particle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Particle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Scene Environment.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Scene Environment.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_White Dark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_White Dark.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_White Transparent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_White Transparent.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Embers.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Embers.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SandParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/SandParticle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +68,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Downloads/sandparticle-master/sandparticle-master/SandParticle/Scripts/ParticleSystems.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8

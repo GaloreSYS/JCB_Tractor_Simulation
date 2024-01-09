@@ -7,8 +7,17 @@ using fourtyfourty.gearController;
 
 public class GearControllerDataLinker : MonoBehaviour
 {
+    public static GearControllerDataLinker Instance;
+    
+    
     [Header("Put scriptable Controller here")]
     public ArmDataJCB ControllData;
+
+    private void Awake()
+    {
+        Instance = this;
+        ControllData.CheckEngine = false;
+    }
 
     private void Update()
     {

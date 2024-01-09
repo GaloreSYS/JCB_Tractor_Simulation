@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TinyGiantStudio.Text;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,22 +15,41 @@ public class SpawnRocksAndPile : MonoBehaviour
     public float BucketPassedValue;
     public bool Collision;
     public UnityEvent EventTriggerToSPawnRock;
-
+    public GameObject[] g ;
+    public Modular3DText _modular3DText;
     private void Awake()
     {
         Instance = this;
+        GetComponent<MeshRenderer>().enabled = false;
+        g = GameObject.FindGameObjectsWithTag("DigItem");
     }
 
     public bool ground;
-
+    public FadeEffect fadeEffect;
     public void Start()
     {
         PrefabPileInBucket.SetActive(false);
         Collision = false;
     }
 
+    private bool gameover;
     public void Update()
     {
+        if(!gameover)
+        _modular3DText.UpdateText(p + " % ");
+        else
+        {
+            _modular3DText.UpdateText("Successfully Completed");
+        }
+        
+        if (p > 60 && !gameover)
+        {
+            gameover = true;
+            
+            fadeEffect.fadeDuration = 10;
+            fadeEffect.FadeOut();
+        }
+        
         BucketPassedValue = Armdata.ValueRLJCBB;
         if (Collision == true)
         {
@@ -59,8 +79,10 @@ public class SpawnRocksAndPile : MonoBehaviour
     }
 
     public AudioClip hitGorund;
+    public int Digged;
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.name == "Terrain")
         {
             if (!FF_Digger.Instance.canDig)
@@ -69,8 +91,20 @@ public class SpawnRocksAndPile : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(hitGorund);
             }
         }
+
+        if (other.CompareTag("DigItem"))
+        {
+            Digged++;
+            int n = g.Length;
+            Debug.Log(n/100f);
+             p = (n / 100f) * Digged;
+            Debug.Log(p);
+            p *= 100;
+                    other.gameObject.SetActive(false);
+        }
     }
 
+    public float p;
     public void OnTriggerStay(Collider other)
     {
         Debug.Log(other.name);
