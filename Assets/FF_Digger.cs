@@ -201,8 +201,9 @@ public ParticleSystem smoke;
         }
         else
         {
-            
-            Spawnstones();
+            if(mud.transform.localScale.x>0.1)
+            {
+            Spawnstones();}
             mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, minLimit, saclingSpeed * Time.deltaTime);
         }
         
