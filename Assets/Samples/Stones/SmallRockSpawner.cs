@@ -34,8 +34,9 @@ public class SmallRockSpawner : MonoBehaviour
 
         if(IsGrounded == true)
         {
-            if(Timer < 10f)
+            if(Timer < 5f)
             {
+                FF_Digger.Instance.AddTerrain(gameObject.transform,0.25f);
                 Timer += Time.deltaTime;
             }
             else

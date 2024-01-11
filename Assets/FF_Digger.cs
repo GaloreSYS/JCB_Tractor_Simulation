@@ -67,6 +67,10 @@ public class FF_Digger : MonoBehaviour
                 s.transform.localScale = new Vector3(size, size, size);
                 count++;
             }
+            else{
+                CancelInvoke(nameof(SpawnRock));
+                Spawning = false;
+            }
         }
 
     }
@@ -112,7 +116,7 @@ public class FF_Digger : MonoBehaviour
             dust.gameObject.SetActive(false);
             return;
         }
-        dust.gameObject.SetActive(true);
+         dust.gameObject.SetActive(true);
         if (editAsynchronously)
         {
             diggerMasterRuntime.ModifyAsyncBuffured(diggerObject.position, brush, action, textureIndex, opacity,
@@ -187,7 +191,7 @@ public class FF_Digger : MonoBehaviour
             
         }
     }
-
+public ParticleSystem smoke;
     public void ScoopMud(bool scoop)
     {
         if (scoop==true)
@@ -197,12 +201,18 @@ public class FF_Digger : MonoBehaviour
         }
         else
         {
+            
+            Spawnstones();
             mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, minLimit, saclingSpeed * Time.deltaTime);
         }
         
     }
+
+    public bool Spawning;
     public void Spawnstones()
     {
+        if(Spawning)return;
+        Spawning = true;
         InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
     }
 }
