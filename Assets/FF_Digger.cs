@@ -203,7 +203,11 @@ public ParticleSystem smoke;
         {
             if(mud.transform.localScale.x>0.1)
             {
-            Spawnstones();}
+            Spawnstones();
+            smoke.Play();
+            }else{
+                smoke.Stop();
+            }
             mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, minLimit, saclingSpeed * Time.deltaTime);
         }
         

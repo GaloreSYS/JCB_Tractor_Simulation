@@ -42,7 +42,7 @@ public class SpawnRocksAndPile : MonoBehaviour
             _modular3DText.UpdateText("Successfully Completed");
         }
         
-        if (p > 60 && !gameover)
+        if (p > 90 && !gameover)
         {
             gameover = true;
             
@@ -96,10 +96,10 @@ public class SpawnRocksAndPile : MonoBehaviour
         {
             Digged++;
             int n = g.Length;
-            Debug.Log(n/100f);
-             p = (n / 100f) * Digged;
+            Debug.Log(100f/n);
+             p = ( 100f/n) * Digged;
             Debug.Log(p);
-            p *= 100;
+           
                     other.gameObject.SetActive(false);
         }
     }
