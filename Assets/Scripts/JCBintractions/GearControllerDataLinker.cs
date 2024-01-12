@@ -21,6 +21,13 @@ public class GearControllerDataLinker : MonoBehaviour
 
     private void Update()
     {
+         if (Input.GetKeyDown(KeyCode.G))
+        {
+            GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
+            EngineStartAudioManger.Instance.PlayAudio2();
+        }
+        
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             ControllData.enableupJCBB = true;
