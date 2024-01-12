@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a043d8950f0d8469e88f11e2758de0, type: 3}
+  m_Name: DialogeFlow1
+  m_EditorClassIdentifier: 
+  ScriptWords: Hi This is a Dialoge testing system for CNH TLB and Tractor. So test
+    is going on like this.
