@@ -103,8 +103,7 @@ public class JCPMovementTriggers : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         GameObject go = other.gameObject;
-        if (go.name == "LegTrackerRight" || go.name == "LegTrackerLeft")
-        {
+      
             switch (mech)
             {
                 case Type.Acc:
@@ -119,7 +118,7 @@ public class JCPMovementTriggers : MonoBehaviour
                 default:
                     break;
             }
-        }
+        
         //if (TurnAxis == Vector3.forward && mech == Type.Break)
         //    Pedal.localRotation = Quaternion.AngleAxis(10, TurnAxis);
 

@@ -59,7 +59,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                         enableLeftDown = false;
                         _ArmDataJCB.EnableLeftLeg = false;
                         LeftSupportOn = false;
-                        FF_Digger.Instance.rightLegOn = false;
+                        FfDigger.Instance.rightLegOn = false;
                     }
                 }
 
@@ -76,7 +76,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                         enableLeftUp = false;
                         _ArmDataJCB.DisableLeftLeg = false;
                         LeftSupportOn = true;
-                        FF_Digger.Instance.leftLegOn = true;
+                        FfDigger.Instance.leftLegOn = true;
                     }
                 }
 
@@ -99,7 +99,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                         enablerightLegdown = false;
                         _ArmDataJCB.EnableRightLeg = false;
                         RightSupportOn = false;
-                        FF_Digger.Instance.rightLegOn = false;
+                        FfDigger.Instance.rightLegOn = false;
                     }
                 }
 
@@ -116,7 +116,7 @@ public class JCBStandsLeftAndRight : MonoBehaviour
                         enableRightlegup = false;
                         _ArmDataJCB.DisableRightLeg = false;
                         RightSupportOn = true;
-                        FF_Digger.Instance.rightLegOn = true;
+                        FfDigger.Instance.rightLegOn = true;
                     }
                 }
 

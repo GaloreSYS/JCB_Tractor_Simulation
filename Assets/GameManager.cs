@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [FormerlySerializedAs("userData")] public (string name, string empId) UserData;
+    [FormerlySerializedAs("userData")] public (string name, string empId) UserData = new ();
 
     public TMP_Text userNameText;
     public TMP_Text empIdText;

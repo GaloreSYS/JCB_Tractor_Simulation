@@ -1,123 +1,147 @@
+using System.Collections;
+using System.Collections.Generic;
 using Digger.Modules.Core.Sources;
 using Digger.Modules.Runtime.Sources;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class FF_Digger : MonoBehaviour
+public class FfDigger : MonoBehaviour
 {
-    public static FF_Digger Instance;
-    
-    [Header("Async parameters")]
-    [Tooltip("Enable to edit the terrain asynchronously and avoid impacting the frame rate too much.")]
-    public bool editAsynchronously = true;
+    public static FfDigger Instance;
 
-    [Header("Modification parameters")] public BrushType brush = BrushType.Sphere;
-    public ActionType action = ActionType.Dig;
-    [Range(0, 7)] public int textureIndex;
-    [Range(0.5f, 10f)] public float size = 4f;
-    [Range(0f, 1f)] public float opacity = 0.5f;
-    public float countdown = 2;
+    [Space(10)] [Required] [SerializeField]
     private DiggerMasterRuntime diggerMasterRuntime;
 
-    public bool canDig, resetStones;
-    public ParticleSystem dust;
 
-    [FormerlySerializedAs("cubde")] public Transform diggerObject;
+    [FormerlySerializedAs("editAsynchronously")]
+    [Tooltip("Enable to edit the terrain asynchronously and avoid impacting the frame rate too much.")]
+    [PropertySpace(SpaceAfter = 15, SpaceBefore = 15)]
+    [ToggleLeft]
+    public bool digAsynchronously = true;
+
+    [BoxGroup("Modification parameters")] public BrushType brush = BrushType.Sphere;
+    [BoxGroup("Modification parameters")] public ActionType action = ActionType.Dig;
+
+    [BoxGroup("Modification parameters")] [Range(0, 7)]
+    public int textureIndex;
+
+    [BoxGroup("Modification parameters")] [Range(0.5f, 10f)]
+    public float size = 4f;
+
+    [BoxGroup("Modification parameters")] [Range(0f, 1f)]
+    public float opacity = 0.5f;
+
+    [ReadOnly] [Space(15)] public bool canDig;
+    [ReadOnly] public bool resetStones;
+
+    [PropertySpace(SpaceBefore = 15)] public ParticleSystem dust;
+
+    [Required] public Transform diggerObject;
 
     public Rigidbody tlb;
     public GameObject stonePrefab;
     public Transform stonePos;
-    public float timmer = 0f;
-    [Header("Mud properties")]
+
     public GameObject mud;
+    [Range(-1, 1)] public float minimumMudGrowValue;
+    [Range(-1, 1)] public float maximumMudGrowValue;
+
+    public float scaleMultiplier;
+
     public Vector3 maxLimit;
     public Vector3 minLimit;
-    public float saclingSpeed;
-    public bool IsScooped=false;
-    public GameObject Bucket;
-    
+    public float scalingSpeed;
+
+    [BoxGroup("BackHoe")] public GameObject bucket;
+
+    [ReadOnly] [BoxGroup("BackHoe")] public float prevBucketPos, currentBucketPos;
+
 
     private void Awake()
     {
-        Instance = this;    
+        Instance = this;
     }
 
     private void Start()
     {
-        diggerMasterRuntime = FindObjectOfType<DiggerMasterRuntime>();
         if (!diggerMasterRuntime)
         {
             enabled = false;
-            Debug.LogWarning(
-                "DiggerRuntimeUsageExample component requires DiggerMasterRuntime component to be setup in the scene. DiggerRuntimeUsageExample will be disabled.");
         }
 
-        mud.transform.localScale = new Vector3(0, 0, 0);
-    }
-
-    public int count;
-    void SpawnRock()
-    {
-        if (resetStones == false)
+        foreach (var smoke in smokes)
         {
-            if (count <= 5)
-            {
-                var s = Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
-                float size = 5;
-                s.transform.localScale = new Vector3(size, size, size);
-                count++;
-            }
-            else{
-                CancelInvoke(nameof(SpawnRock));
-                Spawning = false;
-            }
+            smoke.Stop();
         }
-
+        
+        mud.transform.localScale = new Vector3(0, 0, 0); //Resetting Sand in Bucket
     }
 
-    public void AddTerrain(Transform digger,float s)
+    public int spawnedStoneCount;
+
+
+    public void AddTerrain(Transform digger, float s)
     {
         diggerMasterRuntime.Modify(digger.position, brush, ActionType.Add, textureIndex, opacity, s);
     }
+
+
     private void Update()
     {
+        if (smokes[0].isPlaying)
+        {
+            mudFalling = true;
+        }
+        else
+        {
+            mudFalling = false;
+        }
+        
+        currentBucketPos = bucket.GetComponent<JCBbackBucket>().ValueRL;
+
         if (leftLegOn && rightLegOn)
         {
-            turnOffRB();
+            TurnOffRb();
         }
         else
         {
             turnOnRB();
         }
-        if (Bucket.GetComponent<JCBbackBucket>().ValueRL<1.06f && Bucket.GetComponent<JCBbackBucket>().ValueRL>0f  )
-        {
-            Debug.LogError("decreasing function called");
-            ScoopMud(false);
-            IsScooped = false;
-        }
-        if (canDig == true)
-        {
-            timmer += Time.deltaTime;
 
-            if (timmer > 2f)
+        if (canDig)
+        {
+            if (currentBucketPos < minimumMudGrowValue && currentBucketPos > maximumMudGrowValue)
             {
-                canDig = false;
-                countdown = 0;
+                ScoopMud(MudAction.PickUpAndDrop);
             }
         }
         else
         {
-            timmer = 0f;
+            if (currentBucketPos < minimumMudGrowValue && currentBucketPos > maximumMudGrowValue)
+            {
+                ScoopMud(MudAction.OnlyDrop);
+            }
+        }
+
+
+        if (canDig)
+        {
+            if (currentBucketPos < -0.5f)
+            {
+                canDig = false;
+            }
         }
 
         if (!canDig)
         {
-             
             dust.gameObject.SetActive(false);
             return;
         }
-         dust.gameObject.SetActive(true);
-        if (editAsynchronously)
+
+        dust.gameObject.SetActive(true);
+
+        if (digAsynchronously)
         {
             diggerMasterRuntime.ModifyAsyncBuffured(diggerObject.position, brush, action, textureIndex, opacity,
                 size);
@@ -126,98 +150,171 @@ public class FF_Digger : MonoBehaviour
         {
             diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
         }
-
-    
+        
+        if (mudFalling && spawnRockCoroutine == null)
+        {
+            spawnRockCoroutine = StartCoroutine(SpawnStones());
+        }
+        else if (!mudFalling && spawnRockCoroutine != null)
+        {
+            StopCoroutine(spawnRockCoroutine);
+            spawnRockCoroutine = null;
+        }
+        
     }
 
+    public Coroutine spawnRockCoroutine;
     public bool leftLegOn;
     public bool rightLegOn;
-    public void turnOnRB()
+
+    private void turnOnRB()
     {
         tlb.constraints = RigidbodyConstraints.None;
     }
 
-    public void turnOffRB()
+    private void TurnOffRb()
     {
-        Debug.Log("HERE ");
         tlb.constraints = RigidbodyConstraints.FreezeAll;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name != "Digger") return;
 
-        if (other.gameObject.name == "Digger")
-        {
+        canDig = true;
+        SpawnRocksAndPile.Instance.ground = false;
 
-            canDig = true;
-            SpawnRocksAndPile.Instance.ground = false;
-          
-            resetStones = true;
-            count = 0;
-        }
+        resetStones = true;
+        spawnedStoneCount = 0;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Digger")
-        {
-            canDig = false;
-            CancelInvoke(nameof(SpawnRock));
-          
-            timmer = 0;
-            resetStones = false;
-        }
+        if (other.gameObject.name != "Digger") return;
+
+        canDig = false;
+        resetStones = false;
     }
+
+    public bool scooper;
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name == "Digger")
-        {
-            Debug.LogError("scale is increasing");
-            mud.gameObject.SetActive(true);
-            if (Bucket.GetComponent<JCBbackBucket>().ValueRL<=0.5 && Bucket.GetComponent<JCBbackBucket>().ValueRL>=-2f )
-            {
-               ScoopMud(true);
-            }
-            else
-            {
-                ScoopMud(false);
-            }
+        if (other.gameObject.name != "Digger") return;
 
-            if (mud.transform.localScale==maxLimit)
-            {
-                IsScooped = true;
-            }
-            
-        }
-    }
-public ParticleSystem smoke;
-    public void ScoopMud(bool scoop)
-    {
-        if (scoop==true)
+        mud.gameObject.SetActive(true);
+
+        if (bucket.GetComponent<JCBbackBucket>().ValueRL <= 0.5 && bucket.GetComponent<JCBbackBucket>().ValueRL >= -1f)
         {
-            mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, maxLimit, saclingSpeed * Time.deltaTime);
-            //mud.transform.localScale = maxLimit;
+            scooper = true;
+
+            prevBucketPos = 0;
         }
         else
         {
-            if(mud.transform.localScale.x>0.1)
-            {
-            Spawnstones();
-            smoke.Play();
-            }else{
-                smoke.Stop();
-            }
-            mud.transform.localScale = Vector3.MoveTowards(mud.transform.localScale, minLimit, saclingSpeed * Time.deltaTime);
+            scooper = false;
         }
-        
     }
 
-    public bool Spawning;
-    public void Spawnstones()
+    public ParticleSystem[] smokes;
+
+    private enum MudAction
     {
-        if(Spawning)return;
-        Spawning = true;
-        InvokeRepeating(nameof(SpawnRock), 1, 0.1f);
+        PickUpAndDrop,
+        OnlyDrop
+    }
+
+    private void ScoopMud(MudAction mudAction)
+    {
+        var scale = -Vector3.one * (currentBucketPos * scaleMultiplier);
+
+        if (mudAction == MudAction.OnlyDrop)
+        {
+            if (scale.x >= 0 && scale.x < mud.transform.localScale.x)
+            {
+                mud.transform.localScale = scale;
+                foreach (var smoke in smokes)
+                {
+                    smoke.Play();
+                }
+            }
+            else
+            {
+                foreach (var smoke in smokes)
+                {
+                    smoke.Stop();
+                }
+              
+            }
+        }
+        else
+        {
+            if (scale.x >= 0)
+            {
+                mud.transform.localScale = scale;
+                
+            }
+
+            if (scale.x >= 0&&scale.x < mud.transform.localScale.x)
+            {
+                foreach (var smoke in smokes)
+                {
+                    Debug.Log("Playing Smoke");
+                    smoke.Play();
+                }
+                if (scale.x > mud.transform.localScale.x)
+                {
+                    var e = dust.emission;
+                    e.rateOverTime = 0;
+                }
+            }
+            else
+            {
+                if (scale.x > mud.transform.localScale.x)
+                {
+                    var e = dust.emission;
+                    e.rateOverTime = 1000;
+                }
+                foreach (var smoke in smokes)
+                {
+                    smoke.Stop();
+                }
+            }
+        }
+    }
+
+    public bool spawning;
+
+    public bool mudFalling;
+    private IEnumerator SpawnStones()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(.25f);
+            SpawnRock();
+        }
+    }
+
+    private void SpawnRock()
+    {
+        if (resetStones == false)
+        {
+            if (spawnedStoneCount <= 1)
+            {
+                var s = Instantiate(stonePrefab, stonePos.position, stonePos.rotation);
+                const float i = 5;
+                s.transform.localScale = new Vector3(i, i, i);
+                spawnedStoneCount++;
+            }
+            else
+            {
+                CancelInvoke(nameof(SpawnRock));
+                spawning = false;
+            }
+        }
+        else
+        {
+            spawning = false;
+        }
     }
 }

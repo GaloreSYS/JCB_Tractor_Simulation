@@ -1,52 +1,47 @@
+using System;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class SmallRockSpawner : MonoBehaviour
 {
-    public float Height;
-    public bool IsGrounded;
+    
+    [FormerlySerializedAs("IsGrounded")] public bool isGrounded;
     public Ray ray;
-    public MeshRenderer renda;
-    public float Timer = 0f;
+    [FormerlySerializedAs("renda")] public MeshRenderer meshRenderer;
+    [FormerlySerializedAs("Timer")] public float timer;
     
     private void Start()
     {
-        Height = renda.bounds.size.y;
     }
 
-    void Update()
+    private void Update()
     {
+        if (isGrounded != true) return;
         
-        if (Physics.Raycast(transform.position, Vector3.down, Height))
+        if(timer < 2f)
         {
-            IsGrounded = true;
-            Debug.Log("Grounded");
+            FfDigger.Instance.AddTerrain(gameObject.transform,0.5f);
+            timer += Time.deltaTime;
         }
         else
         {
-            IsGrounded = false;
-            Debug.Log("Not Grounded!");
+            timer = 0f;
+            FfDigger.Instance.spawnedStoneCount--;
+            Destroy(gameObject);
         }
-
-
-        if(IsGrounded == true)
-        {
-            if(Timer < 5f)
-            {
-                FF_Digger.Instance.AddTerrain(gameObject.transform,0.25f);
-                Timer += Time.deltaTime;
-            }
-            else
-            {
-                Timer = 0f;
-                FF_Digger.Instance.count--;
-                Destroy(this.gameObject);
-            }
-            
-        }
+    }
+    
+    private void OnCollisionStay(Collision other)
+    {
+        Debug.Log("I have landed on here"+other.gameObject.name+other.gameObject.tag,other.gameObject);
+        
+        isGrounded = true;
+        Debug.Log("Grounded");
     }
 }
 

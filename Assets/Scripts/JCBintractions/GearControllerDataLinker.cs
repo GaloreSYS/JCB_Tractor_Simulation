@@ -21,9 +21,15 @@ public class GearControllerDataLinker : MonoBehaviour
 
     private void Update()
     {
-         if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
+            ControllData.DisableLeftLeg = true;
+            ControllData.DisableRightLeg = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+           ControllData.CheckEngine = true;
             EngineStartAudioManger.Instance.PlayAudio2();
         }
         

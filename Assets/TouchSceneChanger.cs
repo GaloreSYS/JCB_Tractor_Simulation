@@ -10,6 +10,14 @@ public class TouchSceneChanger : MonoBehaviour
     public int sceneIndex;
     public FadeEffect fadeEffect;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GoToSimulator();
+        }
+    }
+
     [Button]
     public void GoToSimulator()
     {
