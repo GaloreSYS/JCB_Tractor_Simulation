@@ -74,7 +74,7 @@ public class FfDigger : MonoBehaviour
         {
             smoke.Stop();
         }
-        
+
         mud.transform.localScale = new Vector3(0, 0, 0); //Resetting Sand in Bucket
     }
 
@@ -86,6 +86,7 @@ public class FfDigger : MonoBehaviour
         diggerMasterRuntime.Modify(digger.position, brush, ActionType.Add, textureIndex, opacity, s);
     }
 
+    public GameObject warningText;
 
     private void Update()
     {
@@ -97,16 +98,18 @@ public class FfDigger : MonoBehaviour
         {
             mudFalling = false;
         }
-        
+
         currentBucketPos = bucket.GetComponent<JCBbackBucket>().ValueRL;
 
         if (leftLegOn && rightLegOn)
         {
             TurnOffRb();
+            warningText.SetActive(false);
         }
         else
         {
             turnOnRB();
+            warningText.SetActive(true);
         }
 
         if (canDig)
@@ -124,7 +127,17 @@ public class FfDigger : MonoBehaviour
             }
         }
 
-
+        switch (mudFalling)
+        {
+            case true when spawnRockCoroutine == null:
+                spawnRockCoroutine = StartCoroutine(SpawnStones());
+                break;
+            case false when spawnRockCoroutine != null:
+                StopCoroutine(spawnRockCoroutine);
+                spawnRockCoroutine = null;
+                break;
+        }
+        
         if (canDig)
         {
             if (currentBucketPos < -0.5f)
@@ -150,17 +163,8 @@ public class FfDigger : MonoBehaviour
         {
             diggerMasterRuntime.Modify(diggerObject.position, brush, action, textureIndex, opacity, size);
         }
-        
-        if (mudFalling && spawnRockCoroutine == null)
-        {
-            spawnRockCoroutine = StartCoroutine(SpawnStones());
-        }
-        else if (!mudFalling && spawnRockCoroutine != null)
-        {
-            StopCoroutine(spawnRockCoroutine);
-            spawnRockCoroutine = null;
-        }
-        
+
+   
     }
 
     public Coroutine spawnRockCoroutine;
@@ -244,7 +248,6 @@ public class FfDigger : MonoBehaviour
                 {
                     smoke.Stop();
                 }
-              
             }
         }
         else
@@ -252,16 +255,16 @@ public class FfDigger : MonoBehaviour
             if (scale.x >= 0)
             {
                 mud.transform.localScale = scale;
-                
             }
 
-            if (scale.x >= 0&&scale.x < mud.transform.localScale.x)
+            if (scale.x >= 0 && scale.x < mud.transform.localScale.x)
             {
                 foreach (var smoke in smokes)
                 {
                     Debug.Log("Playing Smoke");
                     smoke.Play();
                 }
+
                 if (scale.x > mud.transform.localScale.x)
                 {
                     var e = dust.emission;
@@ -275,6 +278,7 @@ public class FfDigger : MonoBehaviour
                     var e = dust.emission;
                     e.rateOverTime = 1000;
                 }
+
                 foreach (var smoke in smokes)
                 {
                     smoke.Stop();
@@ -286,6 +290,7 @@ public class FfDigger : MonoBehaviour
     public bool spawning;
 
     public bool mudFalling;
+
     private IEnumerator SpawnStones()
     {
         while (true)

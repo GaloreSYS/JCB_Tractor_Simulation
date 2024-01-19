@@ -14,10 +14,6 @@ public class SmallRockSpawner : MonoBehaviour
     public Ray ray;
     [FormerlySerializedAs("renda")] public MeshRenderer meshRenderer;
     [FormerlySerializedAs("Timer")] public float timer;
-    
-    private void Start()
-    {
-    }
 
     private void Update()
     {
@@ -39,9 +35,11 @@ public class SmallRockSpawner : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         Debug.Log("I have landed on here"+other.gameObject.name+other.gameObject.tag,other.gameObject);
-        
-        isGrounded = true;
-        Debug.Log("Grounded");
+        if(other.gameObject.name=="Terrain")
+        {
+            isGrounded = true;
+            Debug.Log("Grounded");
+        }
     }
 }
 

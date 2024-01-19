@@ -1,6 +1,7 @@
 using TinyGiantStudio.Text;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class SpawnRocksAndPile : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class SpawnRocksAndPile : MonoBehaviour
     public GameObject[] g;
     public Modular3DText _modular3DText;
 
+    public AudioClip gameOverAudio;
+    public AudioSource gameOverSource;
+    
     private void Awake()
     {
         Instance = this;
@@ -40,23 +44,23 @@ public class SpawnRocksAndPile : MonoBehaviour
             _modular3DText.UpdateText("Successfully Completed");
         }
 
-        if (p > 90 && !gameover)
+        if (p > 60 && !gameover)
         {
             gameover = true;
 
             fadeEffect.fadeDuration = 10;
+            gameOverSource.PlayOneShot(gameOverAudio);
             fadeEffect.FadeOut();
+            Invoke(nameof(GoToMainMenu),8f);
         }
 
         BucketPassedValue = Armdata.ValueRLJCBB;
-        if (Collision )
-        {
-        }
-        else
-        {
-        }
     }
 
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public AudioClip hitGround;
     public int digged;
 

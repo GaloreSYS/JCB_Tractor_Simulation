@@ -6,33 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ADG_Textures/Demo/DemoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ADG_Textures/Demo/DemoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ADG_Textures/Demo/DemoScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ADG_Textures/Demo/DemoScene.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/3DModels/Tractor/TractorMaterials/Tractor_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/3DModels/Tractor/TractorMaterials/Tractor_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/Audio/LMNT_Daniel_Welcome-to-TLB-Digging-Simulat.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/Audio/LMNT_Daniel_Welcome-to-TLB-Digging-Simulat.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/Audio/LMNT_Priya_Welcome-to-TLB-Digging-Simulat.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/Audio/LMNT_Priya_Welcome-to-TLB-Digging-Simulat.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/Data/New Animation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/Data/New Animation.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/4040/Data/New Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/Data/New Animator Controller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FF_Digger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FF_Digger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TLB_Vehicle_main.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TLB_Vehicle_main.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/3806d2512bada664ab3e3fc1d26581b4.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/3806d2512bada664ab3e3fc1d26581b4.userdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/Small rock.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Samples/Stones/SmallRockSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Stones/SmallRockSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Welcome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Welcome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tractor_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tractor_Simulator_Updated.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBStandsLeftAndRight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBanimationsMov/JCBStandsLeftAndRight.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/GearControllerDataLinker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/GearControllerDataLinker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/ConnectionSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/ConnectionSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/DiggerData/1dca89747da628d4ea7563702d33a6c9.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TouchSceneChanger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/XRGeneralSettingsPerBuildTarget.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tlbbackup/JCPMovementTriggers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +127,7 @@
       <workItem from="1704987628189" duration="4095000" />
       <workItem from="1705052005822" duration="2221000" />
       <workItem from="1705301235009" duration="15427000" />
+      <workItem from="1705382514512" duration="7705000" />
     </task>
     <servers />
   </component>

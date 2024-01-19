@@ -282,7 +282,7 @@ public class GearControllerDataLinker : MonoBehaviour
         {
             case GearControllerStateExtension.GearState.Neutral:
 
-                ControllData.EnableLeftLeg = false;
+                ControllData.EnableLeftLeg = true;
                 ControllData.DisableLeftLeg = false;
                 break;
 
@@ -307,17 +307,17 @@ public class GearControllerDataLinker : MonoBehaviour
             case GearControllerStateExtension.GearState.Neutral:
 
                 ControllData.EnableRightLeg = false;
-                ControllData.DisableLeftLeg = false;
+                ControllData.DisableRightLeg = false;
                 break;
 
             case GearControllerStateExtension.GearState.OnEnable:
                 ControllData.EnableRightLeg = true;
-                ControllData.DisableLeftLeg = false;
+                ControllData.DisableRightLeg = false;
                 break;
 
             case GearControllerStateExtension.GearState.OnDisable:
                 ControllData.EnableRightLeg = false;
-                ControllData.DisableLeftLeg = true;
+                ControllData.DisableRightLeg = true;
                 break;
         }
     }

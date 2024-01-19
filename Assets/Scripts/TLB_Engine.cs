@@ -338,14 +338,14 @@ public class TLB_Engine : MonoBehaviour
 
     private void ReflectIgnition(TurnableObject obj)
     {
-        if (obj.value > 10 && obj.value < 35)
+        if (obj.value is > 10 and < 35 && !isIgnition)
         {
              IgnitionIndicator.color = off;
             GearControllerDataLinker.Instance.ControllData.CheckEngine = false;
             EngineStartAudioManger.Instance.PlayAudio1();
             isIgnition = false;
         }
-        else if (obj.value < 7)
+        else if (obj.value < 7 && !isIgnition)
         {
               IgnitionIndicator.color = standBy;
             EngineStartAudioManger.Instance.StopAudio();
@@ -357,10 +357,12 @@ public class TLB_Engine : MonoBehaviour
             GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
             EngineStartAudioManger.Instance.PlayAudio2();
             isIgnition = true;
+           instructionSource.PlayOneShot(engineStarted);
         }
     }
 
-
+    public AudioClip engineStarted;
+    public AudioSource instructionSource;
     private void ResetIgnitionKeyPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
         //if (turnObj.value <= 45 && turnObj.value >= 30)
