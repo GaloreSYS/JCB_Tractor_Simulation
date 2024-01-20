@@ -227,10 +227,10 @@ public class carmanager : MonoBehaviour
         //    }
 
         
-        if (steerwheel.gameObject.transform.localEulerAngles.z >= 0)
+        if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
         {
             steeringAxis = 0.5f;
-            maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.z;
+            maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
             if (maxSteeringAngle > 45)
             {
                 maxSteeringAngle = 45;
@@ -238,17 +238,17 @@ public class carmanager : MonoBehaviour
             TurnRight();
       //      Debug.Log("Right"+ steerwheel.gameObject.transform.localRotation.z);
         }
-        a = steerwheel.gameObject.transform.localEulerAngles.z - 360;
+        a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
     //    Debug.Log(a + "aaaaa");
         if (a < 0 && a >= -13)
         {
-            Debug.Log("pokemin");
+    //        Debug.Log("pokemin"+a+maxSteeringAngle);
             maxSteeringAngle = -13;
             TurnLeft();
         }
         if (a<-13&&a>-180)
         {
-            Debug.Log("pokemon");
+   //         Debug.Log("pokemon"+a+maxSteeringAngle);
             steeringAxis = 0.5f;
             maxSteeringAngle = a;
             if (a < -65)
@@ -262,7 +262,7 @@ public class carmanager : MonoBehaviour
             //        Debug.Log("max=" + maxSteeringAngle);
             TurnLeft();
         }
-            if (steerwheel.transform.rotation.z == 0)
+            if (steerwheel.transform.rotation.y == 0)
         {
     //        Debug.Log("zero");
         }
