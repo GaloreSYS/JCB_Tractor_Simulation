@@ -11,6 +11,8 @@ TagManager:
   - Position
   - ManusHand
   - DigItem
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX
