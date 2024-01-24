@@ -103,6 +103,8 @@ public class JCPMovementTriggers : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         GameObject go = other.gameObject;
+        
+      if(!TLB_Engine.isIgnition) return;
       
             switch (mech)
             {
