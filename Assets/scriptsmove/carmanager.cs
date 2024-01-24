@@ -5,9 +5,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class carmanager : MonoBehaviour
 {
-    public GameObject senseglove;
-
-
+ //   public GameObject senseglove;
+    public ArmDataJCB gearspeednumber;
+    public ArmDataJCB objgear;
+    public float speedincrease = 1;
+ //   public movementmanager checker;
 
     [Space(20)]
    
@@ -130,14 +132,18 @@ public class carmanager : MonoBehaviour
 
 
 
-        senseglove.SetActive(true);
+//        senseglove.SetActive(true);
 
 
     }
 
     void Update()
     {
-   //     Debug.Log(gearlevercontrol.gameObject.transform.localEulerAngles.x+"okok");
+        //gearspeednumber.gearnumber = objgear.gearValue;
+        //   GoReverse();
+        //   GoForward();
+
+        //     Debug.Log(gearlevercontrol.gameObject.transform.localEulerAngles.x+"okok");
 
         carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
         localVelocityX = transform.InverseTransformDirection(carRigidbody.velocity).x;
@@ -149,62 +155,113 @@ public class carmanager : MonoBehaviour
                         deceleratingCar = false;
                         GoReverse();
                     }
-        if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >300)&&((gearlevercontrol.gameObject.transform.localEulerAngles.y < 360)))
-        {
-          
-            throttleAxis = -0.5f;
-            maxSpeed = 50;
 
-            GoReverse();
 
-        }
-        if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
+
+        if (gearspeednumber.gearValue == 1)
         {
-            //                  Debug.Log("8");
-            //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
-            CancelInvoke("DecelerateCar");
-            throttleAxis = 0f;
-            maxSpeed = 0;
-   //         accelerationMultiplier = 0;
-            deceleratingCar = false;
-            //       GoForward();
-            //        front = true;
-        }
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 0) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 10))
+
+            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 300) && ((gearlevercontrol.gameObject.transform.localEulerAngles.y < 360)))
             {
-            Debug.Log("1");
-            throttleAxis = 0.2f;
+
+                throttleAxis = 1f;
                 maxSpeed = 50;
 
-            GoForward();
+               GoReverse();
 
-        }
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 11) && (gearlevercontrol.gameObject.transform.localEulerAngles.y<= 20))
-            {
-            Debug.Log("2");
-                throttleAxis = 0.4f;
-                maxSpeed = 100;
+           //     GoForward();
 
-            GoForward();
-        }
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 21) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 30))
-            {
-            Debug.Log("3");
-                throttleAxis = 0.6f;
-                maxSpeed = 180;
-
-
-            GoForward();
-
-        }
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 31) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 40))
-            {
-            Debug.Log("4");
-                throttleAxis = 0.8f;
-                maxSpeed = 250;
-
-            GoForward();
             }
+        }
+
+
+
+     
+
+            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
+            {
+                //                  Debug.Log("8");
+                //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
+                CancelInvoke("DecelerateCar");
+                throttleAxis = 0f;
+                maxSpeed = 0;
+                //         accelerationMultiplier = 0;
+                deceleratingCar = false;
+                //       GoForward();
+                //        front = true;
+            }
+
+        if (gearspeednumber.stampaccelerator == true)
+        {
+    //        Debug.Log(gearspeednumber.stampaccelerator+"dbz");
+            if (gearspeednumber.frontandbackdecider == 2)
+            {
+     //           Debug.Log(gearspeednumber.frontandbackdecider + "dbzz");
+                if (gearspeednumber.gearValue == 1)
+                {
+        //            Debug.Log(gearspeednumber.gearnumber + "dbzzzzz");
+                    //          if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 0) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 10))
+                    {
+                        Debug.Log("1");
+                        throttleAxis = -0.2f;
+                        maxSpeed = 50;
+
+                        GoForward();
+
+                        //     GoReverse();
+                    }
+                }
+
+
+                if (gearspeednumber.gearValue == 2)
+                {
+                    //         if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 11) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 20))
+                    {
+                        Debug.Log("2");
+                        throttleAxis = -0.4f;
+                        maxSpeed = 100;
+
+                        GoForward();
+
+                        //     GoReverse();
+                    }
+                }
+
+                if (gearspeednumber.gearValue == 3)
+                {
+                    //       if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 21) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 30))
+                    {
+                        Debug.Log("3");
+                        throttleAxis = -0.6f;
+                        maxSpeed = 180;
+
+
+                        GoForward();
+
+                        //    GoReverse();
+                    }
+                }
+
+
+                if (gearspeednumber.gearValue == 4)
+                {
+
+                    //       if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 31) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 40))
+                    {
+                        Debug.Log("4");
+                        throttleAxis = -0.8f;
+                        maxSpeed = 250;
+
+                        GoForward();
+
+                        //      GoReverse();
+
+                    }
+
+                }
+            }
+
+        }       /*
             if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 41) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 50))
             {
             Debug.Log("5");
@@ -220,12 +277,12 @@ public class carmanager : MonoBehaviour
                 maxSpeed = 500;
 
             GoForward();
-            }
+            }*/
           //  if ((gearlevercontrol.gameObject.transform.localEulerAngles.x >= 50))
             
             //    gearlevercontrol.gameObject.transform.localEulerAngles.x = 50;
         //    }
-
+        
         
         if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
         {
@@ -346,13 +403,28 @@ public class carmanager : MonoBehaviour
             {
               
    //             Debug.Log("5");
-                frontLeftCollider.motorTorque -= 120;
+               frontLeftCollider.motorTorque -= 120;
                 frontRightCollider.motorTorque -= 120;
                 rearLeftCollider.motorTorque -= 120;
                 rearRightCollider.motorTorque -= 120;
             }
         }
     }
+
+
+    private void OnCollisionStay(Collision collision)
+    {
+
+        if (collision.gameObject.tag == "Left")
+        {
+
+            speedincrease += speedincrease * Time.deltaTime;
+            Debug.Log(speedincrease + "s");
+        }
+    }
+
+
+
 
 
     public void GoReverse()

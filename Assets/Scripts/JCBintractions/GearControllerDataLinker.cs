@@ -21,6 +21,8 @@ public class GearControllerDataLinker : MonoBehaviour
 
     private void Update()
     {
+       
+
         if (Input.GetKeyDown(KeyCode.M))
         {
             ControllData.DisableLeftLeg = true;
@@ -326,5 +328,6 @@ public class GearControllerDataLinker : MonoBehaviour
     public void GEAR(int value)
     {
         ControllData.gearValue = value;
+
     }
 }

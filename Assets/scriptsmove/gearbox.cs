@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class gearbox : MonoBehaviour
 {
+
+    public ArmDataJCB gearspeedfrontback;
+    public UnityEvent front = new();
+    public UnityEvent back = new();
     public Vector3 temp;
     public GameObject objj;
     public Transform a;
@@ -21,15 +26,26 @@ public class gearbox : MonoBehaviour
         obj2 = Mathf.Clamp(obj2, 0, 0);
         obj3 = Mathf.Clamp(obj3, 20, 60);
         b.x = obj3;
-        
+        frontbackselectorr();
+
+/*
+
         if (this.gameObject.transform.localEulerAngles.y > 0 && this.gameObject.transform.localEulerAngles.y <= 10)
         {
+
+            gearspeedfrontback.frontandbackdecider = 1;
+
             Debug.Log(this.gameObject.transform.localEulerAngles.x);
             Debug.Log("o10");
             //       this.gameObject.transform.localRotation=   Quaternion.Euler(new Vector3(60, 90, 0));
             this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0,10, 0));
         }
-        if (this.gameObject.transform.localEulerAngles.y >= 11 && this.gameObject.transform.localEulerAngles.y <= 20)
+
+
+
+
+
+  /*      if (this.gameObject.transform.localEulerAngles.y >= 11 && this.gameObject.transform.localEulerAngles.y <= 20)
         {
             Debug.Log(this.gameObject.transform.localEulerAngles.x);
             Debug.Log("o20");
@@ -71,13 +87,49 @@ public class gearbox : MonoBehaviour
             //       this.gameObject.transform.localRotation=   Quaternion.Euler(new Vector3(60, 90, 0));
             this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0,50, 0));
         }
+
+        */
+
+
+
+        /*
+
         if ((this.gameObject.transform.localEulerAngles.y <= 330) &&(this.gameObject.transform.localEulerAngles.y >= 300))
         {
+
+            gearspeedfrontback.frontandbackdecider = 2;
             Debug.Log(this.gameObject.transform.localEulerAngles.x);
             Debug.Log("o70");
             //   this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(-40, 90, 0));
             this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3( 0,-40, 0));
         }
-     
+     */
+    }
+
+
+    public void frontbackselectorr()
+    {
+
+        if (this.gameObject.transform.localEulerAngles.y > 0 && this.gameObject.transform.localEulerAngles.y <= 40)
+        {
+
+            gearspeedfrontback.frontandbackdecider = 2;
+
+            Debug.Log(this.gameObject.transform.localEulerAngles.x);
+            Debug.Log("o10");
+            //       this.gameObject.transform.localRotation=   Quaternion.Euler(new Vector3(60, 90, 0));
+            this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, 10, 0));
+        }
+      
+
+        if ((this.gameObject.transform.localEulerAngles.y <= 350) && (this.gameObject.transform.localEulerAngles.y >= 300))
+        {
+
+            gearspeedfrontback.frontandbackdecider = 1;
+            Debug.Log(this.gameObject.transform.localEulerAngles.x);
+            Debug.Log("o70");
+            //   this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(-40, 90, 0));
+            this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, -40, 0));
+        }
     }
 }

@@ -76,4 +76,8 @@ public class ArmDataJCB : ScriptableObject
     public float Forklift;
     [Range(0.01f, 5f)]
     public float TractorPlow;
+
+    public bool stampaccelerator;
+    public int frontandbackdecider;
+
 }
