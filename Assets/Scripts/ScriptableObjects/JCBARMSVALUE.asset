@@ -33,10 +33,10 @@ MonoBehaviour:
   enabledownJCBB: 0
   ValueRLJCBRLB: 0
   EnableLeftLeg: 0
-  DisableLeftLeg: 0
+  DisableLeftLeg: 1
   valueRL: 0
   EnableRightLeg: 0
-  DisableRightLeg: 0
+  DisableRightLeg: 1
   gearValue: 0
   valueFork: 0
   ForkLiftUp: 0
@@ -54,3 +54,5 @@ MonoBehaviour:
   RightLeg: 0.5
   Forklift: 0.2
   TractorPlow: 0.2
+  stampaccelerator: 0
+  frontandbackdecider: 2

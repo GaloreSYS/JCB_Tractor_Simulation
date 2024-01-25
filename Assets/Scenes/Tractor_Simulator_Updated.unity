@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.6148073, g: 0.632566, b: 0.6875725, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16777207
 --- !u!114 &1036800659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23239,6 +23239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LawnURP
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742325479565902677, guid: 97fb3326855dae84cba054fad5cc9d8f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
