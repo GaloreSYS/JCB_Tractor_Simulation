@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
   CheckEngine: 0
-  valuearms: 0.2177779
+  valuearms: 0
   enabledown: 0
   enableup: 0
   valuebucket: 0
   enableBUdown: 0
   enableBUup: 0
   valueRLback: 0
-  enableRLBdown: 0
+  enableRLBdown: 1
   enableRLBup: 0
   ValuerightandleftRL: 0
   enableRLdown: 0
@@ -28,20 +28,20 @@ MonoBehaviour:
   ValueRLJCUD: 0
   enabledownJCB: 0
   enableupJCB: 0
-  ValueRLJCBB: 1.00444
+  ValueRLJCBB: -1.0044445
   enableupJCBB: 0
-  enabledownJCBB: 0
+  enabledownJCBB: 1
   ValueRLJCBRLB: 0
   EnableLeftLeg: 0
-  DisableLeftLeg: 1
+  DisableLeftLeg: 0
   valueRL: 0
   EnableRightLeg: 0
-  DisableRightLeg: 1
+  DisableRightLeg: 0
   gearValue: 0
   valueFork: 0
   ForkLiftUp: 0
   ForkLiftDown: 0
-  valueTractor: 1.001349
+  valueTractor: 0.16806646
   TractorPlowUP: 0
   TractorPlowDown: 0
   FrontArm: 0.4
