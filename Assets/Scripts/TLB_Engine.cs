@@ -357,12 +357,11 @@ public class TLB_Engine : MonoBehaviour
             GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
             EngineStartAudioManger.Instance.PlayAudio2();
             isIgnition = true;
-           instructionSource.PlayOneShot(engineStarted);
+           InstructionManager.Instance.NextInstruction();
         }
     }
 
-    public AudioClip engineStarted;
-    public AudioSource instructionSource;
+  
     private void ResetIgnitionKeyPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
         //if (turnObj.value <= 45 && turnObj.value >= 30)
