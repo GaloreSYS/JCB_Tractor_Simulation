@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/StopWatch.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StopWatch.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 160 x 160.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Grid 160 x 160.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Scene Environment.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Scene Environment.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiny Giant Studio/Modular 3D Text/Materials/MText_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Materials/Sphere_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Materials/Sphere_Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Materials/TeleTarget.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Materials/TeleTarget.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Scripts/Interaction/GrabbableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Manus/unity-plugin/Scripts/Interaction/GrabbableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,27 +41,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Production",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Production&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../TLB Build\URP_Simulation.exe" />
@@ -123,6 +126,8 @@
       <workItem from="1705301235009" duration="15427000" />
       <workItem from="1705382514512" duration="7705000" />
       <workItem from="1706155995896" duration="5029000" />
+      <workItem from="1706380885284" duration="844000" />
+      <workItem from="1706412474217" duration="1912000" />
     </task>
     <servers />
   </component>

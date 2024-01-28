@@ -18,7 +18,7 @@ MonoBehaviour:
   enableup: 0
   valuebucket: 0
   enableBUdown: 0
-  enableBUup: 0
+  enableBUup: 1
   valueRLback: 0
   enableRLBdown: 0
   enableRLBup: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   valueRL: 0
   EnableRightLeg: 0
   DisableRightLeg: 0
-  gearValue: 0
+  gearValue: 3
   valueFork: 0
   ForkLiftUp: 0
   ForkLiftDown: 0

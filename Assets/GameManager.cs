@@ -1,18 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+
+public enum ModuleStatus
+{
+    Completed,
+    Failed
+}
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [FormerlySerializedAs("userData")] public (string name, string empId) UserData = new ();
+    public (string name, string empId) UserData = new ();
 
     public TMP_Text userNameText;
     public TMP_Text empIdText;
 
+    public string timeTake;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -42,5 +47,24 @@ public class GameManager : MonoBehaviour
     {
         UserData.empId = value;
         empIdText.text = "emp id: " + value;
+    }
+
+    public StopWatch stopWatch = new StopWatch();
+
+    public void StartStopWatch()
+    {
+        stopWatch.Start();
+    }
+    
+    public void StopStopWatch()
+    {
+        stopWatch.Stop();
+    }
+    private void Update()
+    {
+        if (stopWatch.ElapsedSeconds > 0)
+        {
+            timeTake = stopWatch.ElapsedTimeFormatted;
+        }
     }
 }

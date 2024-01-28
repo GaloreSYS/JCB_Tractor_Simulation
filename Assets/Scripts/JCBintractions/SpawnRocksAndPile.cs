@@ -31,6 +31,7 @@ public class SpawnRocksAndPile : MonoBehaviour
     public void Start()
     {
         Collision = false;
+        GameManager.Instance.StartStopWatch();
     }
 
     private bool gameover;
@@ -38,16 +39,18 @@ public class SpawnRocksAndPile : MonoBehaviour
     public void Update()
     {
         if (!gameover)
+        {
             _modular3DText.UpdateText(p.ToString("F0") + " % ");
+        }
         else
         {
-            _modular3DText.UpdateText("Successfully Completed");
+            _modular3DText.UpdateText("Completed");
         }
 
         if (p > 60 && !gameover)
         {
             gameover = true;
-
+            GameManager.Instance.StopStopWatch();
             fadeEffect.fadeDuration = 10;
             gameOverSource.PlayOneShot(gameOverAudio);
             fadeEffect.FadeOut();
@@ -59,7 +62,7 @@ public class SpawnRocksAndPile : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
     public AudioClip hitGround;
     public int digged;
