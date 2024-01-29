@@ -80470,7 +80470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1962446504
 Transform:
   m_ObjectHideFlags: 0
@@ -90263,12 +90263,12 @@ PrefabInstance:
     - target: {fileID: 405257877271184255, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.04
+      value: 1.911
       objectReference: {fileID: 0}
     - target: {fileID: 405257877271184255, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0.212
       objectReference: {fileID: 0}
     - target: {fileID: 405257877271184255, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -90463,7 +90463,7 @@ PrefabInstance:
     - target: {fileID: 3037823046756577423, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3291569572675053719, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -90503,7 +90503,7 @@ PrefabInstance:
     - target: {fileID: 3899065669174493630, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3899065669174493630, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -90533,17 +90533,17 @@ PrefabInstance:
     - target: {fileID: 4225350221117914669, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Radius
-      value: 4.6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4225350221117914669, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4225350221117914669, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225350221117914669, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -90983,7 +90983,7 @@ PrefabInstance:
     - target: {fileID: 6475449251188491512, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6614666238841472826, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -91063,17 +91063,17 @@ PrefabInstance:
     - target: {fileID: 7455196511885844000, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Radius
-      value: 4.6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7455196511885844000, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.33
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7455196511885844000, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7455196511885844000, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
@@ -91230,6 +91230,21 @@ PrefabInstance:
       propertyPath: whenGearIsOnNeutral.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 196709878}
+    - target: {fileID: 8713114269073767107, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7431448
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713114269073767107, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6691307
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713114269073767107, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -84
+      objectReference: {fileID: 0}
     - target: {fileID: 8768849728791637113, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Height
