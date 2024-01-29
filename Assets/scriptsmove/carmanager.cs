@@ -91,6 +91,9 @@ public class carmanager : MonoBehaviour
 
     void Start()
     {
+        gearspeednumber.gearValue = 0;
+        gearspeednumber.stampaccelerator = false;
+        gearspeednumber.frontandbackdecider = 0;
         accelerationMultiplier = 9;
 
 
@@ -166,7 +169,7 @@ public class carmanager : MonoBehaviour
             if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 300) && ((gearlevercontrol.gameObject.transform.localEulerAngles.y < 360)))
             {
 
-                throttleAxis = 1f;
+                throttleAxis = 1.5f;
                 maxSpeed = 50;
                 accelerationMultiplier = 3;
                 GoReverse();
@@ -206,19 +209,20 @@ public class carmanager : MonoBehaviour
 
 
 
+            if (gearspeednumber.stampaccelerator == false)
+            {
+
+
+                Brakes();
+
+            }
 
 
 
 
 
 
-
-
-
-
-
-
-        if (gearspeednumber.stampaccelerator == true)
+                if (gearspeednumber.stampaccelerator == true)
         {
             //        Debug.Log(gearspeednumber.stampaccelerator+"dbz");
             if (gearspeednumber.frontandbackdecider == 2)
@@ -230,7 +234,7 @@ public class carmanager : MonoBehaviour
                     //          if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 0) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 10))
                     {
                         Debug.Log("1");
-                        throttleAxis = -0.2f;
+                        throttleAxis = -0.4f;
                         maxSpeed = 50;
                         accelerationMultiplier = 4;
                         GoForward();
@@ -245,7 +249,7 @@ public class carmanager : MonoBehaviour
                     //         if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 11) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 20))
                     {
                         Debug.Log("2");
-                        throttleAxis = -0.4f;
+                        throttleAxis = -0.6f;
                         maxSpeed = 100;
                         accelerationMultiplier = 6;
                         GoForward();
@@ -259,7 +263,7 @@ public class carmanager : MonoBehaviour
                     //       if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 21) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 30))
                     {
                         Debug.Log("3");
-                        throttleAxis = -0.6f;
+                        throttleAxis = -1.6f;
                         maxSpeed = 180;
                         accelerationMultiplier = 7;
 
@@ -276,7 +280,7 @@ public class carmanager : MonoBehaviour
                     //       if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 31) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 40))
                     {
                         Debug.Log("4");
-                        throttleAxis = -0.8f;
+                        throttleAxis = -2.8f;
                         maxSpeed = 250;
                         accelerationMultiplier = 9;
                         GoForward();
