@@ -139,6 +139,8 @@ public class carmanager : MonoBehaviour
 
     void Update()
     {
+        if(gearspeednumber.CheckEngine == true)
+        { 
         //gearspeednumber.gearnumber = objgear.gearValue;
         //   GoReverse();
         //   GoForward();
@@ -148,13 +150,13 @@ public class carmanager : MonoBehaviour
         carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
         localVelocityX = transform.InverseTransformDirection(carRigidbody.velocity).x;
         localVelocityZ = transform.InverseTransformDirection(carRigidbody.velocity).z;
-   
+
         if (Input.GetKey(KeyCode.S))
-                    {
-                        CancelInvoke("DecelerateCar");
-                        deceleratingCar = false;
-                        GoReverse();
-                    }
+        {
+            CancelInvoke("DecelerateCar");
+            deceleratingCar = false;
+            GoReverse();
+        }
 
 
 
@@ -166,46 +168,71 @@ public class carmanager : MonoBehaviour
 
                 throttleAxis = 1f;
                 maxSpeed = 50;
+                accelerationMultiplier = 3;
+                GoReverse();
 
-               GoReverse();
-
-           //     GoForward();
+                //     GoForward();
 
             }
         }
 
 
 
-     
 
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
-            {
-                //                  Debug.Log("8");
-                //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
-                CancelInvoke("DecelerateCar");
-                throttleAxis = 0f;
-                maxSpeed = 0;
-                //         accelerationMultiplier = 0;
-                deceleratingCar = false;
-                //       GoForward();
-                //        front = true;
-            }
+
+        if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
+        {
+            //                  Debug.Log("8");
+            //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
+            CancelInvoke("DecelerateCar");
+            throttleAxis = 0f;
+            maxSpeed = 0;
+            //         accelerationMultiplier = 0;
+            deceleratingCar = false;
+            //       GoForward();
+            //        front = true;
+        }
+
+
+
+        if (gearspeednumber.brakess == true)
+        {
+            //        gearspeednumber.gearValue = 0;
+            gearspeednumber.stampaccelerator = false;
+            Brakes();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         if (gearspeednumber.stampaccelerator == true)
         {
-    //        Debug.Log(gearspeednumber.stampaccelerator+"dbz");
+            //        Debug.Log(gearspeednumber.stampaccelerator+"dbz");
             if (gearspeednumber.frontandbackdecider == 2)
             {
-     //           Debug.Log(gearspeednumber.frontandbackdecider + "dbzz");
+                //           Debug.Log(gearspeednumber.frontandbackdecider + "dbzz");
                 if (gearspeednumber.gearValue == 1)
                 {
-        //            Debug.Log(gearspeednumber.gearnumber + "dbzzzzz");
+                    //            Debug.Log(gearspeednumber.gearnumber + "dbzzzzz");
                     //          if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 0) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 10))
                     {
                         Debug.Log("1");
                         throttleAxis = -0.2f;
                         maxSpeed = 50;
-
+                        accelerationMultiplier = 4;
                         GoForward();
 
                         //     GoReverse();
@@ -220,7 +247,7 @@ public class carmanager : MonoBehaviour
                         Debug.Log("2");
                         throttleAxis = -0.4f;
                         maxSpeed = 100;
-
+                        accelerationMultiplier = 6;
                         GoForward();
 
                         //     GoReverse();
@@ -234,7 +261,7 @@ public class carmanager : MonoBehaviour
                         Debug.Log("3");
                         throttleAxis = -0.6f;
                         maxSpeed = 180;
-
+                        accelerationMultiplier = 7;
 
                         GoForward();
 
@@ -251,7 +278,7 @@ public class carmanager : MonoBehaviour
                         Debug.Log("4");
                         throttleAxis = -0.8f;
                         maxSpeed = 250;
-
+                        accelerationMultiplier = 9;
                         GoForward();
 
                         //      GoReverse();
@@ -278,12 +305,12 @@ public class carmanager : MonoBehaviour
 
             GoForward();
             }*/
-          //  if ((gearlevercontrol.gameObject.transform.localEulerAngles.x >= 50))
-            
-            //    gearlevercontrol.gameObject.transform.localEulerAngles.x = 50;
+        //  if ((gearlevercontrol.gameObject.transform.localEulerAngles.x >= 50))
+
+        //    gearlevercontrol.gameObject.transform.localEulerAngles.x = 50;
         //    }
-        
-        
+
+
         if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
         {
             steeringAxis = 0.5f;
@@ -293,19 +320,19 @@ public class carmanager : MonoBehaviour
                 maxSteeringAngle = 45;
             }
             TurnRight();
-      //      Debug.Log("Right"+ steerwheel.gameObject.transform.localRotation.z);
+            //      Debug.Log("Right"+ steerwheel.gameObject.transform.localRotation.z);
         }
         a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
-    //    Debug.Log(a + "aaaaa");
+        //    Debug.Log(a + "aaaaa");
         if (a < 0 && a >= -13)
         {
-    //        Debug.Log("pokemin"+a+maxSteeringAngle);
+            //        Debug.Log("pokemin"+a+maxSteeringAngle);
             maxSteeringAngle = -13;
             TurnLeft();
         }
-        if (a<-13&&a>-180)
+        if (a < -13 && a > -180)
         {
-   //         Debug.Log("pokemon"+a+maxSteeringAngle);
+            //         Debug.Log("pokemon"+a+maxSteeringAngle);
             steeringAxis = 0.5f;
             maxSteeringAngle = a;
             if (a < -65)
@@ -319,20 +346,20 @@ public class carmanager : MonoBehaviour
             //        Debug.Log("max=" + maxSteeringAngle);
             TurnLeft();
         }
-            if (steerwheel.transform.rotation.y == 0)
+        if (steerwheel.transform.rotation.y == 0)
         {
-    //        Debug.Log("zero");
+            //        Debug.Log("zero");
         }
 
-            /*   if (Input.GetKey(KeyCode.A))
-                {
-                    TurnLeft();
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    TurnRight();
-                }*/
-            if (Input.GetKey(KeyCode.Space))
+        /*   if (Input.GetKey(KeyCode.A))
+            {
+                TurnLeft();
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                TurnRight();
+            }*/
+        if (Input.GetKey(KeyCode.Space))
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
@@ -340,12 +367,12 @@ public class carmanager : MonoBehaviour
         }
         if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
         {
- // Test          ThrottleOff();
+            // Test          ThrottleOff();
         }
         if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
         {
- //  Test         InvokeRepeating("DecelerateCar", 0f, 0.1f);
- //   Test        deceleratingCar = true;
+            //  Test         InvokeRepeating("DecelerateCar", 0f, 0.1f);
+            //   Test        deceleratingCar = true;
         }
         if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f)
         {
@@ -353,6 +380,7 @@ public class carmanager : MonoBehaviour
         }
         //put end if block
         AnimateWheelMeshes();
+    }
     }
     public void GoForward()
     {
@@ -481,6 +509,29 @@ public class carmanager : MonoBehaviour
 
     public void Brakes()
     {
+
+  //      accelerationMultiplier = 0;
+
+        frontLeftCollider.motorTorque = 0;
+        frontRightCollider.motorTorque = 0;
+        rearLeftCollider.motorTorque = 0;
+        rearRightCollider.motorTorque = 0;
+        accelerationMultiplier = 0;
+        throttleAxis = 0;
+
+        frontLeftCollider.brakeTorque = 0;
+        frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+        frontRightCollider.brakeTorque = 0;
+        frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+        rearLeftCollider.brakeTorque = 0;
+        rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+        rearRightCollider.brakeTorque = 0;
+        rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+
+
+
+
+
         frontLeftCollider.brakeTorque = brakeForce;
         frontRightCollider.brakeTorque = brakeForce;
         rearLeftCollider.brakeTorque = brakeForce;
@@ -628,14 +679,14 @@ public class carmanager : MonoBehaviour
         if (Mathf.Abs(localVelocityX) > 2.5f)
         {
             isDrifting = true;
-   
+
         }
         else
         {
             isDrifting = false;
-    
+
         }
-     
+
         if (throttleAxis != 0f)
         {
             if (throttleAxis > 0f)
@@ -652,17 +703,18 @@ public class carmanager : MonoBehaviour
             }
         }
         carRigidbody.velocity = carRigidbody.velocity * (1f / (1f + (0.025f * decelerationMultiplier)));
-   
+
         frontLeftCollider.motorTorque = 0;
         frontRightCollider.motorTorque = 0;
         rearLeftCollider.motorTorque = 0;
         rearRightCollider.motorTorque = 0;
-    
+
         if (carRigidbody.velocity.magnitude < 0.25f)
         {
             carRigidbody.velocity = Vector3.zero;
             CancelInvoke("DecelerateCar");
-        }
+       }
+    
     }
 
  

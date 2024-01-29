@@ -52,7 +52,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5139740733873574135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handleDefaultPos: {fileID: 0}
-  rotationSpeed: 1
   _gearController: {fileID: 0}
+  test: -10
 --- !u!54 &245218948993118046
 Rigidbody:
   m_ObjectHideFlags: 0

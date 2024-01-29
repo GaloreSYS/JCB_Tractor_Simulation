@@ -79,5 +79,6 @@ public class ArmDataJCB : ScriptableObject
 
     public bool stampaccelerator,tractorbrakess;
     public int frontandbackdecider;
+    public bool brakess;
 
 }
