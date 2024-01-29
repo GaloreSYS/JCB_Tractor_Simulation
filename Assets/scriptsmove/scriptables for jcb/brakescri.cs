@@ -18,7 +18,7 @@ public class brakescri : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        brakemanager.brakess=false;
+        brakemanager.brakess = false;
     }
 
 
