@@ -126,8 +126,8 @@ public class JCBStandsLeftAndRight : MonoBehaviour
 
 
 
-            AnimArms.SetFloat("UPL", ValueArmsLeft);
-            AnimArms.SetFloat("UPR", ValueArmsRight);
+//            AnimArms.SetFloat("UPL", ValueArmsLeft);
+      //      AnimArms.SetFloat("UPR", ValueArmsRight);
         }
 
         

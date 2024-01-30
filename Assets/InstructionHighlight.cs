@@ -39,6 +39,7 @@ public class InstructionHighlight : MonoBehaviour
         {
             StopCoroutine(blinkCoroutine);
             blinkCoroutine = null;
+            gameObject.GetComponent<MeshRenderer>().enabled =false;
             ResetColor(); // Reset the color to original when stopped
         }
     }

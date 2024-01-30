@@ -43,8 +43,8 @@ public class TLB_WCManager : MonoBehaviour
     public void Steering(float Steerinput)
     {
 //        Debug.Log(Steerinput);
-        WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
-        WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
+//        WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
+  //      WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
     }
     
     public void ApplyTorue(float torque)
@@ -75,6 +75,7 @@ public class TLB_WCManager : MonoBehaviour
 
     public float CalculateRPM()
     {
+        
         return (WheelColliders[2].rpm + WheelColliders[3].rpm) / 2; ;
     }
     public void ApplyBrake(float BrakingTorque)

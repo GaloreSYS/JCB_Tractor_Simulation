@@ -184,7 +184,7 @@ public class TLB_Engine : MonoBehaviour
     {
         Breaks = isParkingBreak;
         SpeedText.text = ((int)(VehicleRB.velocity.magnitude * 3.6)).ToString();
-        RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
+      //  RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
         //ThrottleInput = UnityEngine.Input.GetAxis("Vertical");
         speed = VehicleRB.velocity.magnitude * 3.6f;
         //torque = torqueCurve.Evaluate(rpm / (float)maxRPM) * maxTorque;
@@ -342,7 +342,7 @@ public class TLB_Engine : MonoBehaviour
         {
              IgnitionIndicator.color = off;
             GearControllerDataLinker.Instance.ControllData.CheckEngine = false;
-            EngineStartAudioManger.Instance.PlayAudio1();
+            StartEngine();
             isIgnition = false;
         }
         else if (obj.value < 7 && !isIgnition)
@@ -354,13 +354,19 @@ public class TLB_Engine : MonoBehaviour
         else if (obj.value <= 45 && obj.value >= 30)
         {
             IgnitionIndicator.color = on;
-            GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
-            EngineStartAudioManger.Instance.PlayAudio2();
-            isIgnition = true;
+           // StartEngine();
            instructionSource.PlayOneShot(engineStarted);
         }
     }
 
+    public void StartEngine()
+    {
+        if(isIgnition)return;
+        GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
+        EngineStartAudioManger.Instance.PlayAudio1();
+        isIgnition = true;
+        InstructionManager.Instance.NextInstruction();
+    }
     public AudioClip engineStarted;
     public AudioSource instructionSource;
     private void ResetIgnitionKeyPos(TurnableObject turnObj, GrabbedObject grabObj)

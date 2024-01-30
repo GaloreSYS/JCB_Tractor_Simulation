@@ -1,6 +1,7 @@
 using _4040.Scripts; 
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public enum ModuleStatus
 {
@@ -84,6 +85,10 @@ public class GameManager : MonoBehaviour
         if (stopWatch.ElapsedSeconds > 0)
         {
             timeTake = stopWatch.ElapsedTimeFormatted;
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
         }
     }
 }

@@ -17,7 +17,7 @@ public class FadeEffect : MonoBehaviour
         if (FadeOnStart)
         {
             FadeIn();
-            Debug.LogError("FadeinFunctionCalled");
+//            Debug.LogError("FadeinFunctionCalled");
         }
     }
 

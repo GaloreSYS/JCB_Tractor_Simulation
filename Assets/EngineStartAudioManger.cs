@@ -25,13 +25,6 @@ public class EngineStartAudioManger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& !isOn)
-        {
-            PlayAudio1();
-            isOn = true;
-        }
-
-       
         if (!audioSource.isPlaying && audioSource.clip == engineStartingClip)
         {
             PlayAudio2();

@@ -37,7 +37,7 @@ public class carsteerfindrotate : MonoBehaviour
         //   this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, cubesteer.transform.localEulerAngles.y, cubesteer.transform.localEulerAngles.z);
 
 
-        this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, Mathf.Clamp(0,0,265), cubesteer.transform.localEulerAngles.z);
+//        this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, Mathf.Clamp(0,0,265), cubesteer.transform.localEulerAngles.z);
 
 
         if (this.gameObject.transform.localEulerAngles.y >= 0)
