@@ -59,13 +59,17 @@ public class SpawnRocksAndPile : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Results");
     }
     public AudioClip hitGround;
     public int digged;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Person"))
+        {
+            GameManager.Instance.
+        }
         if (other.name == "Terrain")
         {
             if (!FfDigger.Instance.canDig)
