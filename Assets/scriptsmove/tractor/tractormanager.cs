@@ -100,10 +100,10 @@ public class tractormanager : MonoBehaviour
     void Start()
     {
         accelerationMultiplier = 9;
-
-
+        maxSpeed = 90;
+        Tractorr.brakess =false;
         front = false;
-
+        Tractorr.stampaccelerator = false;
 
         carRigidbody = gameObject.GetComponent<Rigidbody>();
         carRigidbody.centerOfMass = bodyMassCenter;
@@ -137,9 +137,6 @@ public class tractormanager : MonoBehaviour
         RRwheelFriction.asymptoteValue = rearRightCollider.sidewaysFriction.asymptoteValue;
         RRwheelFriction.stiffness = rearRightCollider.sidewaysFriction.stiffness;
 
-
-
-
         //        senseglove.SetActive(true);
 
 
@@ -158,18 +155,44 @@ public class tractormanager : MonoBehaviour
             gearNumber = gearspeednumber.gearValue;
         }
 
-
-
-        if (Tractorr.tractorbrakess == true)
+        if (Tractorr.brakess == true)
         {
 
             Brakes();
+
+        }
+        if (Tractorr.brakess == false)
+        {
+
+            accelerationMultiplier = 1;
 
         }
 
 
 
 
+
+        if (Tractorr.stampaccelerator == true)
+        {
+       //     if (Input.GetKey(KeyCode.W))
+            {
+                Debug.Log("4");
+                throttleAxis = 4.8f;
+                maxSpeed = 450;
+                accelerationMultiplier = 6;
+                GoForward();
+            }
+        }
+        if (Tractorr.stampaccelerator == false)
+        {
+            //     if (Input.GetKey(KeyCode.W))
+            {
+               Brakes();
+            }
+
+
+
+        }
 
 
         //gearspeednumber.gearnumber = objgear.gearValue;
@@ -208,11 +231,6 @@ public class tractormanager : MonoBehaviour
 
             }
         }
-
-
-
-
-
         if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
         {
             //                  Debug.Log("8");
@@ -225,7 +243,6 @@ public class tractormanager : MonoBehaviour
             //       GoForward();
             //        front = true;
         }
-
    //     if (gearspeednumber.stampaccelerator == true)
         {
             //        Debug.Log(gearspeednumber.stampaccelerator+"dbz");
@@ -248,8 +265,6 @@ public class tractormanager : MonoBehaviour
                         //     GoReverse();
                     }
                 }
-
-
                 if (gearNumber == 2)
                 {
                     //         if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 11) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 20))
@@ -338,12 +353,14 @@ public class tractormanager : MonoBehaviour
         //    }
 
 
-        if (steerwheel.gameObject.transform.localEulerAngles.x >= 0)
+        //    if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
+
+        if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
         {
             steeringAxis = 0.5f;
-            maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.x;
+            maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
             Debug.Log(maxSteeringAngle);
-            if (steerwheel.gameObject.transform.localEulerAngles.x > 45)
+            if (steerwheel.gameObject.transform.localEulerAngles.y > 45)
             {
                 Debug.Log("hihi");
                 maxSteeringAngle = 45;
@@ -355,27 +372,27 @@ public class tractormanager : MonoBehaviour
 
 
 
-       a = steerwheel.gameObject.transform.localEulerAngles.x - 360;
+       a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
            Debug.Log(a + "aaaaa");
-        if (a < 0 && a >= -13)
+    /*    if (a < 0 && a >= -13)
         {
             //        Debug.Log("pokemin"+a+maxSteeringAngle);
-            maxSteeringAngle = -13;
+            maxSteeringAngle = a;//-23;
             TurnLeft();
       //  TurnRight();
-        }
-        if (a < -13 && a > -220)
+        }*/
+        if (a < 0 && a > -150)
         {
             //         Debug.Log("pokemon"+a+maxSteeringAngle);
             steeringAxis = 0.5f;
             maxSteeringAngle = a;
-            if (a < -95)
+     /*       if (a < -95)
             {
                 maxSteeringAngle = -95;
-            }
-            if (a < -165)
+            }*/
+            if (a > -150&&a<-140)
             {
-                maxSteeringAngle = -95;
+          //      maxSteeringAngle = -125;
             }
             //        Debug.Log("max=" + maxSteeringAngle);
                  TurnLeft();
@@ -383,24 +400,10 @@ public class tractormanager : MonoBehaviour
         //   TurnRight();
         }
 
-        
-        
-
-
-
         if (steerwheel.transform.rotation.y == 0)
         {
             //        Debug.Log("zero");
         }
-
-        /*   if (Input.GetKey(KeyCode.A))
-            {
-                TurnLeft();
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                TurnRight();
-            }*/
         if (Input.GetKey(KeyCode.Space))
         {
             CancelInvoke("DecelerateCar");
@@ -470,7 +473,6 @@ public class tractormanager : MonoBehaviour
 
             else
             {
-
                 //             Debug.Log("5");
                 frontLeftCollider.motorTorque -= 120;
                 frontRightCollider.motorTorque -= 120;
@@ -479,8 +481,6 @@ public class tractormanager : MonoBehaviour
             }
         }
     }
-
-
     private void OnCollisionStay(Collision collision)
     {
 
@@ -491,10 +491,6 @@ public class tractormanager : MonoBehaviour
             Debug.Log(speedincrease + "s");
         }
     }
-
-
-
-
 
     public void GoReverse()
     {

@@ -20,7 +20,7 @@ public class carsteerfindrotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+
         //     this.gameObject.transform.localEulerAngles = new Vector3(0, 0,z=(b)? UnityEngine.Random.Range(0, 360):0);
         //     this.gameObject.transform.localPosition = new Vector3(-0.0209999997f, 1.13552856f, -7.26100016f);
         //this.gameObject.transform.localRotation = Quaternion.Euler(new Vector2(0,-180));
@@ -34,10 +34,10 @@ public class carsteerfindrotate : MonoBehaviour
 
 
         //fromcube
-     //   this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, cubesteer.transform.localEulerAngles.y, cubesteer.transform.localEulerAngles.z);
+        //   this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, cubesteer.transform.localEulerAngles.y, cubesteer.transform.localEulerAngles.z);
 
 
-
+        this.transform.localEulerAngles = new Vector3(cubesteer.transform.localEulerAngles.x, Mathf.Clamp(0,0,265), cubesteer.transform.localEulerAngles.z);
 
 
         if (this.gameObject.transform.localEulerAngles.y >= 0)
