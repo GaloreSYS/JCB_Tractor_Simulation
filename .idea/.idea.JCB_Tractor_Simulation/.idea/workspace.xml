@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Results.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Results.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +115,7 @@
       <workItem from="1705052005822" duration="2221000" />
       <workItem from="1705301235009" duration="15427000" />
       <workItem from="1705382514512" duration="7705000" />
+      <workItem from="1706605499303" duration="808000" />
     </task>
     <servers />
   </component>
@@ -123,6 +124,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

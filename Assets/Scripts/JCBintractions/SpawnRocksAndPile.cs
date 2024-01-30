@@ -68,7 +68,8 @@ public class SpawnRocksAndPile : MonoBehaviour
     {
         if (other.CompareTag("Person"))
         {
-            GameManager.Instance.
+            other.gameObject.SetActive(false);
+            GameManager.Instance.AwarenessFailed();
         }
         if (other.name == "Terrain")
         {

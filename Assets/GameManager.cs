@@ -1,17 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using _4040.Scripts; 
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+
+public enum ModuleStatus
+{
+    Completed,
+    Failed
+}
 
 public class GameManager : MonoBehaviour
 {
+    public ModuleStatus moduleStatus;
     public static GameManager Instance;
-    [FormerlySerializedAs("userData")] public (string name, string empId) UserData = new ();
+    public (string name, string empId) UserData = new();
 
     public TMP_Text userNameText;
     public TMP_Text empIdText;
+
+    public string timeTake;
+
+    private int _totalScore = 100;
 
     private void Awake()
     {
@@ -42,5 +50,40 @@ public class GameManager : MonoBehaviour
     {
         UserData.empId = value;
         empIdText.text = "emp id: " + value;
+    }
+
+    public StopWatch stopWatch = new StopWatch();
+
+    public void StartStopWatch()
+    {
+        stopWatch.Start();
+    }
+
+    public void StopStopWatch()
+    {
+        stopWatch.Stop();
+    }
+
+    public void OnGameOver()
+    {
+        ResultUIManager.Instance.FillData(UserData.name, UserData.empId, moduleStatus.ToString(), timeTake,_totalScore.ToString());
+    }
+
+    public bool awareness;
+    public void AwarenessFailed()
+    {
+        if (!awareness)
+        {
+            awareness = true;
+            _totalScore -= 10;
+        }
+    }
+
+    private void Update()
+    {
+        if (stopWatch.ElapsedSeconds > 0)
+        {
+            timeTake = stopWatch.ElapsedTimeFormatted;
+        }
     }
 }
