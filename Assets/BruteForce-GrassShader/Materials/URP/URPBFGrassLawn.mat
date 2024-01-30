@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GrassTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ddd50bb558b4ce842b6097a0f4da3e3f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundTex:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3bdb253988c80934a896d3e88de65024, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e1d764fa7e47f34eae88e37253c2542, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoGrassTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b401ffc96f01db145958ef4e9183df31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
@@ -101,16 +101,16 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GrassCut: 0
-    - _GrassSaturation: 1.76
+    - _GrassSaturation: 4.33
     - _GrassShading: 0
-    - _GrassThinness: 0.53
-    - _GrassThinnessIntersection: 0.154
+    - _GrassThinness: 3
+    - _GrassThinnessIntersection: 0.01
     - _LightIntensity: 1
     - _Metallic: 0
-    - _MinimumNumberStacks: 2
+    - _MinimumNumberStacks: 2.83
     - _Mode: 0
     - _NearCameraSmoosh: 0.5
-    - _NoisePower: 1.24
+    - _NoisePower: 0
     - _NumberOfStacks: 16
     - _OcclusionStrength: 1
     - _OffsetValue: 1
@@ -126,8 +126,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TilingN1: 4.03
-    - _TilingN2: 0.05
+    - _TilingN1: 0
+    - _TilingN2: 0
     - _TilingN3: 0
     - _UVSec: 0
     - _UseAmbientLight: 0
@@ -149,12 +149,12 @@ Material:
     - _ZWrite: 1
     - __NumberOfStacks: 17
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.7529412, g: 0.72402, b: 0.61960787, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GroundColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GroundColor: {r: 0.95686275, g: 0.8475049, b: 0.5769882, a: 1}
     - _OffsetVector: {r: 0, g: 0, b: 0, a: 0}
     - _PJShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ProjectedShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 0.277, g: 0.25819692, b: 0.1355532, a: 1}
-    - _SelfShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ProjectedShadowColor: {r: 0.4509804, g: 0.23375352, b: 0.04313725, a: 1}
+    - _RimColor: {r: 0.3773585, g: 0.19495425, b: 0, a: 1}
+    - _SelfShadowColor: {r: 0.27044016, g: 0.0770205, b: 0, a: 1}
   m_BuildTextureStacks: []
