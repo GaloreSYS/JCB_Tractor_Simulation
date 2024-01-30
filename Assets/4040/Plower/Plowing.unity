@@ -202,6 +202,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469190019}
   m_CullTransparentMesh: 0
+--- !u!198 &610474042 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2744525316536601397, guid: 23b6e52e7b31a5c4f8a99b81ee826077,
+    type: 3}
+  m_PrefabInstance: {fileID: 5980594144006651210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &950375561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6611637940270376321, guid: 741aa2fac9437ed489385ad88b3a2249,
@@ -870,7 +876,7 @@ PrefabInstance:
         type: 3}
       propertyPath: particleFeedback
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 610474042}
     - target: {fileID: 4517815731775978251, guid: 23b6e52e7b31a5c4f8a99b81ee826077,
         type: 3}
       propertyPath: m_Name
