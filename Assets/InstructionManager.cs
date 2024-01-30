@@ -22,7 +22,10 @@ public class InstructionManager : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
+        instructionBack.text = "";
         PlayInstruction(instructions[currentInstruction]);
+       
     }
 
     public void PlayInstruction(Instruction instruction)
@@ -63,8 +66,9 @@ public class InstructionManager : MonoBehaviour
 
     public void ClearInstruction()
     {
-        instructionBack.text = "";
-        instructionFront.text = "";
+       
+      //  instructionBack.text = "";
+      //  instructionFront.text = "";
        
         if (currentBlinker != null)
         {
@@ -75,14 +79,19 @@ public class InstructionManager : MonoBehaviour
 
     public void NextInstruction()
     {
-        if (currentBlinker != null)
-        {
-            currentBlinker.StopBlinking();
-            currentBlinker = null;
+        CancelInvoke(nameof(ClearInstruction));
+        ClearInstruction();
+            if (currentBlinker != null)
+            {
+                currentBlinker.StopBlinking();
+                currentBlinker = null;
+            }
+
+            currentInstruction++;
+            Debug.Log("Going to Next Instruction "+currentInstruction);
+            PlayInstruction(instructions[currentInstruction]);
         }
-        currentInstruction++;
-        PlayInstruction(instructions[currentInstruction]);
-    }
+    
 }
 
 [System.Serializable]

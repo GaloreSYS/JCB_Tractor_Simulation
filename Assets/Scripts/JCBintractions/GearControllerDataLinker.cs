@@ -31,8 +31,7 @@ public class GearControllerDataLinker : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-           ControllData.CheckEngine = true;
-            EngineStartAudioManger.Instance.PlayAudio2();
+          TLB_Engine.Instance.StartEngine();
         }
         
 
