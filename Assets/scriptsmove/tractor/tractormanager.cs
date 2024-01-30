@@ -177,9 +177,9 @@ public class tractormanager : MonoBehaviour
        //     if (Input.GetKey(KeyCode.W))
             {
                 Debug.Log("4");
-                throttleAxis = 4.8f;
+                throttleAxis = 6.8f;
                 maxSpeed = 450;
-                accelerationMultiplier = 6;
+                accelerationMultiplier = 9;
                 GoForward();
             }
         }
