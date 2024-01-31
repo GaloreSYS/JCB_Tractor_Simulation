@@ -1167,6 +1167,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5597452916088528199, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: gearType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597452916088528199, guid: 297a5ac22e293bd47868088553927b10,
+        type: 3}
+      propertyPath: zMaxAngle
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5603450968320828993, guid: 297a5ac22e293bd47868088553927b10,
         type: 3}
       propertyPath: m_Height

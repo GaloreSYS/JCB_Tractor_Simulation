@@ -79067,6 +79067,11 @@ PrefabInstance:
       objectReference: {fileID: 1570142393}
     - target: {fileID: 804876613664359100, guid: 0b302e689ff72cd4eb97f71675af4579,
         type: 3}
+      propertyPath: gearType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 804876613664359100, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
       propertyPath: liverReachedX_A.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196709878}
@@ -79129,6 +79134,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113544944853447909, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2176522105258556434, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: multiplier
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401166110164839031, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: index
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884369059136349528, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: xMaxAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041476034529049245, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: gearType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5041476034529049245, guid: 0b302e689ff72cd4eb97f71675af4579,
         type: 3}
@@ -79210,6 +79240,11 @@ PrefabInstance:
       propertyPath: whenGearIsOnNeutral.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196709878}
+    - target: {fileID: 7433927771185219081, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: multiplier
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 7617472379791576281, guid: 0b302e689ff72cd4eb97f71675af4579,
         type: 3}
       propertyPath: liverReachedZ_A.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -79250,6 +79285,11 @@ PrefabInstance:
       propertyPath: whenGearIsOnNeutral.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 196709878}
+    - target: {fileID: 8723573493432464050, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
