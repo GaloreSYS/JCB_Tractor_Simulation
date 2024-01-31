@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JCB_Simulator_Welcome.unity
     guid: cf45c670e4c83ca44824395feabaecf2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Results.unity
     guid: 28884395deb5a0945990773e30f720f2
   m_configObjects:

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class tractormanager : MonoBehaviour
@@ -10,6 +11,11 @@ public class tractormanager : MonoBehaviour
     public ArmDataJCB objgear,Tractorr;
     public float speedincrease = 1;
     //   public movementmanager checker;
+
+    public GameObject Cube, EmptyGameObject;
+    private bool currentstste;
+
+    public float Torque;
 
     [Space(20)]
 
@@ -99,6 +105,7 @@ public class tractormanager : MonoBehaviour
 
     void Start()
     {
+        currentstste = false;
         accelerationMultiplier = 9;
         maxSpeed = 90;
         Tractorr.brakess =false;
@@ -144,6 +151,7 @@ public class tractormanager : MonoBehaviour
 
     void Update()
     {
+        Axecontroller();
         gears();
         if (GetInputFrom == GearInputType.Keyboard)
         {
@@ -177,7 +185,7 @@ public class tractormanager : MonoBehaviour
        //     if (Input.GetKey(KeyCode.W))
             {
                 Debug.Log("4");
-                throttleAxis = 4.8f;
+                throttleAxis = Torque;
                 maxSpeed = 450;
                 accelerationMultiplier = 6;
                 GoForward();
@@ -794,8 +802,26 @@ public class tractormanager : MonoBehaviour
     }
 
 
-    
 
+    public void Axecontroller()
+    {
+        
+       if (Input.GetKeyDown(KeyCode.A))
+        {
+            currentstste = EmptyGameObject.activeSelf;
+            currentstste = !currentstste;
+            EmptyGameObject.SetActive(currentstste);
+        }
+
+       if(currentstste == false)
+        {
+            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position, new Vector3(0.381399989f, 0.373299986f, -0.406500012f), 1f);
+        }
+       if (currentstste == true)
+        {
+            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position, new Vector3(0.366699994f, 0.314900011f, -0.406699985f), 1f);
+        }
+    }
 
 
 
