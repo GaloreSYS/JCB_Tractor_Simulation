@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BF_MowingUI : MonoBehaviour
@@ -17,5 +18,11 @@ public class BF_MowingUI : MonoBehaviour
         normalizedValue = Mathf.Clamp01( normalizedValue - Mathf.Lerp(0, mowingManager.marginError, 1-normalizedValue));
         percentageText.text = Mathf.RoundToInt(normalizedValue * 100f).ToString() + " %";
         MowingProgress = Mathf.RoundToInt(normalizedValue * 100f);
+
+        if (normalizedValue * 100f > 70)
+        {
+            SceneManager.LoadScene("Results");
+        }
     }
+    
 }
