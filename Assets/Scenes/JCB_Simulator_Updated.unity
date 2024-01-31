@@ -79365,6 +79365,11 @@ PrefabInstance:
       propertyPath: _modular3DText
       value: 
       objectReference: {fileID: 1570142393}
+    - target: {fileID: 459744505746186027, guid: 0b302e689ff72cd4eb97f71675af4579,
+        type: 3}
+      propertyPath: gameOverFailedAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c3d8d11cddc58245977eaa679d95555, type: 3}
     - target: {fileID: 486498155786404500, guid: 0b302e689ff72cd4eb97f71675af4579,
         type: 3}
       propertyPath: m_IsActive
