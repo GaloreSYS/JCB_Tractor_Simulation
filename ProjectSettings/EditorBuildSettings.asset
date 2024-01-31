@@ -11,13 +11,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TractorSimulation.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/JcbSimulation.unity
     guid: c2f92dee0069846b3b71944155d7eb1d
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: be75e02e1bdbb444f93c0f1548ca1062
+  - enabled: 1
+    path: Assets/Scenes/JCB_Simulator_Updated.unity
+    guid: 3806d2512bada664ab3e3fc1d26581b4
+  - enabled: 0
+    path: Assets/Scenes/Tractor_Simulator_Updated.unity
+    guid: 63df73ef466b43e4daf9875bbae4b48e
+  - enabled: 1
+    path: Assets/Scenes/JCB_Simulator_Welcome.unity
+    guid: cf45c670e4c83ca44824395feabaecf2
+  - enabled: 0
+    path: Assets/Scenes/Results.unity
+    guid: 28884395deb5a0945990773e30f720f2
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: bd6b44827eefb00418e5aa16b01e96f7,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1dde56311f264a0448026099b042c0a0,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8f180b59639321749940f062faa54321,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 91006b4f8acab5649a88aee9e63462a1,
       type: 2}

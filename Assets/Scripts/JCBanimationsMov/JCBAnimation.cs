@@ -9,45 +9,49 @@ public class JCBAnimation : MonoBehaviour
 
     public float ValueArms;
 
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckEngine;
 
     public ArmDataJCB JCBArmData;
 
     public void Start()
     {
         ValueArms = 0;
-        
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
+        CheckEngine = JCBArmData.CheckEngine;
 
-        JCBArmData.valuearms = ValueArms;
-        enableDown = JCBArmData.enabledown;
-        enableUp = JCBArmData.enableup;
-        //for front bucket arms
-        if(enableDown == true)
+        if(CheckEngine == true)
         {
-            if (ValueArms >= -1)
+            JCBArmData.valuearms = ValueArms;
+            enableDown = JCBArmData.enabledown;
+            enableUp = JCBArmData.enableup;
+            //for front bucket arms
+            if (enableDown == true)
             {
-                ValueArms -= Time.deltaTime;
-                enableUp = false;
+                if (ValueArms >= -1)
+                {
+                    ValueArms -= Time.deltaTime * JCBArmData.FrontArm;
+                    enableUp = false;
+                }
             }
-        }
 
 
-        if (enableUp == true)
-        {
-            if (ValueArms <= 1)
+            if (enableUp == true)
             {
-                ValueArms += Time.deltaTime;
-                enableDown = false;
+                if (ValueArms <= 1)
+                {
+                    ValueArms += Time.deltaTime * JCBArmData.FrontArm;
+                    enableDown = false;
+                }
             }
+
+
+            AnimArms.SetFloat("ForUp", ValueArms);
         }
-
-
-        AnimArms.SetFloat("ForUp", ValueArms);
+        
 
     }
 }

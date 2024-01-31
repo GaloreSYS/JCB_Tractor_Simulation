@@ -10,6 +10,12 @@ TagManager:
   - Interactable
   - Position
   - ManusHand
+  - DigItem
+  - left
+  - Left
+  - TractorBreak
+  - Person
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -32,9 +38,9 @@ TagManager:
   - BackArm
   - FrontArmBucket
   - FrontArm
-  - 
-  - 
-  - 
+  - DigArea
+  - DigItem
+  - Dummy
   - 
   - 
   - 

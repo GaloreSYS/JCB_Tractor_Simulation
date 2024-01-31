@@ -9,42 +9,51 @@ public class JCBackArmUpAndDown : MonoBehaviour
 
     public float ValueRL;
 
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckIfEngineIsOn;
     public ArmDataJCB Bucketarm;
 
     public void Start()
     {
-        ValueRL = 0;
-
+        ValueRL = -1;
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
-        enableDown = Bucketarm.enableRLBdown;
-        enableUp = Bucketarm.enableRLBup;
-
-        //for front bucket arms
-        if (enableDown == true)
+        CheckIfEngineIsOn = Bucketarm.CheckEngine;
+        // if (!JCBStandsLeftAndRight.Instance.LeftSupportOn || !JCBStandsLeftAndRight.Instance.RightSupportOn)
+        // {
+        //     Debug.Log("NOT ALLOWED");
+        //     return;
+        // }
+        if(CheckIfEngineIsOn == true)
         {
-            if (ValueRL >= -1)
+            enableDown = Bucketarm.enableRLBdown;
+            enableUp = Bucketarm.enableRLBup;
+
+            //for front bucket arms
+            if (enableDown == true)
             {
-                ValueRL -= Time.deltaTime;
-                enableUp = false;
+                if (ValueRL >= -1)
+                {
+                    ValueRL -= Time.deltaTime * Bucketarm.BackHand;
+                    enableUp = false;
+                }
             }
-        }
 
 
-        if (enableUp == true)
-        {
-            if (ValueRL <= 1)
+            if (enableUp == true && !SpawnRocksAndPile.Instance.ground)
             {
-                ValueRL += Time.deltaTime;
-                enableDown = false;
+                if (ValueRL <= 1)
+                {
+                    ValueRL += Time.deltaTime * Bucketarm.BackHand;
+                    enableDown = false;
+                }
             }
+
+
+            AnimRL.SetFloat("RLBack", ValueRL);
         }
-
-
-        AnimRL.SetFloat("RLBack", ValueRL);
+        
     }
 }

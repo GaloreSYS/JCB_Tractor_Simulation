@@ -9,41 +9,49 @@ public class JCBSecondarmUPandDown : MonoBehaviour
 
     public float ValueUD;
 
-    public bool enableR, enableL;
+    public bool enableR, enableL, CheckEngine;
     public ArmDataJCB armDataJCb;
     public void Start()
     {
         ValueUD = 0;
-
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
+        CheckEngine = armDataJCb.CheckEngine;
         //for front bucket arms
-
-       
-
-        if (enableR == true)
+        if (!JCBStandsLeftAndRight.Instance.LeftSupportOn || !JCBStandsLeftAndRight.Instance.RightSupportOn)
         {
-            if (ValueUD >= -1)
-            {
-                ValueUD -= Time.deltaTime;
-                enableL = false;
-            }
+            Debug.Log("NOT ALLOWED");
+            return;
         }
 
-
-        if (enableL == true)
+       if(CheckEngine == true)
         {
-            if (ValueUD <= 1)
+            if (enableR == true && !SpawnRocksAndPile.Instance.ground)
             {
-                ValueUD += Time.deltaTime;
-                enableR = false;
+                if (ValueUD >= -1)
+                {
+                    ValueUD -= Time.deltaTime;
+                    enableL = false;
+                }
             }
+
+
+            if (enableL == true)
+            {
+                if (ValueUD <= 1)
+                {
+                    ValueUD += Time.deltaTime;
+                    enableR = false;
+                }
+            }
+
+
+            AnimUD.SetFloat("RL", ValueUD);
         }
 
-
-        AnimUD.SetFloat("RL", ValueUD);
+        
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //public enum DrivingMode
@@ -10,6 +8,7 @@ using UnityEngine;
 //}
 public class TLB_WCManager : MonoBehaviour
 {
+    public bool developmentMode;
     // public DrivingMode TLB_DrivingMode;
     [SerializeField] private WheelCollider[] WheelColliders;
     public Transform[] WheelTransform;
@@ -32,23 +31,27 @@ public class TLB_WCManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
+    
+    
     private void FixedUpdate()
     {
         UpdateWheelMovements();
-        
     }
+    
     public void Steering(float Steerinput)
     {
-        WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
-        WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
+//        Debug.Log(Steerinput);
+//        WheelColliders[0].steerAngle = Steerinput*18; //* 10 + steeringOffset;
+  //      WheelColliders[1].steerAngle = Steerinput*18;//* 10 + steeringOffset;
     }
+    
     public void ApplyTorue(float torque)
-    {
-        if (!TLB_Engine.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.isNeutral)
+    {   
+        if (!TLB_Engine.Instance.isParkingBreak && TLB_Engine.isIgnition && !TLB_Engine.Instance.isNeutral || developmentMode )
         {
-            torque = TLB_Engine.isForward ? -torque : torque;
+            torque = TLB_Engine.Instance.isForward ? -torque : torque;
             for (int i = 0; i < WheelColliders.Length; i++)
             {
                 //if (TLB_DrivingMode == DrivingMode.FourWheelDrive)
@@ -72,6 +75,7 @@ public class TLB_WCManager : MonoBehaviour
 
     public float CalculateRPM()
     {
+        
         return (WheelColliders[2].rpm + WheelColliders[3].rpm) / 2; ;
     }
     public void ApplyBrake(float BrakingTorque)

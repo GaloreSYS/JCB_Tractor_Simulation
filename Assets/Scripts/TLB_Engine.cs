@@ -7,21 +7,23 @@ using UnityEngine.Windows;
 using Manus.Interaction;
 using System;
 using Vehicle.Engine;
+using Input = UnityEngine.Input;
 
 
 public class TLB_Engine : MonoBehaviour
 {
-   
+    public static TLB_Engine Instance;
     [SerializeField] int maxTorque, maxRPM = 2200, engineBraking = 500, idleRPM = 950, rpm; //= 516
     [SerializeField] private float ThrottleInput;
     [SerializeField] AnimationCurve torqueCurve;
     public float torque;
     public TLB_WCManager wCManager;
     public float speed, MaxSpeed;
-    public static bool isParkingBreak = true;
+    public  bool isParkingBreak = true;
     public static bool isIgnition = false;
-    public static bool isNeutral = true;
-    public static bool isForward = true;
+    public  bool isNeutral ;
+    public  bool isForward ;
+    public  bool isReverse ;
     public bool Breaks, Parking;
 
 
@@ -56,8 +58,9 @@ public class TLB_Engine : MonoBehaviour
 
     //[SerializeField] TurnableObject RightStabilizerLever;
     //[SerializeField] TurnableObject LeftStabilizerLever;
-   // [SerializeField] TurnableObject ParkingBreakLever;
+    // [SerializeField] TurnableObject ParkingBreakLever;
     [SerializeField] TurnableObject IgnitionKey;
+
     //[SerializeField] TurnableObject ShuttleGear;
     [SerializeField] Transform _sterring;
 
@@ -67,12 +70,16 @@ public class TLB_Engine : MonoBehaviour
     [SerializeField] Text SpeedText;
     [SerializeField] Text RPMText;
     [SerializeField] Rigidbody VehicleRB;
-    Vector2 _limitRangeLeg = new(-7,0);
+    Vector2 _limitRangeLeg = new(-7, 0);
     public Image IgnitionIndicator;
     private Color32 off = new Color32(218, 11, 0, 255);
     private Color32 on = new Color32(26, 219, 0, 255);
     private Color32 standBy = new Color32(218, 182, 0, 255);
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -100,27 +107,24 @@ public class TLB_Engine : MonoBehaviour
     }
 
 
-
     public void DetectParkingLeverValueOFF()
     {
-        if (Parking = false)
+        if (Parking == false)
         {
             isParkingBreak = true;
             wCManager.ApplyBrake(maxTorque * 10);
         }
     }
-    
+
     public void DetectParkingValueON()
     {
-       
-
-
-        if (Parking = true)
+        if (Parking)
         {
             isParkingBreak = false;
             wCManager.ApplyBrake(0);
         }
     }
+
     private void InteractParkingLever(TurnableObject obj)
     {
         if (obj.value > -7f)
@@ -137,41 +141,50 @@ public class TLB_Engine : MonoBehaviour
 
     private void InteractedRightLever(TurnableObject obj)
     {
-        if(obj.value>obj.startValue)
+        if (obj.value > obj.startValue)
         {
-            var clamp = Mathf.Clamp(((obj.value / 1500f) + _hydraulicRightLeg.localPosition.y), _limitRangeLeg.x,_limitRangeLeg.y);
-            _hydraulicRightLeg.localPosition = new Vector3(_hydraulicRightLeg.localPosition.x, clamp , _hydraulicRightLeg.localPosition.z);
+            var clamp = Mathf.Clamp(((obj.value / 1500f) + _hydraulicRightLeg.localPosition.y), _limitRangeLeg.x,
+                _limitRangeLeg.y);
+            _hydraulicRightLeg.localPosition = new Vector3(_hydraulicRightLeg.localPosition.x, clamp,
+                _hydraulicRightLeg.localPosition.z);
         }
-        else if(obj.value < obj.startValue)
+        else if (obj.value < obj.startValue)
         {
-            var clamp = Mathf.Clamp(-((obj.value / 1500f) - _hydraulicRightLeg.localPosition.y), _limitRangeLeg.x, _limitRangeLeg.y);
-            _hydraulicRightLeg.localPosition = new Vector3(_hydraulicRightLeg.localPosition.x, clamp, _hydraulicRightLeg.localPosition.z);
+            var clamp = Mathf.Clamp(-((obj.value / 1500f) - _hydraulicRightLeg.localPosition.y), _limitRangeLeg.x,
+                _limitRangeLeg.y);
+            _hydraulicRightLeg.localPosition = new Vector3(_hydraulicRightLeg.localPosition.x, clamp,
+                _hydraulicRightLeg.localPosition.z);
         }
     }
+
     private void InteractedLeftLever(TurnableObject obj)
     {
         if (obj.value > obj.startValue)
         {
-            var clamp = Mathf.Clamp(((obj.value / 1500f) + _hydraulicLeftLeg.localPosition.y), _limitRangeLeg.x, _limitRangeLeg.y);
-            _hydraulicLeftLeg.localPosition = new Vector3(_hydraulicLeftLeg.localPosition.x, clamp, _hydraulicLeftLeg.localPosition.z);
+            var clamp = Mathf.Clamp(((obj.value / 1500f) + _hydraulicLeftLeg.localPosition.y), _limitRangeLeg.x,
+                _limitRangeLeg.y);
+            _hydraulicLeftLeg.localPosition = new Vector3(_hydraulicLeftLeg.localPosition.x, clamp,
+                _hydraulicLeftLeg.localPosition.z);
         }
         else if (obj.value < obj.startValue)
         {
-            var clamp = Mathf.Clamp(-((obj.value / 1500f) - _hydraulicLeftLeg.localPosition.y), _limitRangeLeg.x, _limitRangeLeg.y);
-            _hydraulicLeftLeg.localPosition = new Vector3(_hydraulicLeftLeg.localPosition.x, clamp, _hydraulicLeftLeg.localPosition.z);
+            var clamp = Mathf.Clamp(-((obj.value / 1500f) - _hydraulicLeftLeg.localPosition.y), _limitRangeLeg.x,
+                _limitRangeLeg.y);
+            _hydraulicLeftLeg.localPosition = new Vector3(_hydraulicLeftLeg.localPosition.x, clamp,
+                _hydraulicLeftLeg.localPosition.z);
         }
     }
 
     private void ResetLeverPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
-        grabObj.transform.localRotation = Quaternion.Slerp(grabObj.transform.localRotation, turnObj.startRot,2);
+        grabObj.transform.localRotation = Quaternion.Slerp(grabObj.transform.localRotation, turnObj.startRot, 2);
     }
 
     private void FixedUpdate()
     {
         Breaks = isParkingBreak;
         SpeedText.text = ((int)(VehicleRB.velocity.magnitude * 3.6)).ToString();
-        RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
+      //  RPMText.text = (Mathf.Abs((int)wCManager.CalculateRPM()) / 100).ToString();
         //ThrottleInput = UnityEngine.Input.GetAxis("Vertical");
         speed = VehicleRB.velocity.magnitude * 3.6f;
         //torque = torqueCurve.Evaluate(rpm / (float)maxRPM) * maxTorque;
@@ -218,12 +231,14 @@ public class TLB_Engine : MonoBehaviour
 
         if (value == 0)
         {
-            _rotValue = Mathf.Clamp(_frontArmBucket.localEulerAngles.x - 0.05f, LimitfrontArmBucket.x, LimitfrontArmBucket.y);
+            _rotValue = Mathf.Clamp(_frontArmBucket.localEulerAngles.x - 0.05f, LimitfrontArmBucket.x,
+                LimitfrontArmBucket.y);
             _frontArmBucket.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisFrontArmBucket);
         }
         else if (value == 1)
         {
-            _rotValue = Mathf.Clamp(_frontArmBucket.localEulerAngles.x + 0.05f, LimitfrontArmBucket.x, LimitfrontArmBucket.y);
+            _rotValue = Mathf.Clamp(_frontArmBucket.localEulerAngles.x + 0.05f, LimitfrontArmBucket.x,
+                LimitfrontArmBucket.y);
             _frontArmBucket.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisFrontArmBucket);
         }
     }
@@ -234,16 +249,15 @@ public class TLB_Engine : MonoBehaviour
     }
 
 
-
     public void BackArmLeftandRightMove(float value)
     {
         float _rotValue;
 
         if (value == 0)
         {
-            _rotValue = Mathf.Clamp(_backArm.localEulerAngles.y + 0.05f,LimitBackArm.x,LimitBackArm.y);
+            _rotValue = Mathf.Clamp(_backArm.localEulerAngles.y + 0.05f, LimitBackArm.x, LimitBackArm.y);
             //Quaternion.
-            _backArm.localRotation = Quaternion.AngleAxis(_rotValue,TurnAxisBackArm);
+            _backArm.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisBackArm);
         }
         else if (value == 1)
         {
@@ -251,14 +265,15 @@ public class TLB_Engine : MonoBehaviour
             _backArm.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisBackArm);
         }
     }
+
     public void BackFWDAndBCKMove(float value)
     {
         float _rotValue;
 
         if (value == 0)
         {
-            _rotValue = Mathf.Clamp(_backArm.localEulerAngles.x + 0.05f,LimitBackForwardArm.x, LimitBackForwardArm.y);
-            _backArm.localRotation = Quaternion.AngleAxis(_rotValue,TurnAxisBackArmFrontMove);
+            _rotValue = Mathf.Clamp(_backArm.localEulerAngles.x + 0.05f, LimitBackForwardArm.x, LimitBackForwardArm.y);
+            _backArm.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisBackArmFrontMove);
         }
         else if (value == 1)
         {
@@ -271,7 +286,7 @@ public class TLB_Engine : MonoBehaviour
     {
         float _rotValue;
 
-        if (value == 0) 
+        if (value == 0)
         {
             _rotValue = Mathf.Clamp(_backForeArm.localEulerAngles.x - 0.05f, LimitForeArm.x, LimitForeArm.y);
             _backForeArm.localRotation = Quaternion.AngleAxis(_rotValue, TurnAxisForeArm);
@@ -320,25 +335,40 @@ public class TLB_Engine : MonoBehaviour
             config.angularYLimit = limit;
         }
     }
+
     private void ReflectIgnition(TurnableObject obj)
     {
-        if (obj.value > 10 && obj.value<35)
+        if (obj.value is > 10 and < 35 && !isIgnition)
         {
-            IgnitionIndicator.color = standBy;
-        }
-        else if (obj.value < 7)
-        {
-            IgnitionIndicator.color = off;
+             IgnitionIndicator.color = off;
+            GearControllerDataLinker.Instance.ControllData.CheckEngine = false;
+            StartEngine();
             isIgnition = false;
         }
-        else if(obj.value<=45&&obj.value>=30)
+        else if (obj.value < 7 && !isIgnition)
+        {
+              IgnitionIndicator.color = standBy;
+            EngineStartAudioManger.Instance.StopAudio();
+         
+        }
+        else if (obj.value <= 45 && obj.value >= 30)
         {
             IgnitionIndicator.color = on;
-            isIgnition = true;
+           // StartEngine();
+           instructionSource.PlayOneShot(engineStarted);
         }
     }
 
-
+    public void StartEngine()
+    {
+        if(isIgnition)return;
+        GearControllerDataLinker.Instance.ControllData.CheckEngine = true;
+        EngineStartAudioManger.Instance.PlayAudio1();
+        isIgnition = true;
+        InstructionManager.Instance.NextInstruction();
+    }
+    public AudioClip engineStarted;
+    public AudioSource instructionSource;
     private void ResetIgnitionKeyPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
         //if (turnObj.value <= 45 && turnObj.value >= 30)
@@ -360,15 +390,16 @@ public class TLB_Engine : MonoBehaviour
         }
         else if (turnableObject.value > -13 && turnableObject.value < 13)
             isNeutral = true;
-
     }
 
     public void Forwordandbackword(int value)
     {
-        if(value == 0)
+        if (value == 0)
         {
             isNeutral = true;
             isForward = false;
+            isReverse = false;
+
         }
 
 
@@ -376,25 +407,66 @@ public class TLB_Engine : MonoBehaviour
         {
             isNeutral = false;
             isForward = true;
+            isReverse = false;
         }
 
-        Debug.LogError(value.ToString());
+        if (value == 2)
+        {
+            isNeutral = false;
+            isForward = false;
+            isReverse = true;
+        }
+
+       // Debug.LogError(value.ToString());
     }
 
 
     private void Update()
     {
-        
-       if (EngineManager.CurrentEngineState == EngineState.ON)
+        if (EngineManager.CurrentEngineState == EngineState.ON)
         {
             Parking = true;
         }
-       else
+        else
         {
             Parking = false;
         }
-
-
+        
+        keyBoardController();
     }
+    
+    public void keyBoardController()
+    {
+      var  GearValue = 1;
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (TLB_Engine.Instance.isForward)
+            {
+                wCManager.ApplyTorue(1 * (10000 * 1));
+            }
+            else if (TLB_Engine.Instance.isReverse)
+            {
+                wCManager.ApplyTorue(1 * (5000));
+            }
+            else
+            {
+                Debug.Log("NEUTRAL");
+            }
+        }
 
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            wCManager.ApplyTorue(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(2000);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            wCManager.ApplyBrake(0);
+        }
+    }
 }

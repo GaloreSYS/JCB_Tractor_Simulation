@@ -9,42 +9,47 @@ public class JCsecArmUD : MonoBehaviour
 
     public float ValueRL;
 
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckEngine;
     public ArmDataJCB armDataJCb;
 
     public void Start()
     {
-        ValueRL = 1;
+        ValueRL = 1.0f;
 
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
-        //for front bucket arms
-        enableDown = armDataJCb.enabledownJCB;
-        enableUp = armDataJCb.enableupJCB;
-
-        if (enableDown == true)
+        CheckEngine = armDataJCb.CheckEngine;
+        if(CheckEngine == true)
         {
-            if (ValueRL >= -1)
+            enableDown = armDataJCb.enabledownJCB;
+            enableUp = armDataJCb.enableupJCB;
+
+            if (enableDown == true)
             {
-                ValueRL -= Time.deltaTime;
-                enableUp = false;
+                if (ValueRL >= -1)
+                {
+                    ValueRL -= Time.deltaTime * armDataJCb.backbucketArm;
+                    enableUp = false;
+                }
             }
-        }
 
 
-        if (enableUp == true)
-        {
-            if (ValueRL <= 1)
+            if (enableUp == true)
             {
-                ValueRL += Time.deltaTime;
-                enableDown = false;
+                if (ValueRL <= 1)
+                {
+                    ValueRL += Time.deltaTime * armDataJCb.backbucketArm;
+                    enableDown = false;
+                }
             }
+
+
+            AnimRL.SetFloat("SideRL", ValueRL);
         }
-
-
-        AnimRL.SetFloat("SideRL", ValueRL);
     }
+        //for front bucket arms
+        
 }

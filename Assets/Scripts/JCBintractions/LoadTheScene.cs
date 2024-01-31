@@ -14,4 +14,8 @@ public class LoadTheScene : MonoBehaviour
         SceneNumber = value;
         SceneManager.LoadScene(SceneNumber);
     }
+    public void LoadSceneOnClick(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
 }

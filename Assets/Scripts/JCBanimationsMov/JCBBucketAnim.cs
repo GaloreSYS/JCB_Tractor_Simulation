@@ -6,7 +6,7 @@ public class JCBBucketAnim : MonoBehaviour
 {
     public Animator AnimBucket;
     public float ValueBucket, OutBucket;
-    public bool enableDown, enableUp;
+    public bool enableDown, enableUp, CheckEngine;
 
     public ArmDataJCB JCbarmdata;
     public void Start()
@@ -15,29 +15,34 @@ public class JCBBucketAnim : MonoBehaviour
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
-        enableDown = JCbarmdata.enableBUdown; 
-        enableUp = JCbarmdata.enableBUup; 
-
-        if (enableDown == true)
+        CheckEngine = JCbarmdata.CheckEngine;
+        if(CheckEngine == true )
         {
-            if(ValueBucket >= -1)
-            {
-                ValueBucket -= Time.deltaTime;
-                enableUp = false;
-            }
-        }
+            enableDown = JCbarmdata.enableBUdown;
+            enableUp = JCbarmdata.enableBUup;
 
-        if(enableUp == true)
-        {
-            if (ValueBucket <= 1)
+            if (enableDown == true)
             {
-                ValueBucket += Time.deltaTime;
-                enableDown = false;
+                if (ValueBucket >= -1)
+                {
+                    ValueBucket -= Time.deltaTime * JCbarmdata.FrontBucket;
+                    enableUp = false;
+                }
             }
-        }
 
-        AnimBucket.SetFloat("UD", ValueBucket);
+            if (enableUp == true)
+            {
+                if (ValueBucket <= 1)
+                {
+                    ValueBucket += Time.deltaTime * JCbarmdata.FrontBucket;
+                    enableDown = false;
+                }
+            }
+
+            AnimBucket.SetFloat("UD", ValueBucket);
+        }
+        
     }
 }
