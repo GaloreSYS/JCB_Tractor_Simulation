@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50d0c66b06e986449649d20604bce34, type: 3}
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
-  CheckEngine: 0
+  CheckEngine: 1
   valuearms: 0
   enabledown: 0
   enableup: 0
@@ -55,6 +55,6 @@ MonoBehaviour:
   Forklift: 0.2
   TractorPlow: 0.2
   stampaccelerator: 0
-  tractorbrakess: 0
-  frontandbackdecider: 1
+  tractorbrakess: 1
+  frontandbackdecider: 0
   brakess: 0
