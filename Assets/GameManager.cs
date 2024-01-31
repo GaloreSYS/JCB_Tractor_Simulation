@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 {
     public ModuleStatus moduleStatus;
     public static GameManager Instance;
-    public (string name, string empId) UserData = new();
+  public string name,empId;
 
     public TMP_Text userNameText;
     public TMP_Text empIdText;
@@ -37,19 +37,22 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        userNameText.text = "default user";
-        empIdText.text = "emp id: " + "873475802";
+        
+        name = "default user";
+        empId = "emp id: " + "873475802";
+        userNameText.text = name;
+        empIdText.text = empId;
     }
 
     public void UpdateUserName(string value)
     {
-        UserData.name = value;
+        name = value;
         userNameText.text = value;
     }
 
     public void UpdateEmpID(string value)
     {
-        UserData.empId = value;
+        empId = value;
         empIdText.text = "emp id: " + value;
     }
 
@@ -67,7 +70,8 @@ public class GameManager : MonoBehaviour
 
     public void OnGameOver()
     {
-        ResultUIManager.Instance.FillData(UserData.name, UserData.empId, moduleStatus.ToString(), timeTake,_totalScore.ToString());
+        StopStopWatch();
+        ResultUIManager.Instance.FillData(name, empId, moduleStatus.ToString(), timeTake,_totalScore.ToString());
     }
 
     public bool awareness;

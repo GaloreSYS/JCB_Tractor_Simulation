@@ -11,9 +11,8 @@ public class LandDetector : MonoBehaviour
         if (other.gameObject.name == "Terrain")
         {
             if(SpawnRocksAndPile.Instance.gameover)return;
-            GameManager.Instance.moduleStatus = ModuleStatus.Failed;
             GameManager.Instance._totalScore -= 80;
-            SpawnRocksAndPile.Instance.GameOver();
+            SpawnRocksAndPile.Instance.GameOver( ModuleStatus.Failed);
         }
     }
 }

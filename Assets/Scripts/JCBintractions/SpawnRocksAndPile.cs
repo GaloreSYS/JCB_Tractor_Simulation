@@ -17,8 +17,9 @@ public class SpawnRocksAndPile : MonoBehaviour
     public Modular3DText _modular3DText;
 
     public AudioClip gameOverAudio;
+    public AudioClip gameOverFailedAudio;
     public AudioSource gameOverSource;
-    
+
     private void Awake()
     {
         Instance = this;
@@ -32,6 +33,7 @@ public class SpawnRocksAndPile : MonoBehaviour
     public void Start()
     {
         Collision = false;
+        GameManager.Instance.StartStopWatch();
     }
 
     public bool gameover;
@@ -39,7 +41,7 @@ public class SpawnRocksAndPile : MonoBehaviour
     public void Update()
     {
         if (!gameover)
-            _modular3DText.UpdateText((percentage*1.5).ToString("F0") + " % ");
+            _modular3DText.UpdateText((percentage * 1.5).ToString("F0") + " % ");
         else
         {
             _modular3DText.UpdateText("Completed");
@@ -47,25 +49,35 @@ public class SpawnRocksAndPile : MonoBehaviour
 
         if (percentage > 60 && !gameover)
         {
-           GameOver();
+            GameOver(ModuleStatus.Completed);
         }
 
         BucketPassedValue = Armdata.ValueRLJCBB;
     }
 
-    public void GameOver()
+    public void GameOver(ModuleStatus moduleStatus)
     {
+        GameManager.Instance.moduleStatus = moduleStatus;
         gameover = true;
-
         fadeEffect.fadeDuration = 7;
-        gameOverSource.PlayOneShot(gameOverAudio);
+        if (moduleStatus == ModuleStatus.Failed)
+        {
+            gameOverSource.PlayOneShot(gameOverFailedAudio);
+        }
+        else
+        {
+            gameOverSource.PlayOneShot(gameOverAudio);
+        }
+
         fadeEffect.FadeOut();
-        Invoke(nameof(GoToMainMenu),8f);
+        Invoke(nameof(GoToMainMenu), 8f);
     }
+
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Results");
     }
+
     public AudioClip hitGround;
     public int digged;
 
@@ -76,6 +88,7 @@ public class SpawnRocksAndPile : MonoBehaviour
             other.gameObject.SetActive(false);
             GameManager.Instance.AwarenessFailed();
         }
+
         if (other.name == "Terrain")
         {
             if (!FfDigger.Instance.canDig)

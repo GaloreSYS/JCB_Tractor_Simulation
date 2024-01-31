@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4040/Scripts/ResultUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/Scripts/ResultUIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InstructionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InstructionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/LMNT_Voices.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/LMNT_Voices.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LandDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LandDetector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Results.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Results.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Scripts/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Scripts/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/New Render Texture.renderTexture" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,7 @@
       <workItem from="1705301235009" duration="15427000" />
       <workItem from="1705382514512" duration="7705000" />
       <workItem from="1706605499303" duration="1517000" />
-      <workItem from="1706688806838" duration="3952000" />
+      <workItem from="1706688806838" duration="5498000" />
     </task>
     <servers />
   </component>
