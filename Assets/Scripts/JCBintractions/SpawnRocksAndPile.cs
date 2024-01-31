@@ -2,6 +2,7 @@ using TinyGiantStudio.Text;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class SpawnRocksAndPile : MonoBehaviour
 {
@@ -33,30 +34,34 @@ public class SpawnRocksAndPile : MonoBehaviour
         Collision = false;
     }
 
-    private bool gameover;
+    public bool gameover;
 
     public void Update()
     {
         if (!gameover)
-            _modular3DText.UpdateText(p.ToString("F0") + " % ");
+            _modular3DText.UpdateText((percentage*1.5).ToString("F0") + " % ");
         else
         {
-            _modular3DText.UpdateText("Successfully Completed");
+            _modular3DText.UpdateText("Completed");
         }
 
-        if (p > 60 && !gameover)
+        if (percentage > 60 && !gameover)
         {
-            gameover = true;
-
-            fadeEffect.fadeDuration = 10;
-            gameOverSource.PlayOneShot(gameOverAudio);
-            fadeEffect.FadeOut();
-            Invoke(nameof(GoToMainMenu),8f);
+           GameOver();
         }
 
         BucketPassedValue = Armdata.ValueRLJCBB;
     }
 
+    public void GameOver()
+    {
+        gameover = true;
+
+        fadeEffect.fadeDuration = 7;
+        gameOverSource.PlayOneShot(gameOverAudio);
+        fadeEffect.FadeOut();
+        Invoke(nameof(GoToMainMenu),8f);
+    }
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Results");
@@ -85,12 +90,12 @@ public class SpawnRocksAndPile : MonoBehaviour
         digged++;
         var n = g.Length;
         Debug.Log(100f / n);
-        p = (100f / n) * digged;
-        Debug.Log(p);
+        percentage = (100f / n) * digged;
+        Debug.Log(percentage);
         other.gameObject.SetActive(false);
     }
 
-    public float p;
+    [FormerlySerializedAs("p")] public float percentage;
 
     public void OnTriggerStay(Collider other)
     {

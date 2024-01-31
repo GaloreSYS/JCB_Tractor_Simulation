@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public string timeTake;
 
-    private int _totalScore = 100;
+    public int _totalScore = 100;
 
     private void Awake()
     {
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         if (!awareness)
         {
             awareness = true;
-            _totalScore -= 10;
+            _totalScore -= 20;
         }
     }
 

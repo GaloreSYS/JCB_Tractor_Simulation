@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using TinyGiantStudio.Text;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,8 @@ public class InstructionManager : MonoBehaviour
     public static InstructionManager Instance;
 
     public TMP_Text instructionFront;
-    public TMP_Text instructionBack;
+   // public TMP_Text instructionBack;
+    public TMP_Text instructionBackGlass;
 
     public AudioSource instructionAudioSource;
 
@@ -23,7 +25,7 @@ public class InstructionManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        instructionBack.text = "";
+        instructionBackGlass.text = "";
         PlayInstruction(instructions[currentInstruction]);
        
     }
@@ -39,15 +41,18 @@ public class InstructionManager : MonoBehaviour
         switch (instruction.instructionSide)
         {
             case InstructionSide.Back:
-                instructionBack.text = instruction.instructionText;
+                instructionBackGlass.text = instruction.instructionText;
                 break;
             case InstructionSide.Front:
                 instructionFront.text = instruction.instructionText;
                 break;
             case InstructionSide.Both:
-                instructionBack.text = instruction.instructionText;
+                instructionBackGlass.text = instruction.instructionText;
                 instructionFront.text = instruction.instructionText;
                 break;
+            default:
+                Debug.Log("ERROR");
+                throw new ArgumentOutOfRangeException();
         }
 
         instructionAudioSource.PlayOneShot(instruction.instructionAudio);
@@ -66,9 +71,9 @@ public class InstructionManager : MonoBehaviour
 
     public void ClearInstruction()
     {
-       
-      //  instructionBack.text = "";
-      //  instructionFront.text = "";
+
+        instructionBackGlass.text = "";
+        instructionFront.text = "";
        
         if (currentBlinker != null)
         {
@@ -97,10 +102,13 @@ public class InstructionManager : MonoBehaviour
 [System.Serializable]
 public class Instruction
 {
+    [TextArea(5,10)]
     public string instructionText;
     public AudioClip instructionAudio;
     public float instructionLength;
+    [EnumToggleButtons]
     public InstructionType type;
+    [EnumToggleButtons]
     public InstructionSide instructionSide;
     public  InstructionHighlight instructionHighlight;
 }

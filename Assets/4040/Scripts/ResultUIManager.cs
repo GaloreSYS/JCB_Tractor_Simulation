@@ -27,5 +27,10 @@ namespace _4040.Scripts
             timeTake.text = timeTaken;
             totalScore.text = score;
         }
+
+        public void Quit()
+        {
+            Application.Quit();
+        }
     }
 }
