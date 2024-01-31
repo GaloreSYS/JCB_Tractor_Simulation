@@ -6,11 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/RenderTextures/GrassRT.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Scripts/BF_MowingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Scripts/BF_MowingUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LandDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LandDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Results.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Results.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/JCBintractions/SpawnRocksAndPile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/New Render Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Balanced.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-Performant.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/DiggerData/1dca89747da628d4ea7563702d33a6c9.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/gearbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/gearbox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/scriptables for jcb/AcceleratorTrue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/scriptables for jcb/AcceleratorTrue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +130,7 @@
       <workItem from="1705301235009" duration="15427000" />
       <workItem from="1705382514512" duration="7705000" />
       <workItem from="1706605499303" duration="1517000" />
-      <workItem from="1706688806838" duration="5498000" />
+      <workItem from="1706688806838" duration="9780000" />
     </task>
     <servers />
   </component>

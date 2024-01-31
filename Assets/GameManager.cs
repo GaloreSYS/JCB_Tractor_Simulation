@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     {
         
         name = "default user";
-        empId = "emp id: " + "873475802";
+        empId =  "873475802";
         userNameText.text = name;
         empIdText.text = empId;
     }

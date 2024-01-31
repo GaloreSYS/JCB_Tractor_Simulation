@@ -115,7 +115,7 @@ public class gearbox : MonoBehaviour
 
             gearspeedfrontback.frontandbackdecider = 2;
 
-            Debug.Log(this.gameObject.transform.localEulerAngles.x);
+            Debug.Log(this.gameObject.transform.localEulerAngles.x,gameObject);
             Debug.Log("o10");
             //       this.gameObject.transform.localRotation=   Quaternion.Euler(new Vector3(60, 90, 0));
             this.gameObject.transform.localRotation = Quaternion.Euler(new Vector3(0, 10, 0));

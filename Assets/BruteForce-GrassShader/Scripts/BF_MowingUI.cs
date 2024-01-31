@@ -21,7 +21,7 @@ public class BF_MowingUI : MonoBehaviour
 
         if (normalizedValue * 100f > 70)
         {
-            SceneManager.LoadScene("Results");
+          //  SceneManager.LoadScene("Results");
         }
     }
     
