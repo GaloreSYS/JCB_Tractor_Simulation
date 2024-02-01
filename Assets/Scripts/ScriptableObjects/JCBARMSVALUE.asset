@@ -52,9 +52,9 @@ MonoBehaviour:
   backbucket: 0.4
   LeftLeg: 0.5
   RightLeg: 0.5
-  Forklift: 0.2
+  Forklift: 0.03
   TractorPlow: 0.2
-  stampaccelerator: 1
-  tractorbrakess: 1
-  frontandbackdecider: 2
+  stampaccelerator: 0
+  tractorbrakess: 0
+  frontandbackdecider: 1
   brakess: 0

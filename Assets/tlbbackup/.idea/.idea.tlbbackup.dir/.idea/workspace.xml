@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12a9a8be-fcc1-4742-a6d2-113e9882f707" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../scriptsmove/ShuttleGear.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../4040/Plower/Plowing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../4040/Plower/Plowing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EngineStartAudioManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../EngineStartAudioManger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Scripts/TLB_Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scriptsmove/gearbox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scriptsmove/gearbox.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../scriptsmove/ShuttleGear.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scriptsmove/scriptablepasser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../scriptsmove/scriptablepasser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scriptsmove/scriptables for jcb/AcceleratorTrue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../scriptsmove/scriptables for jcb/AcceleratorTrue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/JCPMovementTriggers.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2bkwizObOKDKYpo5hs3o4xK2sj4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ForCheckingAndRefracting",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12a9a8be-fcc1-4742-a6d2-113e9882f707" name="Changes" comment="" />
+      <created>1706772517300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706772517300</updated>
+      <workItem from="1706772523123" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

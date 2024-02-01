@@ -14,9 +14,5 @@ public class scriptablepasser : MonoBehaviour
     {
         b= value;
     }
-    public void FixedUpdate()
-    {
-        //gearspeed.gearValue = s;
-        //gearspeed.frontandbackdecider = b;
-    }
+      
 }

@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Distortion:
-        m_Texture: {fileID: 2800000, guid: 7dca70292f589e345aef9b57403a46e6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9eb8f1ba60975784ea9768fee3955c08, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -114,7 +114,7 @@ Material:
     - _NoisePower: 0
     - _NumberOfStacks: 16
     - _OcclusionStrength: 1
-    - _OffsetValue: 1
+    - _OffsetValue: 0
     - _Parallax: 0.02
     - _ProceduralDistance: 5.5
     - _ProceduralStrength: 1.5

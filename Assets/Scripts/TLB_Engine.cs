@@ -355,7 +355,7 @@ public class TLB_Engine : MonoBehaviour
         {
             IgnitionIndicator.color = on;
            // StartEngine();
-           instructionSource.PlayOneShot(engineStarted);
+         
         }
     }
 
@@ -367,8 +367,7 @@ public class TLB_Engine : MonoBehaviour
         isIgnition = true;
         InstructionManager.Instance.NextInstruction();
     }
-    public AudioClip engineStarted;
-    public AudioSource instructionSource;
+  
     private void ResetIgnitionKeyPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
         //if (turnObj.value <= 45 && turnObj.value >= 30)

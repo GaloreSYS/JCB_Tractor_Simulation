@@ -19,6 +19,7 @@ public class AcceleratorTrue : MonoBehaviour
     {
         if (other.gameObject.tag == "Left")
         {
+            Debug.Log("Pressing");
             manager.stampaccelerator = true;
 
         }
