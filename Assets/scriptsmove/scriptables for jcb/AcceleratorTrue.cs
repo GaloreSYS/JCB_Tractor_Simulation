@@ -11,7 +11,14 @@ public class AcceleratorTrue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            manager.stampaccelerator = true; 
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            manager.stampaccelerator = false; 
+        }
     }
 
     private void OnTriggerStay(Collider other)
