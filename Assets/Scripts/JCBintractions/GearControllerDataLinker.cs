@@ -13,6 +13,12 @@ public class GearControllerDataLinker : MonoBehaviour
     [Header("Put scriptable Controller here")]
     public ArmDataJCB ControllData;
 
+    public void MakeItMovable()
+    {
+        ControllData.CheckEngine = true;
+        ControllData.gearValue = 1;
+        ControllData.frontandbackdecider = 2;
+    }
     private void Awake()
     {
         Instance = this;
@@ -22,7 +28,10 @@ public class GearControllerDataLinker : MonoBehaviour
     private void Update()
     {
        
-
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+           MakeItMovable();
+        }
         if (Input.GetKeyDown(KeyCode.M))
         {
             ControllData.DisableLeftLeg = true;

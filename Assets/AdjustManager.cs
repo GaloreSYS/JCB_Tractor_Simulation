@@ -5,9 +5,17 @@ using UnityEngine;
 public class AdjustManager : MonoBehaviour
 {
     public float speed = 10f;
+
+    public bool editable;
+    
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            editable = !editable;
+        }
+        if(!editable) return;
         float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         float moveY = 0;
         if (Input.GetKey(KeyCode.Q))
