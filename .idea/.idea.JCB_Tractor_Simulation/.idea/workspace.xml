@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f5ea493-924d-4126-9598-63e31bf89ea8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/scriptsmove/ShuttleGear.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JCB_Tractor_Simulation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/4040/Plower/Plowing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/4040/Plower/Plowing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce-GrassShader/Materials/URP/URPBFGrassLawn.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EngineStartAudioManger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Updated.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Welcome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JCB_Simulator_Welcome.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/JCBARMSVALUE.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TLB_Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Explosion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/carmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/carmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/gearbox.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/gearbox.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/ShuttleGear.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/scriptablepasser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/scriptablepasser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/scriptables for jcb/AcceleratorTrue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/scriptables for jcb/AcceleratorTrue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scriptsmove/carsteerfindrotate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scriptsmove/carsteerfindrotate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +19,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30adf90198bc4c4b83910c6fb1877998174000/2d/7a47e222/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdjustManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Drone_Guard/Animation/AnimContr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InstructionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LandDetector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.fourtyfourty.gearcontroller@6bab0ff1cc/Runtime/GrabThis.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.9/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Vrif-Check/Assets/SteamVR/Input/SteamVR_Input.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -136,7 +124,8 @@
       <workItem from="1705382514512" duration="7705000" />
       <workItem from="1706605499303" duration="1517000" />
       <workItem from="1706688806838" duration="16424000" />
-      <workItem from="1706772597308" duration="2357000" />
+      <workItem from="1706772597308" duration="2955000" />
+      <workItem from="1707317124722" duration="4476000" />
     </task>
     <servers />
   </component>
