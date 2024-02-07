@@ -139,8 +139,8 @@ namespace Manus.Interaction
 		{
 			ExtraGrabInfo t_ExtraGrabInfo = new ExtraGrabInfo();
 			t_ExtraGrabInfo.info = p_Info;
-			t_ExtraGrabInfo.previousPosition = p_Info.interactor.transform.position;
-			t_ExtraGrabInfo.previousRotation = p_Info.interactor.transform.rotation;
+			t_ExtraGrabInfo.previousPosition = p_Info.interactor.transform.localPosition;
+			t_ExtraGrabInfo.previousRotation = p_Info.interactor.transform.localRotation;
 			t_ExtraGrabInfo.handToObjectRotation = Quaternion.Inverse( p_Info.interactor.transform.rotation ) * transform.transform.rotation;
 			m_GrabInfo.Add( t_ExtraGrabInfo );
 		}
@@ -201,7 +201,7 @@ namespace Manus.Interaction
 				var t_Grab = m_GrabInfo[i];
 				GrabbedObject.Info t_Info = t_Grab.info;
 				Vector3 t_PrevDir = transform.InverseTransformPoint( t_Grab.previousPosition );
-				Vector3 t_CurrentDir = transform.InverseTransformPoint( t_Info.interactor.transform.position );
+				Vector3 t_CurrentDir = transform.InverseTransformPoint( t_Info.interactor.transform.localPosition );
 				Vector2 t_PrevProjDir = Project( t_PrevDir );
 				Vector2 t_CurrentProjDir = Project( t_CurrentDir );
 
@@ -230,9 +230,9 @@ namespace Manus.Interaction
 
 			for( int i = 0; i < m_GrabInfo.Count; i++ )
 			{
-				m_GrabInfo[i].previousPosition = m_GrabInfo[i].info.interactor.transform.position;
-				m_GrabInfo[i].previousRotation = m_GrabInfo[i].info.interactor.transform.rotation;
-				m_GrabInfo[i].handToObjectRotation = Quaternion.Inverse( m_GrabInfo[i].previousRotation ) * transform.transform.rotation;
+				m_GrabInfo[i].previousPosition = m_GrabInfo[i].info.interactor.transform.localPosition;
+				m_GrabInfo[i].previousRotation = m_GrabInfo[i].info.interactor.transform.localRotation;
+				m_GrabInfo[i].handToObjectRotation = Quaternion.Inverse( m_GrabInfo[i].previousRotation ) * transform.transform.localRotation;
 			}
 
 			if( rotationSteps > 0.0f )
@@ -279,8 +279,8 @@ namespace Manus.Interaction
 
 		public void OnGrabbedHandPose( InteractionHand p_Object, GrabbedObject.Info p_Info )
 		{
-			p_Object.visualHandRoot.position = transform.TransformPoint( p_Info.objectToHand );
-			p_Object.visualHandRoot.rotation = transform.rotation * p_Info.objectToHandRotation;
+			p_Object.visualHandRoot.localPosition = transform.TransformPoint( p_Info.objectToHand );
+			p_Object.visualHandRoot.localRotation = transform.localRotation * p_Info.objectToHandRotation;
 		}
 
 		private void OnDrawGizmosSelected()
