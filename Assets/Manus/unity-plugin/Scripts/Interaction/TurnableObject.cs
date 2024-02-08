@@ -239,6 +239,7 @@ namespace Manus.Interaction
                 m_Value = Mathf.Clamp(m_Value, rotationLimits.x, rotationLimits.y);
             }
 
+            Debug.Log(Quaternion.AngleAxis(m_Value, turnAxis));
             transform.localRotation = Quaternion.AngleAxis(m_Value, turnAxis);
 
             for (int i = 0; i < m_GrabInfo.Count; i++)
