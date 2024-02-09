@@ -72,6 +72,7 @@ namespace Manus.Interaction
 
         public Action<TurnableObject, GrabbedObject> onGrabEnd;
         public Quaternion startRot;
+        public float xOffset = 0.0f;
         public Vector3 turnAxis = Vector3.forward;
         public Vector3 upAxis = Vector3.up;
 
@@ -106,7 +107,15 @@ namespace Manus.Interaction
                 m_Value = Mathf.Clamp(m_Value, rotationLimits.x, rotationLimits.y);
             }
 
-            transform.localRotation = Quaternion.AngleAxis(m_Value, turnAxis);
+// Define your offset value
+            float xOffset = 10.0f; // Change this to whatever offset you need
+
+// Create a new vector for turnAxis with the offset applied
+            Vector3 modifiedTurnAxis = new Vector3(turnAxis.x + xOffset, turnAxis.y, turnAxis.z);
+
+// Calculate the rotation using Quaternion.AngleAxis with the modified turnAxis
+            transform.localRotation = Quaternion.AngleAxis(m_Value, modifiedTurnAxis);
+
             if (rotationSteps > 0.0f)
             {
                 float t_SV = m_Value / rotationSteps;
@@ -116,7 +125,15 @@ namespace Manus.Interaction
                     m_SteppedValue = Mathf.Round(t_SV) * rotationSteps;
                 }
 
-                transform.localRotation = Quaternion.AngleAxis(m_SteppedValue, turnAxis);
+                Debug.Log("m_Value: " + m_Value);
+                Debug.Log("modifiedTurnAxis: " + modifiedTurnAxis);
+                Debug.Log("m_SteppedValue: " + m_SteppedValue);
+
+// Calculate the rotation using Quaternion.AngleAxis with the modified turnAxis
+                transform.localRotation = Quaternion.AngleAxis(m_SteppedValue, modifiedTurnAxis);
+
+// Debug logging of the rotation applied
+                Debug.Log("Rotation Applied: " + transform.localRotation.eulerAngles);
                 m_Value = m_SteppedValue;
             }
 

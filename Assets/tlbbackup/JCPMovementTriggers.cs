@@ -47,57 +47,57 @@ public class JCPMovementTriggers : MonoBehaviour
         var go = other.gameObject;
 
 
-        Debug.Log("Collision detected", gameObject);
-        switch (mech)
-        {
-            case Type.Acc:
-                if (TLB_Engine.Instance.isForward)
-                {
-                    Debug.Log("F");
-                    wCManager.ApplyTorue(1 * (10000 ));
-                }
-                else if (TLB_Engine.Instance.isReverse)
-                { Debug.Log("R");
-                    wCManager.ApplyTorue(1 * (5000));
-                }
-                else
-                {
-                    Debug.Log("NEUTRAL");
-                }
-                break;
-            case Type.Break:
-                wCManager.ApplyBrake(2000);
-                break;
-            case Type.Back:
-                wCManager.ApplyTorue(-1 * (5000));
-                break;
-            case Type.BackRotation:
-                BackRotation();
-                break;
-            case Type.Up:
-                tlbEngine.BackForeArmUpAndMove(0);
-                break;
-            case Type.Down:
-                tlbEngine.BackForeArmUpAndMove(1);
-                break;
-            case Type.Left:
-                tlbEngine.BackArmLeftandRightMove(0);
-                break;
-            case Type.Right:
-                tlbEngine.BackArmLeftandRightMove(1);
-                break;
-            case Type.FRLeft:
-                tlbEngine.FrontArmUpAndMove(0);
-                break;
-            case Type.FRRight:
-                tlbEngine.FrontArmUpAndMove(1);
-                break;
-            case Type.FRRotation:
-                FRRotation();
-                break;
-            default:
-                break;
-        }
+        // Debug.Log("Collision detected", gameObject);
+        // switch (mech)
+        // {
+        //     case Type.Acc:
+        //         if (TLB_Engine.Instance.isForward)
+        //         {
+        //             Debug.Log("F");
+        //             wCManager.ApplyTorue(1 * (10000 ));
+        //         }
+        //         else if (TLB_Engine.Instance.isReverse)
+        //         { Debug.Log("R");
+        //             wCManager.ApplyTorue(1 * (5000));
+        //         }
+        //         else
+        //         {
+        //             Debug.Log("NEUTRAL");
+        //         }
+        //         break;
+        //     case Type.Break:
+        //         wCManager.ApplyBrake(2000);
+        //         break;
+        //     case Type.Back:
+        //         wCManager.ApplyTorue(-1 * (5000));
+        //         break;
+        //     case Type.BackRotation:
+        //         BackRotation();
+        //         break;
+        //     case Type.Up:
+        //         tlbEngine.BackForeArmUpAndMove(0);
+        //         break;
+        //     case Type.Down:
+        //         tlbEngine.BackForeArmUpAndMove(1);
+        //         break;
+        //     case Type.Left:
+        //         tlbEngine.BackArmLeftandRightMove(0);
+        //         break;
+        //     case Type.Right:
+        //         tlbEngine.BackArmLeftandRightMove(1);
+        //         break;
+        //     case Type.FRLeft:
+        //         tlbEngine.FrontArmUpAndMove(0);
+        //         break;
+        //     case Type.FRRight:
+        //         tlbEngine.FrontArmUpAndMove(1);
+        //         break;
+        //     case Type.FRRotation:
+        //         FRRotation();
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 
     private void OnTriggerExit(Collider other)
