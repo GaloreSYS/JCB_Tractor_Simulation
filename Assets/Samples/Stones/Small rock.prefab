@@ -127,13 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef21d5c573bf164698f6b411745e8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Height: 2
-  IsGrounded: 0
-  renda: {fileID: 7715158731136269634}
-  Timer: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
+  isGrounded: 0
+  meshRenderer: {fileID: 7715158731136269634}
+  timer: 0
 --- !u!135 &3749523034936556735
 SphereCollider:
   m_ObjectHideFlags: 0

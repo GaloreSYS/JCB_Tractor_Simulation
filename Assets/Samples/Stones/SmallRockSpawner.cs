@@ -31,10 +31,20 @@ public class SmallRockSpawner : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DigArea")
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
     private void OnCollisionStay(Collision other)
     {
         Debug.Log("I have landed on here"+other.gameObject.name+other.gameObject.tag,other.gameObject);
+  
         if(other.gameObject.name=="Terrain")
         {
             isGrounded = true;
