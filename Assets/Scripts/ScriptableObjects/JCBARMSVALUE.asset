@@ -44,12 +44,12 @@ MonoBehaviour:
   valueTractor: 0
   TractorPlowUP: 0
   TractorPlowDown: 0
-  FrontArm: 0.4
-  FrontBucket: 0.4
-  BackArm: 0.4
-  BackHand: 0.4
-  backbucketArm: 0.4
-  backbucket: 0.4
+  FrontArm: 0.25
+  FrontBucket: 0.25
+  BackArm: 0.25
+  BackHand: 0.25
+  backbucketArm: 0.25
+  backbucket: 0.25
   LeftLeg: 0.5
   RightLeg: 0.5
   Forklift: 0.03
