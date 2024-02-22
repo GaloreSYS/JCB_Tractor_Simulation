@@ -24,7 +24,7 @@ public class MovementTriggers : MonoBehaviour
 
     private float _moveValue;
     private float _prevMoveValue=0f;
-
+/*
     private void Start()
     {
         DefaultRotation = this.transform.rotation;
@@ -122,5 +122,5 @@ public class MovementTriggers : MonoBehaviour
             this.transform.rotation = Quaternion.Lerp(this.transform.rotation, DefaultRotation, 0.5f * Time.deltaTime);
         }
     }
-
+*/
 }

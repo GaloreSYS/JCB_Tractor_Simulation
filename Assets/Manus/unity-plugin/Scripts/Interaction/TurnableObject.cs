@@ -101,7 +101,7 @@ namespace Manus.Interaction
             startRot = transform.localRotation;
             m_Value = startValue;
 
-            if (limitRotation)
+            if(limitRotation)
             {
                 m_Value = Mathf.Clamp(m_Value, rotationLimits.x, rotationLimits.y);
             }
