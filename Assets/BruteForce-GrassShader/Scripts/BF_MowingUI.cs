@@ -10,7 +10,13 @@ public class BF_MowingUI : MonoBehaviour
 
     public Text percentageText;
     public BF_MowingManager mowingManager;
-
+    public int spawnInterval = 5;
+    private int spawnAt;
+    public Convyer convyer;
+    private void Start()
+    {
+        spawnAt = 100 - 5;
+    }
     void Update()
     {
         float marginValue = (float)mowingManager.totalMarker * mowingManager.marginError;
@@ -19,9 +25,17 @@ public class BF_MowingUI : MonoBehaviour
         percentageText.text = Mathf.RoundToInt(normalizedValue * 100f).ToString() + " %";
         MowingProgress = Mathf.RoundToInt(normalizedValue * 100f);
 
-        if (normalizedValue * 100f > 70)
+        if (convyer != null)
         {
-          //  SceneManager.LoadScene("Results");
+            Debug.Log(Mathf.RoundToInt(normalizedValue * 100f) +" "+spawnAt + " Found Conveyer" + (Mathf.RoundToInt(normalizedValue * 100f) < spawnAt));
+            if (Mathf.RoundToInt(normalizedValue * 100f) < spawnAt)
+                {
+                    Debug.Log("Spawn Grass Bundle");
+                    convyer.SpawnGrassBundle();
+                    spawnAt -= spawnInterval;
+                }
+             
+            return;
         }
     }
     

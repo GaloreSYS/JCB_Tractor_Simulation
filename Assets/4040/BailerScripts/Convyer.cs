@@ -9,7 +9,7 @@ public class Convyer : MonoBehaviour
     [SerializeField] GameObject PrefabHere, Loactionofspawn;
     void Start()
     {
-        InvokeRepeating("Spawnables", 1, 20);
+   
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Convyer : MonoBehaviour
         rb.MovePosition(position);
     }
 
-    public void Spawnables()
+    public void SpawnGrassBundle()
     {
         Instantiate(PrefabHere, Loactionofspawn.transform.position, Quaternion.identity);
     }
