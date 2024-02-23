@@ -177,7 +177,7 @@ public class TLB_Engine : MonoBehaviour
 
     private void ResetLeverPos(TurnableObject turnObj, GrabbedObject grabObj)
     {
-        grabObj.transform.localRotation = Quaternion.Slerp(grabObj.transform.localRotation, turnObj.startRot, 2);
+        //grabObj.transform.localRotation = Quaternion.Slerp(grabObj.transform.localRotation, turnObj.startRot, 2);
     }
 
     private void FixedUpdate()

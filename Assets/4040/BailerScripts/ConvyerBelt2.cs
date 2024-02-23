@@ -4,34 +4,25 @@ using UnityEngine;
 
 public class ConvyerBelt2 : MonoBehaviour
 {
-    public float speed;
-    public Vector3 direction;
-    public List<GameObject> onBelt;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float Speed;
+    [SerializeField] bool startConv;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        startConv = false;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ConveyerMethod()
     {
-        for (int i = 0; i <= onBelt.Count - 1; i++)
+        Vector3 position = rb.position;
+        rb.position += Vector3.back * Speed * Time.fixedDeltaTime;
+        rb.MovePosition(position);
+    }
+    private void Update()
+    {
+        if(startConv == true)
         {
-            onBelt[i].GetComponent<Rigidbody>().velocity = speed * direction;
+            ConveyerMethod();
         }
-    }
-
-    // When something collides with the belt
-    private void OnCollisionEnter(Collision collision)
-    {
-        onBelt.Add(collision.gameObject);
-    }
-
-    // When something leaves the belt
-    private void OnCollisionExit(Collision collision)
-    {
-        onBelt.Remove(collision.gameObject);
     }
 }

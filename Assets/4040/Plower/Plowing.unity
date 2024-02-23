@@ -1223,6 +1223,8 @@ MonoBehaviour:
   MowingProgress: 100
   percentageText: {fileID: 469190021}
   mowingManager: {fileID: 950375561}
+  spawnInterval: 5
+  convyer: {fileID: 0}
 --- !u!1 &1109001177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1502,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_HDR
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_AllowMSAA
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: far clip plane
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_RenderingPath
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 309
       objectReference: {fileID: 0}
     - target: {fileID: 4095806279899012793, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}

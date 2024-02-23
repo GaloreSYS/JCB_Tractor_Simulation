@@ -5,10 +5,18 @@ using UnityEngine;
 public class TractorBackController : MonoBehaviour
 {
     [SerializeField] Animator _anim;
-    [SerializeField] [Range(-1f, 1f)] float Value;
-   
-    void FixedUpdate()
+    [SerializeField] float Value;
+    private void Start()
     {
-        _anim.SetFloat("SetTractorAnim", Value) ;
+        Value = 1;
+    }
+    public void GoUp()
+    {
+        _anim.SetBool("UpLoader", true);
+    }
+
+    public void GoDown()
+    {
+        _anim.SetBool("UpLoader", false);
     }
 }
