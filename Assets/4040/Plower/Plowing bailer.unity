@@ -2227,6 +2227,41 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: field of view
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 38.059135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: far clip plane
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_RenderingPath
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210135360615575135, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 309
+      objectReference: {fileID: 0}
     - target: {fileID: 3696218592852482331, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
       propertyPath: m_Height
