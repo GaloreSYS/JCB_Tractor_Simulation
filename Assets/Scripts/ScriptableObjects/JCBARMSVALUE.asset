@@ -41,9 +41,9 @@ MonoBehaviour:
   valueFork: 0
   ForkLiftUp: 0
   ForkLiftDown: 0
-  valueTractor: 0
+  valueTractor: -1.0024959
   TractorPlowUP: 0
-  TractorPlowDown: 0
+  TractorPlowDown: 1
   FrontArm: 0.25
   FrontBucket: 0.25
   BackArm: 0.25
@@ -56,5 +56,5 @@ MonoBehaviour:
   TractorPlow: 0.2
   stampaccelerator: 0
   tractorbrakess: 0
-  frontandbackdecider: 1
+  frontandbackdecider: 0
   brakess: 0

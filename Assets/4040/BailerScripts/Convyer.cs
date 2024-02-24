@@ -9,6 +9,7 @@ public class Convyer : MonoBehaviour
     [SerializeField] GameObject PrefabHere, Loactionofspawn;
     void Start()
     {
+        //InvokeRepeating("SpawnGrassBundle", 1, 10);
    
     }
 
