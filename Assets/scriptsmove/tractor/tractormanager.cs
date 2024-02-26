@@ -396,7 +396,7 @@ public class tractormanager : MonoBehaviour
         if (steerwheel.transform.rotation.y <= 140f && steerwheel.transform.rotation.y >= -110f)
         {
 
-            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 && steerwheel.gameObject.transform.localEulerAngles.y < 180)
+            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 && steerwheel.gameObject.transform.localEulerAngles.y < 179)
             {
                 steeringAxis = 0.5f;
                 maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
@@ -417,18 +417,18 @@ public class tractormanager : MonoBehaviour
             a = steerwheel.gameObject.transform.localEulerAngles.y;
 
        
-            if (a > 270 && a <= 359)
+            if (a > 180 && a <= 359)
             {
                 Debug.Log("something is working...");
                 steeringAxis = 0.5f;
                 maxSteeringAngle = a;
 
-                if (steerwheel.gameObject.transform.localEulerAngles.y < (360-45))
+                if (steerwheel.gameObject.transform.localEulerAngles.y < 270)
                 {
-                    maxSteeringAngle = 0;
+                    maxSteeringAngle = 45;
 
-                    steerwheel.transform.localRotation = Quaternion.Euler(0, 360 - 45, 0);
-                    Debug.Log(maxSteeringAngle + "steer angle..."+ Quaternion.Euler(0, 360 - 45, 0));
+                    steerwheel.transform.localRotation = Quaternion.Euler(0, 270, 0);
+                    Debug.Log(maxSteeringAngle + "steer angle..."+ Quaternion.Euler(0, 270, 0));
                 }
                 TurnLeft();
 

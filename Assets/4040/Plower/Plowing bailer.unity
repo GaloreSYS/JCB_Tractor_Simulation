@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6148073, g: 0.632566, b: 0.6875725, a: 1}
+  m_IndirectSpecularColor: {r: 0.61480397, g: 0.6325604, b: 0.68756753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4265,10 +4265,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733532078767477106, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.07567181
+      objectReference: {fileID: 0}
+    - target: {fileID: 733532078767477106, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.022835905
+      objectReference: {fileID: 0}
+    - target: {fileID: 854088569592172359, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.051327154
+      objectReference: {fileID: 0}
+    - target: {fileID: 854088569592172359, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.014663578
+      objectReference: {fileID: 0}
+    - target: {fileID: 975715130552779836, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.06386521
+      objectReference: {fileID: 0}
+    - target: {fileID: 975715130552779836, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.01959927
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471934785761675783, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.07342117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471934785761675783, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.021710588
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088766150449555787, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721857069446375883, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.07567201
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721857069446375883, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.022836003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228700891559301502, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.074785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228700891559301502, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0243925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696347863547844948, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.029485786
+      objectReference: {fileID: 0}
     - target: {fileID: 6078292059417401902, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
       propertyPath: m_Name
       value: Tractor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929922155930398086, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.08982047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929922155930398086, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.029910233
       objectReference: {fileID: 0}
     - target: {fileID: 6969462510255551468, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
@@ -4319,6 +4399,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325553145778632078, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.08007858
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325553145778632078, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.02703929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555215748331294548, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Height
+      value: 0.06386528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8555215748331294548, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.019599307
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
