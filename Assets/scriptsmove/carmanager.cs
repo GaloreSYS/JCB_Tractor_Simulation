@@ -125,6 +125,7 @@ public class carmanager : MonoBehaviour
 
     void Update()
     {
+        Steer();
         if (gearspeednumber.CheckEngine == true)
         {
             //gearspeednumber.gearnumber = objgear.gearValue;
@@ -269,6 +270,18 @@ public class carmanager : MonoBehaviour
                         }
                     }
                 }
+
+
+
+
+
+
+
+
+
+
+
+
             } /*
                 if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 41) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 50))
                 {
@@ -292,7 +305,7 @@ public class carmanager : MonoBehaviour
             //    }
 
 
-            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
+     /*       if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
             {
                 steeringAxis = 0.5f;
                 maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
@@ -331,7 +344,7 @@ public class carmanager : MonoBehaviour
 
                 //        Debug.Log("max=" + maxSteeringAngle);
                 TurnLeft();
-            }
+            }*/
 
             if (steerwheel.transform.rotation.y == 0)
             {
@@ -375,7 +388,68 @@ public class carmanager : MonoBehaviour
         }
     }
 
-    public void GoForward()
+
+
+    public void Steer()
+    {
+        Debug.Log("jcb");
+        {
+            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 && steerwheel.gameObject.transform.localEulerAngles.y < 180)
+            {
+                steeringAxis = 0.5f;
+                maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
+
+
+                if (steerwheel.gameObject.transform.localEulerAngles.y > 45)
+                {
+                    steerwheel.transform.localRotation = Quaternion.Euler(0, 45, 0);
+
+                    maxSteeringAngle = 45;
+                }
+                TurnRight();
+                return;
+            }
+            a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
+            Debug.Log(a + "aaaaa");
+            if (a < 0 && a >= -13)
+            {
+                Debug.Log("pokemin");
+                maxSteeringAngle = -13;
+                TurnLeft();
+            }
+            if (a < -13 && a > -180)
+            {
+                Debug.Log("pokemon");
+                steeringAxis = 0.5f;
+                maxSteeringAngle = a;
+                if (a < -65)
+                {
+                    maxSteeringAngle = -65;
+                }
+                if (a < -165)
+                {
+                    maxSteeringAngle = -65;
+                }
+
+                TurnLeft();
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void GoForward()
     {
         Debug.Log("1");
         if (Mathf.Abs(localVelocityX) > 2.5f)
