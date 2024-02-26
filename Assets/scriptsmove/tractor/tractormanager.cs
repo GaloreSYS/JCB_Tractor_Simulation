@@ -389,9 +389,82 @@ public class tractormanager : MonoBehaviour
         }
         //put end if block
         AnimateWheelMeshes();
+        
+        
+        
+        
+        
+        
+        
+        if (steerwheel.gameObject.transform.localEulerAngles.y >= 0)
+        {
+            steeringAxis = 0.5f;
+            maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
+            if (maxSteeringAngle > 45)
+            {
+                maxSteeringAngle = 45;
+            }
+            TurnRight();
+            //      Debug.Log("Right"+ steerwheel.gameObject.transform.localRotation.z);
+        }
+        a = steerwheel.gameObject.transform.localEulerAngles.y- 360;
+        //    Debug.Log(a + "aaaaa");
+        if (a < 0 && a >= -13)
+        {
+            Debug.Log("pokemin");
+            maxSteeringAngle = -13;
+            TurnLeft();
+        }
+        if (a<-13&&a>-180)
+        {
+            Debug.Log("pokemon");
+            steeringAxis = 0.5f;
+            maxSteeringAngle = a;
+            if (maxSteeringAngle < -45)
+            {
+                maxSteeringAngle = -45;
+            }   
+            //        Debug.Log("max=" + maxSteeringAngle);
+            TurnLeft();
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
+
+
+
     public void Steer()
+    {
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+ /*   public void Steer()
     {
         if (steerwheel.transform.rotation.y <= 140f && steerwheel.transform.rotation.y >= -110f)
         {
@@ -411,16 +484,18 @@ public class tractormanager : MonoBehaviour
                 TurnRight();
                 return;
             }
+}
 
 
-
-            a = steerwheel.gameObject.transform.localEulerAngles.y;
+            a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
 
        
-            if (a > 270 && a <= 359)
+         //   if (a > 270 && a <= 359)
+            if (a <-13 && a > -180)
             {
                 Debug.Log("something is working...");
                 steeringAxis = 0.5f;
+                TurnLeft();
                 maxSteeringAngle = a;
 
                 if (steerwheel.gameObject.transform.localEulerAngles.y < (360-45))
@@ -435,7 +510,7 @@ public class tractormanager : MonoBehaviour
             }
         }
 
-    }
+    }*/
     public void GoForward()
     {
 
@@ -633,10 +708,10 @@ public class tractormanager : MonoBehaviour
 
     public void TurnLeft()
     {
-        steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
-        if (steeringAxis > 1f)
+        steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
+        if (steeringAxis < -1f)
         {
-            steeringAxis = 1f;
+            steeringAxis = -1f;
         }
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
