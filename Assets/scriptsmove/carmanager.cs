@@ -126,6 +126,10 @@ public class carmanager : MonoBehaviour
     void Update()
     {
         Steer();
+        AnimateWheelMeshes();
+
+
+
         if (gearspeednumber.CheckEngine == true)
         {
             //gearspeednumber.gearnumber = objgear.gearValue;
@@ -161,8 +165,7 @@ public class carmanager : MonoBehaviour
             }
 
 
-            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y ==
-                 0)) // ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
+            if ((gearlevercontrol.gameObject.transform.localEulerAngles.y ==0)) // ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
             {
                 //                  Debug.Log("8");
                 //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
@@ -272,16 +275,6 @@ public class carmanager : MonoBehaviour
                 }
 
 
-
-
-
-
-
-
-
-
-
-
             } /*
                 if ((gearlevercontrol.gameObject.transform.localEulerAngles.y >= 41) && (gearlevercontrol.gameObject.transform.localEulerAngles.y <= 50))
                 {
@@ -346,10 +339,7 @@ public class carmanager : MonoBehaviour
                 TurnLeft();
             }*/
 
-            if (steerwheel.transform.rotation.y == 0)
-            {
-                //        Debug.Log("zero");
-            }
+          
 
             /*   if (Input.GetKey(KeyCode.A))
                 {
@@ -380,7 +370,7 @@ public class carmanager : MonoBehaviour
 
             if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f)
             {
-                ResetSteeringAngle();
+        //        ResetSteeringAngle();
             }
 
             //put end if block
@@ -394,7 +384,7 @@ public class carmanager : MonoBehaviour
     {
         Debug.Log("jcb");
         {
-            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 && steerwheel.gameObject.transform.localEulerAngles.y < 180)
+            if (steerwheel.gameObject.transform.localEulerAngles.y > 3 && steerwheel.gameObject.transform.localEulerAngles.y < 180)
             {
                 steeringAxis = 0.5f;
                 maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
@@ -411,43 +401,16 @@ public class carmanager : MonoBehaviour
             }
             a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
             Debug.Log(a + "aaaaa");
-            if (a < 0 && a >= -13)
+           if (a < 0 && a >= -180)
             {
-                Debug.Log("pokemin");
-                maxSteeringAngle = -13;
-                TurnLeft();
-            }
-            if (a < -13 && a > -180)
-            {
-                Debug.Log("pokemon");
                 steeringAxis = 0.5f;
-                maxSteeringAngle = a;
-                if (a < -65)
-                {
-                    maxSteeringAngle = -65;
-                }
-                if (a < -165)
-                {
-                    maxSteeringAngle = -65;
-                }
-
+                Debug.Log("pokemon");
+                maxSteeringAngle = a;// -13;
                 TurnLeft();
             }
+      
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         public void GoForward()
     {
@@ -623,18 +586,15 @@ public class carmanager : MonoBehaviour
 
     public void TurnLeft()
     {
-        steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
-        if (steeringAxis < -1f)
+        steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
+        if (steeringAxis > 1f)
         {
-            steeringAxis = -1f;
+            steeringAxis = 1f;
         }
-
         var steeringAngle = steeringAxis * maxSteeringAngle;
-        frontLeftCollider.steerAngle =
-            Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle,
-                steeringSpeed); //steerinj anjle is to be controlled by handle
+        frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
-    }
+    } 
 
 
     public void TurnRight()
@@ -650,7 +610,7 @@ public class carmanager : MonoBehaviour
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
 
-    public void ResetSteeringAngle()
+ /*   public void ResetSteeringAngle()
     {
         if (steeringAxis < 0f)
         {
@@ -670,7 +630,7 @@ public class carmanager : MonoBehaviour
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
-
+    */
 
     void AnimateWheelMeshes()
     {
