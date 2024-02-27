@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JCBARMSVALUE
   m_EditorClassIdentifier: 
   CheckEngine: 1
-  valuearms: -0.7388879
+  valuearms: -0.73055464
   enabledown: 0
   enableup: 0
   valuebucket: 0
@@ -56,5 +56,5 @@ MonoBehaviour:
   TractorPlow: 0.2
   stampaccelerator: 0
   tractorbrakess: 0
-  frontandbackdecider: 2
+  frontandbackdecider: 1
   brakess: 0

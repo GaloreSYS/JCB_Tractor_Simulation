@@ -32,6 +32,7 @@ public class SpawnRocksAndPile : MonoBehaviour
 
     public void Start()
     {
+        GameManager.Instance.moduleName = "Digging(TLB)";
         Collision = false;
         GameManager.Instance.StartStopWatch();
     }

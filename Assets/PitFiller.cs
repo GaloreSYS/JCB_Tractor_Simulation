@@ -16,8 +16,11 @@ public class PitFiller : MonoBehaviour
     public Modular3DText _modular3DText;
     public float percentage;
     public int fillerCount;
+
     private void Start()
     {
+        GameManager.Instance.moduleName = "Front Bucket(TLB)";
+        GameManager.Instance.StartStopWatch();
         fillerCount = GameObject.FindGameObjectsWithTag("Filler").Length;
     }
 
@@ -28,10 +31,11 @@ public class PitFiller : MonoBehaviour
             percentage += 100 / fillerCount;
         }
     }
+
     public void Update()
     {
         if (!gameover)
-            _modular3DText.UpdateText((percentage ).ToString("F0") + " % ");
+            _modular3DText.UpdateText((percentage).ToString("F0") + " % ");
         else
         {
             _modular3DText.UpdateText("Completed");
@@ -42,13 +46,13 @@ public class PitFiller : MonoBehaviour
             GameOver(ModuleStatus.Completed);
         }
     }
-    
+
     public void GameOver(ModuleStatus moduleStatus)
     {
         GameManager.Instance.moduleStatus = moduleStatus;
         gameover = true;
         fadeEffect.fadeDuration = 7;
-       
+
         if (moduleStatus == ModuleStatus.Failed)
         {
             gameOverSource.PlayOneShot(gameOverFailedAudio);
@@ -58,6 +62,7 @@ public class PitFiller : MonoBehaviour
             gameOverSource.PlayOneShot(gameOverAudio);
         }
 
+        GameManager.Instance.StopStopWatch();
         fadeEffect.FadeOut();
         Invoke(nameof(GoToMainMenu), 8f);
     }

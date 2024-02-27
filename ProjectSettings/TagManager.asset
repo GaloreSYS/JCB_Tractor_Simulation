@@ -18,6 +18,8 @@ TagManager:
   - ground
   - DigArea
   - Filler
+  - PickItem
+  - DropArea
   layers:
   - Default
   - TransparentFX
@@ -48,8 +50,8 @@ TagManager:
   - DroppedHey
   - Digged
   - Ground
-  - 
-  - 
+  - BaseFork
+  - Fork
   - 
   m_SortingLayers:
   - name: Default

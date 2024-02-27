@@ -1,51 +1,84 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TinyGiantStudio.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JCBForkLift : MonoBehaviour
 {
-    public ArmDataJCB ArmDatajvb;
-    public Animator anim;
-    public float ValueForks;
-    public bool ForkUp, ForkDown, CheckEngine;
+    public FadeEffect fadeEffect;
+    public bool gameover;
+    public AudioClip gameOverAudio;
+    public AudioClip gameOverFailedAudio;
+    public AudioSource gameOverSource;
+
+
+
+    public GameObject pickUpItem;
+
     // Start is called before the first frame update
     void Start()
     {
-        anim.SetFloat("ForkLift", 0f);
+        pickUpItem.SetActive(false);
+        GameManager.Instance.moduleName = "ForkLift(TLB)";
+        GameManager.Instance.StartStopWatch();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public bool pickedUp;
+
+    private void OnTriggerEnter(Collider other)
     {
-        CheckEngine = ArmDatajvb.CheckEngine;
-
-        if(CheckEngine == true)
+        if (other.gameObject.CompareTag("PickItem"))
         {
-            ArmDatajvb.valueFork = ValueForks;
-            ForkUp = ArmDatajvb.ForkLiftUp;
-            ForkDown = ArmDatajvb.ForkLiftDown;
-            //for front bucket arms
-            if (ForkUp == true)
+            pickedUp = true;
+            other.gameObject.SetActive(false);
+            pickUpItem.SetActive(true);
+        }
+
+        if (other.gameObject.CompareTag("DropArea"))
+        {
+            if (pickedUp)
             {
-                if (ValueForks >= -1)
-                {
-                    ValueForks -= Time.deltaTime * ArmDatajvb.Forklift;
-                    ForkDown = false;
-                }
+                pickUpItem.SetActive(false);
+                other.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().material = pickUpItem.gameObject
+                    .transform.GetChild(0).GetComponent<MeshRenderer>().materials[0];
+                GameOver(ModuleStatus.Completed);
             }
+        }
+    }
+
+    public void GameOver(ModuleStatus moduleStatus)
+    {
+        GameManager.Instance.moduleStatus = moduleStatus;
+        gameover = true;
+        fadeEffect.fadeDuration = 7;
+
+        if (moduleStatus == ModuleStatus.Failed)
+        {
+            gameOverSource.PlayOneShot(gameOverFailedAudio);
+        }
+        else
+        {
+            gameOverSource.PlayOneShot(gameOverAudio);
+        }
+
+        GameManager.Instance.StopStopWatch();
+        fadeEffect.FadeOut();
+        Invoke(nameof(GoToMainMenu), 8f);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Results");
+    }
 
 
-            if (ForkDown == true)
-            {
-                if (ValueForks <= 1)
-                {
-                    ValueForks += Time.deltaTime * ArmDatajvb.Forklift;
-                    ForkUp = false;
-                }
-            }
-
-
-            anim.SetFloat("ForkLift", ValueForks);
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickItem"))
+        {
+            pickedUp = false;
         }
     }
 }
