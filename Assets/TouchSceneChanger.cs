@@ -10,6 +10,11 @@ public class TouchSceneChanger : MonoBehaviour
     public int sceneIndex;
     public FadeEffect fadeEffect;
 
+    private void Start()
+    {
+        sceneIndex = GameManager.Instance.sceneIndex;
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))

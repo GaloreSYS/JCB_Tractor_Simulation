@@ -11,6 +11,7 @@ public enum ModuleStatus
 
 public class GameManager : MonoBehaviour
 {
+    public int sceneIndex;
     public ModuleStatus moduleStatus;
     public static GameManager Instance;
   public string name,empId;
@@ -21,7 +22,10 @@ public class GameManager : MonoBehaviour
     public string timeTake;
 
     public int _totalScore = 100;
-
+public void SetSceneIndex(int index)
+    {
+        sceneIndex = index;
+    }
     private void Awake()
     {
         if (Instance == null)
