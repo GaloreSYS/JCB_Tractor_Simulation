@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public int sceneIndex;
     public ModuleStatus moduleStatus;
     public static GameManager Instance;
-  public string name,empId;
+  public string name,empId,moduleName;
 
     public TMP_Text userNameText;
     public TMP_Text empIdText;
@@ -75,7 +75,7 @@ public void SetSceneIndex(int index)
     public void OnGameOver()
     {
         StopStopWatch();
-        ResultUIManager.Instance.FillData(name, empId, moduleStatus.ToString(), timeTake,_totalScore.ToString());
+        ResultUIManager.Instance.FillData(name, empId, moduleStatus.ToString(), timeTake,_totalScore.ToString(),moduleName);
     }
 
     public bool awareness;
