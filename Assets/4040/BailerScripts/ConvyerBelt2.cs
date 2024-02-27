@@ -8,10 +8,11 @@ public class ConvyerBelt2 : MonoBehaviour
 {
     [SerializeField] Rigidbody rb;
     [SerializeField] float Speed;
-    [SerializeField] bool startConv;
+    [SerializeField] bool startConv,a;
     [SerializeField] Rigidbody[] HeyRiggidBody;
     [SerializeField] ParentConstraint[] HeyConstraint;
-
+    [SerializeField] Animator anime;
+    
     private void Start()
     {
         startConv = false;
@@ -33,7 +34,8 @@ public class ConvyerBelt2 : MonoBehaviour
     }
     private void Update()
     {
-        if(startConv == true)
+        dumper();
+        if (startConv == true)
         {
             ConveyerMethod();
             for (int i = 0; i < HeyRiggidBody.Length; i++)
@@ -46,5 +48,35 @@ public class ConvyerBelt2 : MonoBehaviour
                 HeyConstraint[i].constraintActive = false;
             }
         }
+    }
+
+
+    public void dumper()
+    {
+
+
+        if(Input.GetKeyDown(KeyCode.H)) {
+
+            anime.SetBool("UpLoader",true);
+            Invoke("tractor", 1.5f);
+        
+        }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+
+            anime.SetBool("UpLoader", false);
+         
+
+        }
+
+
+
+    }
+    
+    public void tractor()
+    {
+
+        startConv = true;
     }
 }
