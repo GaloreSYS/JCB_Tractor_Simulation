@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 3940101878891614796}
   - component: {fileID: 4266695842943071684}
   - component: {fileID: 2686243423719305151}
+  - component: {fileID: 8571122385038158836}
   - component: {fileID: 5940557823660407170}
   m_Layer: 10
   m_Name: Lever2
@@ -690,7 +691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6277269341797657701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.15917304, w: 0.9872507}
+  m_LocalRotation: {x: 0, y: 0, z: 0.19080894, w: 0.9816273}
   m_LocalPosition: {x: 0.013218009, y: 0.004865999, z: 0.003725002}
   m_LocalScale: {x: 0.0009999998, y: 0.001, z: 0.0009999999}
   m_ConstrainProportionsScale: 0
@@ -700,7 +701,7 @@ Transform:
   - {fileID: 3126411754096421608}
   - {fileID: 5422168496006629537}
   m_Father: {fileID: 4023851692481507561}
-  m_LocalEulerAnglesHint: {x: 0.001, y: 0, z: 26.238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22}
 --- !u!114 &4266695842943071684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,20 +714,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46c1d138d9c44fc4cb8a1510b6b13230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startValue: 24.85
+  startValue: 22
   limitRotation: 1
   rotationLimits: {x: 15, y: 30}
   ReachedEndA:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5940557823660407170}
-        m_TargetAssemblyTypeName: KeyboardControlforPlower, Assembly-CSharp
-        m_MethodName: Up
-        m_Mode: 1
+      - m_Target: {fileID: 8571122385038158836}
+        m_TargetAssemblyTypeName: scriptsmove.ShuttleGear, Assembly-CSharp
+        m_MethodName: FrontBackSelector
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -734,14 +735,14 @@ MonoBehaviour:
   ReachedEndB:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5940557823660407170}
-        m_TargetAssemblyTypeName: KeyboardControlforPlower, Assembly-CSharp
-        m_MethodName: Down
-        m_Mode: 1
+      - m_Target: {fileID: 8571122385038158836}
+        m_TargetAssemblyTypeName: scriptsmove.ShuttleGear, Assembly-CSharp
+        m_MethodName: FrontBackSelector
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -774,6 +775,22 @@ CapsuleCollider:
   m_Height: 0.87060034
   m_Direction: 1
   m_Center: {x: -0.25, y: 1.67, z: 0.02}
+--- !u!114 &8571122385038158836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277269341797657701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aea390ae4f2091439c11bb059eb0d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vehicleData: {fileID: 11400000, guid: 57318cbcf72f9c247b9bf29baa8d0903, type: 2}
+  obj: 90
+  obj2: 0
+  obj3: 0
 --- !u!114 &5940557823660407170
 MonoBehaviour:
   m_ObjectHideFlags: 0

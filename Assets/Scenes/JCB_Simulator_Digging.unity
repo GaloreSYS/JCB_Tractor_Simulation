@@ -88113,21 +88113,6 @@ PrefabInstance:
       propertyPath: liverReachedZ_B.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 196709878}
-    - target: {fileID: 4529764907353975440, guid: b3577b038e47574419eabb98c85a1297,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.002695744
-      objectReference: {fileID: 0}
-    - target: {fileID: 4529764907353975440, guid: b3577b038e47574419eabb98c85a1297,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.39411354
-      objectReference: {fileID: 0}
-    - target: {fileID: 4529764907353975440, guid: b3577b038e47574419eabb98c85a1297,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.9910918
-      objectReference: {fileID: 0}
     - target: {fileID: 4851485938482121620, guid: b3577b038e47574419eabb98c85a1297,
         type: 3}
       propertyPath: m_Height

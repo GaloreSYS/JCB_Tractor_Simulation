@@ -26,8 +26,8 @@ public class EngineStartAudioManger : MonoBehaviour
         if (GetComponent<TLB_Engine>())
         {
         }
-        else
-            PlayAudio1();
+     //   else
+            //PlayAudio1();
     }
 
     void Update()
@@ -39,7 +39,7 @@ public class EngineStartAudioManger : MonoBehaviour
     }
 
     public void PlayAudio1()
-    {
+    {if(isOn)return;
         audioSource.clip = engineStartingClip;
         audioSource.loop = false;
         audioSource.Play();
@@ -50,6 +50,7 @@ public class EngineStartAudioManger : MonoBehaviour
         audioSource.clip = engineIdleStateClip;
         audioSource.loop = true;
         audioSource.Play();
+        isOn = true;
     }
 
     public void StopAudio()

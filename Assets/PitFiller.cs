@@ -20,8 +20,11 @@ public class PitFiller : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.moduleName = "Front Bucket(TLB)";
-        GameManager.Instance.StartStopWatch();
+        if(GameManager.Instance!=null)
+        {
+            GameManager.Instance.moduleName = "Front Bucket(TLB)";
+            GameManager.Instance.StartStopWatch();
+        }
         fillerCount = GameObject.FindGameObjectsWithTag("Filler").Length;
     }
 
@@ -55,7 +58,8 @@ public class PitFiller : MonoBehaviour
     }
     public void GameOver(ModuleStatus moduleStatus)
     {
-        GameManager.Instance.moduleStatus = moduleStatus;
+        
+     
         gameover = true;
         fadeEffect.fadeDuration = 7;
 
@@ -67,8 +71,11 @@ public class PitFiller : MonoBehaviour
         {
             gameOverSource.PlayOneShot(gameOverAudio);
         }
-
-        GameManager.Instance.StopStopWatch();
+        if(GameManager.Instance!=null)
+        {
+            GameManager.Instance.moduleStatus = moduleStatus;
+            GameManager.Instance.StopStopWatch();
+        }
         fadeEffect.FadeOut();
         Invoke(nameof(GoToMainMenu), 8f);
     }

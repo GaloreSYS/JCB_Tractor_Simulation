@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &85824220
 Transform:
   m_ObjectHideFlags: 0
@@ -808,7 +808,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773387815}
   serializedVersion: 4
-  m_Mass: 100
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -864,8 +864,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.9291544, y: 1.416195, z: 6.3137093}
-  m_Center: {x: 0.045224667, y: 1.41, z: -4.06}
+  m_Size: {x: 2.9291544, y: 1.4161952, z: 5.1993876}
+  m_Center: {x: 0.045224667, y: 1.41, z: -4.6171603}
 --- !u!59 &773387820
 HingeJoint:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0019940631, y: 0, z: 0.7694578}
+  m_ConnectedAnchor: {x: 0.0019940631, y: 0.0040000677, z: 0.7694578}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -894,8 +894,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: -5
-    max: 5
+    min: -113.49579
+    max: 101.30997
     bounciness: 0
     bounceMinVelocity: 100
     contactDistance: 0
@@ -1930,6 +1930,17 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.00584534
       objectReference: {fileID: 0}
+    - target: {fileID: 8524696626728133411, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: instructions.Array.data[1].instructionText
+      value: Once the calibration is complete please proceed to collect the raked
+        crops using the baler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524696626728133411, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: instructions.Array.data[1].instructionAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d468f1f097d95045b3748a2655cf76a, type: 3}
     - target: {fileID: 8555215748331294548, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
       propertyPath: m_Height
@@ -2068,7 +2079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1014380387
 Transform:
   m_ObjectHideFlags: 0
@@ -2246,7 +2257,7 @@ MonoBehaviour:
   convyer: {fileID: 681057771}
   fadeEffect: {fileID: 1178911675}
   gameover: 0
-  gameOverAudio: {fileID: 0}
+  gameOverAudio: {fileID: 8300000, guid: e4f8a8eee7b4ef74dbfcf85a6daa5bea, type: 3}
   gameOverFailedAudio: {fileID: 0}
   gameOverSource: {fileID: 1036800663}
 --- !u!82 &1036800663
@@ -2755,7 +2766,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607076693}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2786,12 +2797,12 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.06337387, y: -0.15666673, z: -2.3407173}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
-    spring: 0
-    damper: 0
+    spring: 0.2
+    damper: 0.22
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -2802,8 +2813,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: -60
-    max: 60
+    min: -180
+    max: 180
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -2832,8 +2843,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.9291544, y: 1.416195, z: 6.3137093}
-  m_Center: {x: 0.045224667, y: 1.41, z: -4.06}
+  m_Size: {x: 2.9291544, y: 1.4161952, z: 6.0059185}
+  m_Center: {x: 0.045224667, y: 1.41, z: -4.213895}
 --- !u!4 &1607076697
 Transform:
   m_ObjectHideFlags: 0

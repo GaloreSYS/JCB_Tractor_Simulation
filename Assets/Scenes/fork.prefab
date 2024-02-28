@@ -461,10 +461,8 @@ MonoBehaviour:
   gameOverAudio: {fileID: 0}
   gameOverFailedAudio: {fileID: 0}
   gameOverSource: {fileID: 0}
-  _modular3DText: {fileID: 0}
-  percentage: 0
-  fillerCount: 0
   pickUpItem: {fileID: 5033436763936241832}
+  pickedUp: 0
 --- !u!1 &4270550941633644063
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,14 +40,16 @@ public class ConvyerBelt2 : MonoBehaviour
         rb.MovePosition(position);
     }
 
+    private bool Completed;
     private void Update()
     {
         dumper();
-        if (startConv == true)
+        if (startConv && !Completed)
         {
             ConveyerMethod();
             for (int i = 0; i < HeyRiggidBody.Length; i++)
             {
+                HeyRiggidBody[i].drag = 10;
                 HeyRiggidBody[i].isKinematic = false;
             }
 
@@ -55,7 +57,24 @@ public class ConvyerBelt2 : MonoBehaviour
             {
                 HeyConstraint[i].constraintActive = false;
             }
+
+            Completed = true;
+          Invoke(nameof(resetDrag),2f); 
         }
+
+        if (Completed)
+        {
+            ConveyerMethod();
+        }
+
+    }
+
+    public void resetDrag()
+    {
+        for (int i = 0; i < HeyRiggidBody.Length; i++)
+        {
+            HeyRiggidBody[i].drag = 0;
+        } 
     }
 
 
@@ -92,7 +111,8 @@ public class ConvyerBelt2 : MonoBehaviour
     public AudioSource gameOverSource;
     public void GameOver(ModuleStatus moduleStatus)
     {
-        GameManager.Instance.moduleStatus = moduleStatus;
+        Debug.Log(moduleStatus);
+      
         gameover = true;
         fadeEffect.fadeDuration = 7;
 
@@ -104,8 +124,11 @@ public class ConvyerBelt2 : MonoBehaviour
         {
             gameOverSource.PlayOneShot(gameOverAudio);
         }
-
-        GameManager.Instance.StopStopWatch();
+        if(GameManager.Instance!=null)
+        {
+            GameManager.Instance.moduleStatus = moduleStatus;
+            GameManager.Instance.StopStopWatch();
+        }
         fadeEffect.FadeOut();
         Invoke(nameof(GoToMainMenu), 8f);
     }

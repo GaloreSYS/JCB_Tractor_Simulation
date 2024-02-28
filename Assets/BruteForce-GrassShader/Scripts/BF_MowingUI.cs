@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -78,7 +77,7 @@ public class BF_MowingUI : MonoBehaviour
 
     public void GameOver(ModuleStatus moduleStatus)
     {
-        GameManager.Instance.moduleStatus = moduleStatus;
+       
         gameover = true;
         fadeEffect.fadeDuration = 7;
 
@@ -90,8 +89,11 @@ public class BF_MowingUI : MonoBehaviour
         {
             gameOverSource.PlayOneShot(gameOverAudio);
         }
-
-        GameManager.Instance.StopStopWatch();
+        if(GameManager.Instance!=null)
+        {
+            GameManager.Instance.moduleStatus = moduleStatus;
+            GameManager.Instance.StopStopWatch();
+        }
         fadeEffect.FadeOut();
         Invoke(nameof(GoToMainMenu), 8f);
     }

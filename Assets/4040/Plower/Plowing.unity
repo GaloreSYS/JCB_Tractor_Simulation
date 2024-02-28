@@ -458,7 +458,7 @@ MonoBehaviour:
   convyer: {fileID: 0}
   fadeEffect: {fileID: 917251913}
   gameover: 0
-  gameOverAudio: {fileID: 0}
+  gameOverAudio: {fileID: 8300000, guid: 6060612f37ce2554bac1a9883399a149, type: 3}
   gameOverFailedAudio: {fileID: 0}
   gameOverSource: {fileID: 2110856062}
 --- !u!4 &1118212176 stripped
@@ -1292,6 +1292,11 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.029485788
       objectReference: {fileID: 0}
+    - target: {fileID: 4749129616005163642, guid: 4060741f25c4f2943b2d7a3b12b464a4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5091646670973588199, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
       propertyPath: m_Enabled
@@ -1612,7 +1617,9 @@ PrefabInstance:
       propertyPath: ReachedEndB.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1495756397506270635, guid: 4060741f25c4f2943b2d7a3b12b464a4, type: 3}
+    - {fileID: 4749129616005163642, guid: 4060741f25c4f2943b2d7a3b12b464a4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1937906682087671473, guid: 4060741f25c4f2943b2d7a3b12b464a4,
