@@ -56,24 +56,38 @@ public class TractorPlowControlls : MonoBehaviour
         Ray checkGround = new Ray(testground.transform.position, Vector3.down);
 
         Debug.DrawRay(testground.transform.position, Vector3.down * rayLength);
-        if (Physics.Raycast(checkGround, out hit, rayLength))
+        if (EnableUp == true)
         {
-            if (hit.collider.tag == "ground")
-            {
-                onGround = true;
+            boxs[0].gameObject.SetActive(false);
+            boxs[1].gameObject.SetActive(false);
+            boxs[2].gameObject.SetActive(false);
 
-                boxs[0].gameObject.SetActive(true);
-                boxs[1].gameObject.SetActive(true);
-                boxs[2].gameObject.SetActive(true);
-            }
-            if (EnableUp == true)
-            {
-                boxs[0].gameObject.SetActive(false);
-                boxs[1].gameObject.SetActive(false);
-                boxs[2].gameObject.SetActive(false);
-
-            }
         }
+        if (!EnableUp)
+        {
+            boxs[0].gameObject.SetActive(true);
+            boxs[1].gameObject.SetActive(true);
+            boxs[2].gameObject.SetActive(true);
+
+        }
+        // if (Physics.Raycast(checkGround, out hit, rayLength))
+        // {
+        //     if (hit.collider.tag == "ground")
+        //     {
+        //         onGround = true;
+        //
+        //         boxs[0].gameObject.SetActive(true);
+        //         boxs[1].gameObject.SetActive(true);
+        //         boxs[2].gameObject.SetActive(true);
+        //     }
+        //     if (EnableUp == true)
+        //     {
+        //         boxs[0].gameObject.SetActive(false);
+        //         boxs[1].gameObject.SetActive(false);
+        //         boxs[2].gameObject.SetActive(false);
+        //
+        //     }
+        // }
 
     }
 

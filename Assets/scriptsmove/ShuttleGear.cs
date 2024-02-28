@@ -15,6 +15,7 @@ namespace scriptsmove
         public void FrontBackSelector(int value)
         {
             vehicleData.frontandbackdecider = value;
+            vehicleData.gearValue = 1;
         }
     }
 }

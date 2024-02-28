@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Manus.Interaction
 {
@@ -56,6 +57,8 @@ namespace Manus.Interaction
         /// </summary>
         public Vector2 rotationLimits = new Vector3(0.0f, 90.0f);
 
+        public UnityEvent ReachedEndA = new();
+        public UnityEvent ReachedEndB = new();
         public float rotationSteps = -1.0f;
 
         public bool snapToStep = false;
@@ -237,6 +240,17 @@ namespace Manus.Interaction
             if (limitRotation)
             {
                 m_Value = Mathf.Clamp(m_Value, rotationLimits.x, rotationLimits.y);
+                if (m_Value <= rotationLimits.x+1)
+                {Debug.Log("AAA");
+                    ReachedEndA?.Invoke();
+                }
+
+                if (m_Value >= rotationLimits.y-1)
+                {
+                    Debug.Log("BBB");
+                    ReachedEndB?.Invoke();
+                }
+                Debug.Log("TEST "+m_Value);
             }
 
             transform.localRotation = Quaternion.AngleAxis(m_Value, turnAxis);
@@ -292,6 +306,7 @@ namespace Manus.Interaction
             }
 
             onValueChanged?.Invoke(this);
+            
         }
 
         public void OnGrabbedHandPose(InteractionHand p_Object, GrabbedObject.Info p_Info)

@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02761efe598a45c98fa1baf4d446c6a7, type: 3}
   m_Name: MainUI
   m_EditorClassIdentifier: 
-  EditorPosition: {x: -652.6667, y: 75.333336, z: 0}
+  EditorPosition: {x: -653, y: 75, z: 0}
   EditorScale: {x: 0.7561437, y: 0.7561437, z: 1}
   Id: 5f72ca37-e611-4d1a-9872-d3c971674846
   GraphName: Flow Graph

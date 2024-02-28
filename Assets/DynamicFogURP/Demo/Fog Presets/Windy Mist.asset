@@ -18,7 +18,7 @@ MonoBehaviour:
   densityExponential: 1.14
   maxHeight: 10000
   distanceMax: 100000
-  tintColor: {r: 0.85400003, g: 0.728076, b: 0.25449204, a: 0.5176471}
+  tintColor: {r: 1, g: 0.9950672, b: 0.9764151, a: 0.5176471}
   useVerticalGradient: 1
   verticalGradient:
     serializedVersion: 2

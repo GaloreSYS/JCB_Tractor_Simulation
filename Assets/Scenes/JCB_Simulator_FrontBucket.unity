@@ -42034,7 +42034,7 @@ MonoBehaviour:
   ground: 0
   fadeEffect: {fileID: 6967047564566576685}
   gameover: 0
-  gameOverAudio: {fileID: 8300000, guid: 66b2c6220a9c3b344af2131175819202, type: 3}
+  gameOverAudio: {fileID: 8300000, guid: 506efaed2cf93ad439f8dbd3d701be3d, type: 3}
   gameOverFailedAudio: {fileID: 8300000, guid: d47541a28aa04a34daeff3fa6befdce7, type: 3}
   gameOverSource: {fileID: 6618577547071583661}
   _modular3DText: {fileID: 1570142393}
@@ -87889,10 +87889,9 @@ MonoBehaviour:
     type: 0
     instructionSide: 0
     instructionHighlight: {fileID: 8088360894165589510}
-  - instructionText: Great! Now  the vechicle is ON,  Rotate your seat to start digging, 
-      Make sure both stabilizer legs are  properly deployed before starting  the
-      digging process.
-    instructionAudio: {fileID: 8300000, guid: d47541a28aa04a34daeff3fa6befdce7, type: 3}
+  - instructionText: Great! Now  the vechicle is ON,  Adjust the front bucket and
+      push the rocks into the pit in front
+    instructionAudio: {fileID: 8300000, guid: ba7629aa126506f48bc769412984cf4b, type: 3}
     instructionLength: 10
     type: 0
     instructionSide: 1

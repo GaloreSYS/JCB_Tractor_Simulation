@@ -24,9 +24,10 @@ public class AcceleratorTrue : MonoBehaviour
     private void OnTriggerStay(Collider other)
    
     {
+        Debug.Log(other.gameObject.name,gameObject);
         if (other.gameObject.tag == "Left")
         {
-            Debug.Log("Pressing");
+            Debug.Log("Pressing",gameObject);
             manager.stampaccelerator = true;
 
         }

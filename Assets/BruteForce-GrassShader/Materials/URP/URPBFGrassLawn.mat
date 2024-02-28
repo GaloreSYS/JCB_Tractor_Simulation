@@ -58,11 +58,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundTex:
-        m_Texture: {fileID: 2800000, guid: 7f969087a2b5cf840bdda1c1d1e3a930, type: 3}
+        m_Texture: {fileID: 2800000, guid: 159ce40681cf148b4829df993d1a0c6c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1c9c84b4fcfbed24baac10214c8deea0, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1f3da621d899e341b0c9d832b1d57d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -105,15 +105,15 @@ Material:
     - _GrassCut: 0
     - _GrassSaturation: 4.33
     - _GrassShading: 0
-    - _GrassThinness: 1
-    - _GrassThinnessIntersection: 0.154
-    - _LightIntensity: 1
+    - _GrassThinness: 1.786
+    - _GrassThinnessIntersection: 0.01
+    - _LightIntensity: 0.556
     - _Metallic: 0
     - _MinimumNumberStacks: 0
     - _Mode: 0
     - _NearCameraSmoosh: 0.5
     - _NoisePower: 1.24
-    - _NumberOfStacks: 16
+    - _NumberOfStacks: 5.68
     - _OcclusionStrength: 1
     - _OffsetValue: 1
     - _Parallax: 0.02
@@ -122,7 +122,7 @@ Material:
     - _RTEffect: 1
     - _RimMax: 0.591
     - _RimMin: 0.11
-    - _RimPower: 3.15
+    - _RimPower: 2.97
     - _ShadowFuziness: 1
     - _ShadowMax: 0
     - _SmoothnessTextureChannel: 0
@@ -146,7 +146,7 @@ Material:
     - _UseWC: 0
     - _WindForce: 0
     - _WindMovement: 0
-    - _WorldRotation: 0
+    - _WorldRotation: 45
     - _WorldScale: 10
     - _ZWrite: 1
     - __NumberOfStacks: 17
@@ -154,9 +154,9 @@ Material:
     - _Color: {r: 0.7529412, g: 0.72402, b: 0.61960787, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.95686275, g: 0.8475049, b: 0.5769882, a: 1}
-    - _OffsetVector: {r: 0, g: 0, b: 0, a: 0}
+    - _OffsetVector: {r: 0, g: 0.11, b: 0, a: 0}
     - _PJShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ProjectedShadowColor: {r: 0.4509804, g: 0.23375352, b: 0.04313725, a: 1}
-    - _RimColor: {r: 0.277, g: 0.25819692, b: 0.1355532, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
     - _SelfShadowColor: {r: 0.284, g: 0.27240816, b: 0.066653065, a: 1}
   m_BuildTextureStacks: []

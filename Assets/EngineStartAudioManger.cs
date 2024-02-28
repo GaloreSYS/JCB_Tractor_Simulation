@@ -18,39 +18,43 @@ public class EngineStartAudioManger : MonoBehaviour
         Instance = this;
     }
 
+   
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (GetComponent<TLB_Engine>())
+        {
+        }
+        else
+            PlayAudio1();
     }
 
     void Update()
     {
         if (!audioSource.isPlaying && audioSource.clip == engineStartingClip)
         {
-            
             PlayAudio2();
         }
     }
 
-  public  void PlayAudio1()
+    public void PlayAudio1()
     {
         audioSource.clip = engineStartingClip;
-        audioSource.loop=false;
+        audioSource.loop = false;
         audioSource.Play();
     }
 
-   public void PlayAudio2()
+    public void PlayAudio2()
     {
         audioSource.clip = engineIdleStateClip;
-        audioSource.loop=true;
+        audioSource.loop = true;
         audioSource.Play();
-        
     }
-   
-   public void StopAudio()
-   {
-       isOn = false;
-       audioSource.Stop();
-        
-   }
+
+    public void StopAudio()
+    {
+        isOn = false;
+        audioSource.Stop();
+    }
 }

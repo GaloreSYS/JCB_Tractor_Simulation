@@ -53,9 +53,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.0799676
+  m_Height: 0.07996744
   m_Direction: 0
-  m_Center: {x: -0.024983801, y: -0, z: -0}
+  m_Center: {x: -0.024983719, y: -0, z: -0}
 --- !u!1 &133279572757469153
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,9 +319,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.04634884
+  m_Height: 0.04634912
   m_Direction: 0
-  m_Center: {x: -0.012174421, y: -0, z: -0}
+  m_Center: {x: -0.01217456, y: -0, z: -0}
 --- !u!1 &482872801285901125
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,9 +375,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.06170517
+  m_Height: 0.061704975
   m_Direction: 0
-  m_Center: {x: -0.017852584, y: -0, z: -0}
+  m_Center: {x: -0.017852487, y: -0, z: -0}
 --- !u!1 &509729733113717681
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,9 +518,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.07070708
+  m_Height: 0.0707071
   m_Direction: 0
-  m_Center: {x: -0.02035354, y: -0, z: -0}
+  m_Center: {x: -0.020353548, y: -0, z: -0}
 --- !u!1 &621085031323459739
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,9 +574,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.07084513
+  m_Height: 0.07084518
   m_Direction: 0
-  m_Center: {x: -0.022422565, y: -0, z: -0}
+  m_Center: {x: -0.02242259, y: -0, z: -0}
 --- !u!1 &804773585115925122
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,9 +825,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.08528585
+  m_Height: 0.08528594
   m_Direction: 0
-  m_Center: {x: -0.027642926, y: -0, z: -0}
+  m_Center: {x: -0.02764297, y: -0, z: -0}
 --- !u!1 &1077644137805567889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,9 +1050,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.047175184
+  m_Height: 0.047175236
   m_Direction: 0
-  m_Center: {x: -0.012587592, y: -0, z: -0}
+  m_Center: {x: -0.012587618, y: -0, z: -0}
 --- !u!1 &1318741963620653529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,9 +1440,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.031617142
+  m_Height: 0.031616785
   m_Direction: 0
-  m_Center: {x: -0.0068085724, y: -0, z: -0}
+  m_Center: {x: -0.0068083927, y: -0, z: -0}
 --- !u!1 &1894658887323181260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,9 +1496,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0123333335
-  m_Height: 0.06141526
+  m_Height: 0.061415292
   m_Direction: 0
-  m_Center: {x: -0.018374296, y: -0, z: -0}
+  m_Center: {x: -0.018374313, y: -0, z: -0}
 --- !u!1 &1902309742529735961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2512,9 +2512,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009666666
-  m_Height: 0.037771292
+  m_Height: 0.037771184
   m_Direction: 0
-  m_Center: {x: -0.009218981, y: -0, z: -0}
+  m_Center: {x: -0.009218926, y: -0, z: -0}
 --- !u!1 &2868621211625571378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,9 +2568,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.07173571
+  m_Height: 0.071735844
   m_Direction: 0
-  m_Center: {x: -0.022867857, y: -0, z: -0}
+  m_Center: {x: -0.022867924, y: -0, z: -0}
 --- !u!1 &3160689964341073500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,9 +2655,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.031889662
+  m_Height: 0.031889677
   m_Direction: 0
-  m_Center: {x: -0.0069448305, y: -0, z: -0}
+  m_Center: {x: -0.006944838, y: -0, z: -0}
 --- !u!1 &3192054343289281455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,9 +2711,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.086081974
+  m_Height: 0.086081885
   m_Direction: 0
-  m_Center: {x: -0.028040987, y: -0, z: -0}
+  m_Center: {x: -0.028040944, y: -0, z: -0}
 --- !u!1 &3259411223371500523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,9 +2896,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.04028912
+  m_Height: 0.04028919
   m_Direction: 0
-  m_Center: {x: -0.009144559, y: -0, z: -0}
+  m_Center: {x: -0.009144595, y: -0, z: -0}
 --- !u!1 &3457697046878902687
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,9 +3087,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.029748913
+  m_Height: 0.029748986
   m_Direction: 0
-  m_Center: {x: -0.005874457, y: -0, z: -0}
+  m_Center: {x: -0.005874493, y: -0, z: -0}
 --- !u!1 &3608047332433082748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,9 +3174,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.040289156
+  m_Height: 0.040289246
   m_Direction: 0
-  m_Center: {x: -0.009144579, y: -0, z: -0}
+  m_Center: {x: -0.009144623, y: -0, z: -0}
 --- !u!1 &3844947232621071045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,7 +3326,6 @@ GameObject:
   - component: {fileID: 8529527120102044491}
   - component: {fileID: 6648349919666458740}
   - component: {fileID: 708628598032942062}
-  - component: {fileID: 6203002133765366741}
   m_Layer: 13
   m_Name: LegTrackerRight
   m_TagString: Left
@@ -3385,33 +3384,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15567759, y: 0.32202053, z: 0.29850137}
   m_Center: {x: 0, y: 0, z: 0.14463896}
---- !u!54 &6203002133765366741
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4049158158709533743}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4138584594884470121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,9 +3437,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.031889673
+  m_Height: 0.031889588
   m_Direction: 0
-  m_Center: {x: -0.006944837, y: -0, z: -0}
+  m_Center: {x: -0.006944794, y: -0, z: -0}
 --- !u!1 &4186664119747278446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,9 +3493,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.049494587
+  m_Height: 0.049494572
   m_Direction: 0
-  m_Center: {x: -0.013747294, y: -0, z: -0}
+  m_Center: {x: -0.013747286, y: -0, z: -0}
 --- !u!1 &4344790015631922696
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,9 +3605,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.0728171
+  m_Height: 0.07281724
   m_Direction: 0
-  m_Center: {x: -0.021408552, y: -0, z: -0}
+  m_Center: {x: -0.021408621, y: -0, z: -0}
 --- !u!1 &4368417450978157708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,9 +3824,10 @@ GameObject:
   - component: {fileID: 6129815355325019754}
   - component: {fileID: 904628897877105568}
   - component: {fileID: 5881565929089432563}
+  - component: {fileID: 589286434737153130}
   m_Layer: 13
   m_Name: Rick_owens_flat_boots_fbx
-  m_TagString: Untagged
+  m_TagString: Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3924,6 +3897,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &589286434737153130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687324232891589618}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12741826, y: 0.29312152, z: 0.3188779}
+  m_Center: {x: -0.00000047311187, y: -0.000000479213, z: 0.15943913}
 --- !u!1 &5081963530194857650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,9 +4003,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.029748928
+  m_Height: 0.02974908
   m_Direction: 0
-  m_Center: {x: -0.0058744643, y: -0, z: -0}
+  m_Center: {x: -0.0058745407, y: -0, z: -0}
 --- !u!1 &5319262514716304227
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,9 +4494,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.08528585
+  m_Height: 0.08528587
   m_Direction: 0
-  m_Center: {x: -0.027642926, y: -0, z: -0}
+  m_Center: {x: -0.027642937, y: -0, z: -0}
 --- !u!1 &6010296214054133949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,9 +4550,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.07173619
+  m_Height: 0.07173583
   m_Direction: 0
-  m_Center: {x: -0.022868095, y: -0, z: -0}
+  m_Center: {x: -0.022867914, y: -0, z: -0}
 --- !u!1 &6183340703204771695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4872,9 +4866,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.07669785
+  m_Height: 0.076698065
   m_Direction: 0
-  m_Center: {x: -0.025348924, y: -0, z: -0}
+  m_Center: {x: -0.025349034, y: -0, z: -0}
 --- !u!1 &6569787204479647192
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,9 +4922,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.046349317
+  m_Height: 0.046349183
   m_Direction: 0
-  m_Center: {x: -0.012174659, y: -0, z: -0}
+  m_Center: {x: -0.012174591, y: -0, z: -0}
 --- !u!1 &6634127793833906894
 GameObject:
   m_ObjectHideFlags: 0
@@ -4984,9 +4978,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.028397752
+  m_Height: 0.028397528
   m_Direction: 0
-  m_Center: {x: -0.0051988764, y: -0, z: -0}
+  m_Center: {x: -0.0051987646, y: -0, z: -0}
 --- !u!1 &6752806675720467367
 GameObject:
   m_ObjectHideFlags: 0
@@ -5514,9 +5508,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.086081475
+  m_Height: 0.0860817
   m_Direction: 0
-  m_Center: {x: -0.028040739, y: -0, z: -0}
+  m_Center: {x: -0.02804085, y: -0, z: -0}
 --- !u!1 &7331684405033775164
 GameObject:
   m_ObjectHideFlags: 0
@@ -7248,9 +7242,10 @@ GameObject:
   - component: {fileID: 3022893747201039900}
   - component: {fileID: 5006301729700812184}
   - component: {fileID: 4553720172139344794}
+  - component: {fileID: 5334048979793077318}
   m_Layer: 13
   m_Name: Rick_owens_flat_boots_fbx
-  m_TagString: Untagged
+  m_TagString: Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7320,6 +7315,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5334048979793077318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7921379243536536868}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12741826, y: 0.29312152, z: 0.3188779}
+  m_Center: {x: -0.00000047311187, y: -0.000000479213, z: 0.15943913}
 --- !u!1 &8040432121305774470
 GameObject:
   m_ObjectHideFlags: 0
@@ -7373,9 +7389,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.07669834
+  m_Height: 0.076698154
   m_Direction: 0
-  m_Center: {x: -0.02534917, y: -0, z: -0}
+  m_Center: {x: -0.025349075, y: -0, z: -0}
 --- !u!1 &8125116071246737366
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,9 +7445,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.031616688
+  m_Height: 0.031616837
   m_Direction: 0
-  m_Center: {x: -0.0068083443, y: -0, z: -0}
+  m_Center: {x: -0.0068084197, y: -0, z: -0}
 --- !u!1 &8197966898375485803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,9 +7501,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.070845135
+  m_Height: 0.07084525
   m_Direction: 0
-  m_Center: {x: -0.022422567, y: -0, z: -0}
+  m_Center: {x: -0.022422621, y: -0, z: -0}
 --- !u!1 &8436523055332054056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,9 +9028,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.013
-  m_Height: 0.061705127
+  m_Height: 0.061704956
   m_Direction: 0
-  m_Center: {x: -0.017852563, y: -0, z: -0}
+  m_Center: {x: -0.017852478, y: -0, z: -0}
 --- !u!1 &8495283744878135755
 GameObject:
   m_ObjectHideFlags: 0
@@ -9068,9 +9084,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.0707071
+  m_Height: 0.07070697
   m_Direction: 0
-  m_Center: {x: -0.020353548, y: -0, z: -0}
+  m_Center: {x: -0.020353485, y: -0, z: -0}
 --- !u!1 &8648021302629698340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9124,9 +9140,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.07996762
+  m_Height: 0.07996765
   m_Direction: 0
-  m_Center: {x: -0.024983808, y: -0, z: -0}
+  m_Center: {x: -0.024983823, y: -0, z: -0}
 --- !u!1 &8763099632307019425
 GameObject:
   m_ObjectHideFlags: 0
@@ -10599,9 +10615,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Height: 0.07281756
+  m_Height: 0.07281729
   m_Direction: 0
-  m_Center: {x: -0.02140878, y: -0, z: -0}
+  m_Center: {x: -0.021408645, y: -0, z: -0}
 --- !u!1 &8887698791624348584
 GameObject:
   m_ObjectHideFlags: 0
@@ -10655,9 +10671,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0123333335
-  m_Height: 0.06141522
+  m_Height: 0.061415322
   m_Direction: 0
-  m_Center: {x: -0.018374277, y: -0, z: -0}
+  m_Center: {x: -0.018374328, y: -0, z: -0}
 --- !u!1 &8887974537758893950
 GameObject:
   m_ObjectHideFlags: 0
@@ -10669,7 +10685,6 @@ GameObject:
   - component: {fileID: 5689037949975748808}
   - component: {fileID: 1336212454562977053}
   - component: {fileID: 622181652132547606}
-  - component: {fileID: 4796792174494646627}
   m_Layer: 13
   m_Name: LegTrackerLeft
   m_TagString: Left
@@ -10728,33 +10743,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16556054, y: 0.31095955, z: 0.3021155}
   m_Center: {x: 0, y: 0, z: 0.14463893}
---- !u!54 &4796792174494646627
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8887974537758893950}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8970591764392764028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10808,9 +10796,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.04717518
+  m_Height: 0.047175243
   m_Direction: 0
-  m_Center: {x: -0.01258759, y: -0, z: -0}
+  m_Center: {x: -0.012587623, y: -0, z: -0}
 --- !u!1 &8975337789677944605
 GameObject:
   m_ObjectHideFlags: 0
@@ -10975,9 +10963,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.011
-  m_Height: 0.04949456
+  m_Height: 0.04949449
   m_Direction: 0
-  m_Center: {x: -0.01374728, y: -0, z: -0}
+  m_Center: {x: -0.013747244, y: -0, z: -0}
 --- !u!1 &9001483183643007190
 GameObject:
   m_ObjectHideFlags: 0
@@ -11257,9 +11245,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009
-  m_Height: 0.028397752
+  m_Height: 0.02839753
   m_Direction: 0
-  m_Center: {x: -0.0051988764, y: -0, z: -0}
+  m_Center: {x: -0.0051987655, y: -0, z: -0}
 --- !u!1 &9110485241564195140
 GameObject:
   m_ObjectHideFlags: 0
@@ -11313,9 +11301,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.009666666
-  m_Height: 0.037771314
+  m_Height: 0.037771244
   m_Direction: 0
-  m_Center: {x: -0.009218991, y: -0, z: -0}
+  m_Center: {x: -0.009218955, y: -0, z: -0}
 --- !u!1 &9182201975275025584
 GameObject:
   m_ObjectHideFlags: 0

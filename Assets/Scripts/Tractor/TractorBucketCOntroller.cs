@@ -8,6 +8,7 @@ public class TractorBucketCOntroller : MonoBehaviour
 
     public void Upside()
     {
+      
         TractorPlow.TractorPlowUP = true;
         TractorPlow.TractorPlowDown = false;
     }

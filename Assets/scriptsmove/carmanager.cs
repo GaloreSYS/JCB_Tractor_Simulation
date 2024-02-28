@@ -400,11 +400,11 @@ public class carmanager : MonoBehaviour
                 return;
             }
             a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
-            Debug.Log(a + "aaaaa");
+       
            if (a < 0 && a >= -180)
             {
                 steeringAxis = 0.5f;
-                Debug.Log("pokemon");
+//                Debug.Log("pokemon");
                 maxSteeringAngle = a;// -13;
                 TurnLeft();
             }

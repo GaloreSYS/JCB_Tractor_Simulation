@@ -31,9 +31,11 @@ public class TouchSceneChanger : MonoBehaviour
     
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-   
-       StartCoroutine(changeScene());
+        Debug.Log(other.name+"Triggered");
+ if(other.gameObject.name =="CubeLeft")
+ {
+     StartCoroutine(changeScene());
+ }
     }
 
     public IEnumerator changeScene()

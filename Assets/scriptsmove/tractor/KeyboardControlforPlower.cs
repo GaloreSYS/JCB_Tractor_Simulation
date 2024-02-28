@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,24 @@ public class KeyboardControlforPlower : MonoBehaviour
     public ArmDataJCB TractorPlowerValue;
     public bool downobject, Upobject;
 
+    private void Start()
+    {
+        Up();
+    }
+
+    public void Up()
+    {
+        togglebuttonUP();
+        DownObject.SetActive(false);
+        downobject = DownObject.activeSelf;
+    }
+
+    public void Down()
+    {
+        togglebuttonDown();
+        UpObject.SetActive(false);
+        Upobject = UpObject.activeSelf;
+    }
    
     private void Update()
     {
@@ -16,16 +35,12 @@ public class KeyboardControlforPlower : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            togglebuttonUP();
-            DownObject.SetActive(false);
-            downobject = DownObject.activeSelf;
+           Up();
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            togglebuttonDown();
-            UpObject.SetActive(false);
-            Upobject = UpObject.activeSelf;
+Down();
         }
     }
 

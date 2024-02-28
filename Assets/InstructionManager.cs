@@ -25,6 +25,7 @@ public class InstructionManager : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        if(instructionBackGlass!=null)
         instructionBackGlass.text = "";
         PlayInstruction(instructions[currentInstruction]);
        
@@ -71,7 +72,7 @@ public class InstructionManager : MonoBehaviour
 
     public void ClearInstruction()
     {
-
+if(instructionBackGlass!=null)
         instructionBackGlass.text = "";
         instructionFront.text = "";
        

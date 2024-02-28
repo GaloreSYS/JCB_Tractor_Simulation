@@ -18,62 +18,46 @@ public class tractormanager : MonoBehaviour
 
     public float Torque;
 
-    [Space(20)]
-
-    [Space(10)]
-    [Range(20, 590)]
+    [Space(20)] [Space(10)] [Range(20, 590)]
     public int maxSpeed = 90;
-    [Range(10, 320)]
-    public int maxReverseSpeed = 45;
-    [Range(1, 10)]
-    public int accelerationMultiplier = 5;
+
+    [Range(10, 320)] public int maxReverseSpeed = 45;
+    [Range(1, 10)] public int accelerationMultiplier = 5;
+
     [Space(10)]
 
     //   [Range(10, 45)]
     //   public int maxSteeringAngle = 27; 
-
-
     [Range(-65, 45)]
     public float maxSteeringAngle;
+
     public GameObject steerwheel, gearlevercontrol;
     public float a, b, c;
     public bool front;
 
 
-
-
-    [Range(0.1f, 1f)]
-    public float steeringSpeed = 0.5f;
-    [Space(10)]
-    [Range(100, 600)]
-    public int brakeForce = 450;
-    [Range(1, 10)]
-    public int decelerationMultiplier = 6;
-    [Range(1, 10)]
-    public int handbrakeDriftMultiplier = 5;
-    [Space(10)]
-    public Vector3 bodyMassCenter;
+    [Range(0.1f, 1f)] public float steeringSpeed = 0.5f;
+    [Space(10)] [Range(100, 600)] public int brakeForce = 450;
+    [Range(1, 10)] public int decelerationMultiplier = 6;
+    [Range(1, 10)] public int handbrakeDriftMultiplier = 5;
+    [Space(10)] public Vector3 bodyMassCenter;
 
 
     public GameObject frontLeftMesh;
     public WheelCollider frontLeftCollider;
-    [Space(10)]
-    public GameObject frontRightMesh;
+    [Space(10)] public GameObject frontRightMesh;
     public WheelCollider frontRightCollider;
-    [Space(10)]
-    public GameObject rearLeftMesh;
+    [Space(10)] public GameObject rearLeftMesh;
     public WheelCollider rearLeftCollider;
-    [Space(10)]
-    public GameObject rearRightMesh;
+    [Space(10)] public GameObject rearRightMesh;
     public WheelCollider rearRightCollider;
 
 
-
-
-
     public float carSpeed;
+
     //  [HideInInspector]
     public bool isDrifting;
+
     //   [HideInInspector]
     public bool isTractionLocked;
 
@@ -98,6 +82,7 @@ public class tractormanager : MonoBehaviour
 
     public int gearNumber, TempGearValue;
     public GearInputType GetInputFrom;
+
     public enum GearInputType
     {
         Keyboard,
@@ -146,14 +131,11 @@ public class tractormanager : MonoBehaviour
         RRwheelFriction.stiffness = rearRightCollider.sidewaysFriction.stiffness;
 
         //        senseglove.SetActive(true);
-
-
     }
 
 
     void Update()
     {
-       
         Axecontroller();
         gears();
         if (GetInputFrom == GearInputType.Keyboard)
@@ -170,24 +152,41 @@ public class tractormanager : MonoBehaviour
         {
             Brakes();
         }
+
         if (Tractorr.brakess == false)
         {
-
             accelerationMultiplier = 1;
-
         }
 
-        if (Tractorr.stampaccelerator == true)
+        if (Tractorr.stampaccelerator)
         {
-            //     if (Input.GetKey(KeyCode.W))
+            Debug.Log("1");
+            if (gearspeednumber.frontandbackdecider == 1)
             {
-                Debug.Log("4");
-                throttleAxis = Torque;
-                maxSpeed = 450;
-                accelerationMultiplier = 6;
-                GoForward();
+                if (gearspeednumber.gearValue is 1 or 2 or 3 or 4)
+                {
+                    {
+                        Debug.Log("1");
+                        throttleAxis = 4.5f;
+                        maxSpeed = 50;
+                        accelerationMultiplier = -4;
+                        GoForward();
+                    }
+                }
+            }
+            if (gearspeednumber.frontandbackdecider == 2)
+            {
+            if (gearspeednumber.gearValue == 1)
+                {
+                    Debug.Log("4");
+                    throttleAxis = 2.5f;
+                    maxSpeed = 450;
+                    accelerationMultiplier = 6;
+                    GoForward();
+                }
             }
         }
+
         if (Tractorr.stampaccelerator == false)
         {
             //     if (Input.GetKey(KeyCode.W))
@@ -229,13 +228,10 @@ public class tractormanager : MonoBehaviour
         }
 
 
-
         if (gearNumber == 5)
         {
-
             //   if ((gearlevercontrol.gameObject.transform.localEulerAngles.y > 300) && ((gearlevercontrol.gameObject.transform.localEulerAngles.y < 360)))
             {
-
                 //       throttleAxis = 1f;
                 //     maxSpeed = 50;
                 CancelInvoke("DecelerateCar");
@@ -244,27 +240,24 @@ public class tractormanager : MonoBehaviour
 
                 accelerationMultiplier = 5;
                 //     GoForward();
-
             }
         }
-        if ((gearlevercontrol.gameObject.transform.localEulerAngles.y == 0))// ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
+
+        if ((gearlevercontrol.gameObject.transform.localEulerAngles.y ==
+             0)) // ||( gearlevercontrol.gameObject.transform.localEulerAngles.x <=5))//////////
         {
             //                  Debug.Log("8");
             //                  Debug.Log( gearlevercontrol.gameObject.transform.localEulerAngles.x);
             CancelInvoke("DecelerateCar");
             throttleAxis = 0f;
             maxSpeed = 0;
-          
+
             deceleratingCar = false;
-   
         }
-      
-        {
-           
-            {
+
+        
                 if (gearNumber == 1)
                 {
-       
                     {
                         Debug.Log("1");
                         throttleAxis = 0.8f;
@@ -275,9 +268,9 @@ public class tractormanager : MonoBehaviour
                         //     GoReverse();
                     }
                 }
+
                 if (gearNumber == 2)
                 {
-                   
                     {
                         Debug.Log("2");
                         throttleAxis = 1.9f;
@@ -288,10 +281,9 @@ public class tractormanager : MonoBehaviour
                         //     GoReverse();
                     }
                 }
-               
+
                 if (gearNumber == 3)
                 {
-                   
                     {
                         Debug.Log("3");
                         throttleAxis = 2.4f;
@@ -299,72 +291,53 @@ public class tractormanager : MonoBehaviour
 
                         accelerationMultiplier = 5;
                         GoForward();
-
                     }
                 }
 
 
                 if (gearNumber == 4)
                 {
-
-                  
                     {
                         Debug.Log("4");
                         throttleAxis = 5.6f;
                         maxSpeed = 450;
                         accelerationMultiplier = 5;
                         GoForward();
-
-                        
-
-                    }
-
-                }
-
-                if (Input.GetKey(KeyCode.W))
-                {
-
-                    if (GetInputFrom == GearInputType.Keyboard)
-                    {
-                        throttleAxis = 4.8f;
-                        maxSpeed = 450;
-
-                        GoForward();
                     }
                 }
-               
-            }
-        }      
+
+        
+     
         Steer();
- 
+
         if (Input.GetKey(KeyCode.Space))
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
             Handbrake();
         }
+
         if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
         {
-           
         }
+
         if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
         {
-           
         }
+
         if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f)
         {
             ResetSteeringAngle();
         }
-       
+
         AnimateWheelMeshes();
     }
 
     public void Steer()
     {
-    
         {
-
-            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 && steerwheel.gameObject.transform.localEulerAngles.y < 180)
+            if (steerwheel.gameObject.transform.localEulerAngles.y >= 0 &&
+                steerwheel.gameObject.transform.localEulerAngles.y < 180)
             {
                 steeringAxis = 0.5f;
                 maxSteeringAngle = steerwheel.gameObject.transform.localEulerAngles.y;
@@ -373,22 +346,24 @@ public class tractormanager : MonoBehaviour
                 if (steerwheel.gameObject.transform.localEulerAngles.y > 45)
                 {
                     steerwheel.transform.localRotation = Quaternion.Euler(0, 45, 0);
-    
+
                     maxSteeringAngle = 45;
                 }
+
                 TurnRight();
                 return;
             }
 
 
             a = steerwheel.gameObject.transform.localEulerAngles.y - 360;
-                Debug.Log(a + "aaaaa");
+            Debug.Log(a + "aaaaa");
             if (a < 0 && a >= -13)
             {
                 Debug.Log("pokemin");
                 maxSteeringAngle = -13;
                 TurnLeft();
             }
+
             if (a < -13 && a > -180)
             {
                 Debug.Log("pokemon");
@@ -398,21 +373,19 @@ public class tractormanager : MonoBehaviour
                 {
                     maxSteeringAngle = -65;
                 }
+
                 if (a < -165)
                 {
                     maxSteeringAngle = -65;
                 }
-                
+
                 TurnLeft();
             }
-
-
         }
-
     }
+
     public void GoForward()
     {
-
         Debug.Log("1");
         if (Mathf.Abs(localVelocityX) > 2.5f)
         {
@@ -422,9 +395,8 @@ public class tractormanager : MonoBehaviour
         {
             isDrifting = false;
         }
-      
+
         {
-           
             if (Mathf.RoundToInt(carSpeed) < maxSpeed)
             {
                 Debug.Log("4");
@@ -445,20 +417,19 @@ public class tractormanager : MonoBehaviour
 
             else
             {
-              
-                frontLeftCollider.motorTorque -= 120;
-                frontRightCollider.motorTorque -= 120;
-                rearLeftCollider.motorTorque -= 120;
-                rearRightCollider.motorTorque -= 120;
+                Debug.Log("HEHE");
+                frontLeftCollider.motorTorque += 120;
+                frontRightCollider.motorTorque += 120;
+                rearLeftCollider.motorTorque += 120;
+                rearRightCollider.motorTorque += 120;
             }
         }
     }
+
     private void OnCollisionStay(Collision collision)
     {
-
         if (collision.gameObject.tag == "Left")
         {
-
             speedincrease += speedincrease * Time.deltaTime;
             Debug.Log(speedincrease + "s");
         }
@@ -466,16 +437,13 @@ public class tractormanager : MonoBehaviour
 
     public void GoReverse()
     {
-
         if (Mathf.Abs(localVelocityX) > 2.5f)
         {
             isDrifting = true;
-
         }
         else
         {
             isDrifting = false;
-
         }
 
         throttleAxis = throttleAxis - (Time.deltaTime * 3f);
@@ -490,9 +458,9 @@ public class tractormanager : MonoBehaviour
         }
         else
         {
+            Debug.Log("here");
             if (Mathf.Abs(Mathf.RoundToInt(carSpeed)) < maxReverseSpeed)
             {
-
                 frontLeftCollider.brakeTorque = 0;
                 frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
                 frontRightCollider.brakeTorque = 0;
@@ -504,10 +472,6 @@ public class tractormanager : MonoBehaviour
             }
             else
             {
-
-
-
-
                 frontLeftCollider.motorTorque = 0;
                 frontRightCollider.motorTorque = 0;
                 rearLeftCollider.motorTorque = 0;
@@ -518,7 +482,6 @@ public class tractormanager : MonoBehaviour
 
     public void Brakes()
     {
-
         frontLeftCollider.motorTorque = 0;
         frontRightCollider.motorTorque = 0;
         rearLeftCollider.motorTorque = 0;
@@ -534,9 +497,6 @@ public class tractormanager : MonoBehaviour
         rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
         rearRightCollider.brakeTorque = 0;
         rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-
-
-
 
 
         frontLeftCollider.brakeTorque = brakeForce;
@@ -557,6 +517,7 @@ public class tractormanager : MonoBehaviour
         {
             driftingAxis = FLWextremumSlip / (FLWextremumSlip * handbrakeDriftMultiplier);
         }
+
         if (driftingAxis > 1f)
         {
             driftingAxis = 1f;
@@ -588,8 +549,6 @@ public class tractormanager : MonoBehaviour
 
 
         isTractionLocked = true;
-
-
     }
 
 
@@ -600,11 +559,11 @@ public class tractormanager : MonoBehaviour
         {
             steeringAxis = 1f;
         }
+
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
-
 
 
     public void TurnRight()
@@ -614,6 +573,7 @@ public class tractormanager : MonoBehaviour
         {
             steeringAxis = 1f;
         }
+
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
@@ -629,10 +589,12 @@ public class tractormanager : MonoBehaviour
         {
             steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
         }
+
         if (Mathf.Abs(frontLeftCollider.steerAngle) < 1f)
         {
             steeringAxis = 0f;
         }
+
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
@@ -686,12 +648,10 @@ public class tractormanager : MonoBehaviour
         if (Mathf.Abs(localVelocityX) > 2.5f)
         {
             isDrifting = true;
-
         }
         else
         {
             isDrifting = false;
-
         }
 
         if (throttleAxis != 0f)
@@ -704,11 +664,13 @@ public class tractormanager : MonoBehaviour
             {
                 throttleAxis = throttleAxis + (Time.deltaTime * 10f);
             }
+
             if (Mathf.Abs(throttleAxis) < 0.15f)
             {
                 throttleAxis = 0f;
             }
         }
+
         carRigidbody.velocity = carRigidbody.velocity * (1f / (1f + (0.025f * decelerationMultiplier)));
 
         frontLeftCollider.motorTorque = 0;
@@ -735,18 +697,22 @@ public class tractormanager : MonoBehaviour
         {
             TempGearValue = 1;
         }
+
         if (Input.GetKeyDown(KeyCode.O))
         {
             TempGearValue = 2;
         }
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             TempGearValue = 3;
         }
+
         if (Input.GetKeyDown(KeyCode.LeftBracket))
         {
             TempGearValue = 4;
         }
+
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
             TempGearValue = 5;
@@ -759,17 +725,12 @@ public class tractormanager : MonoBehaviour
             TempGearValue = 0;
 
             Brakes();
-
         }
-
-
     }
-
 
 
     public void Axecontroller()
     {
-
         if (Input.GetKeyDown(KeyCode.A))
         {
             currentstste = EmptyGameObject.activeSelf;
@@ -779,11 +740,14 @@ public class tractormanager : MonoBehaviour
 
         if (currentstste == false)
         {
-            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position, new Vector3(0.381399989f, 0.373299986f, -0.406500012f), 1f);
+            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position,
+                new Vector3(0.381399989f, 0.373299986f, -0.406500012f), 1f);
         }
+
         if (currentstste == true)
         {
-            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position, new Vector3(0.366699994f, 0.314900011f, -0.406699985f), 1f);
+            Cube.transform.localPosition = Vector3.Lerp(Cube.transform.position,
+                new Vector3(0.366699994f, 0.314900011f, -0.406699985f), 1f);
         }
     }
 }
