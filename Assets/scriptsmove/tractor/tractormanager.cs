@@ -92,7 +92,7 @@ public class tractormanager : MonoBehaviour
     void Start()
     {
         currentstste = false;
-        accelerationMultiplier = 9;
+        accelerationMultiplier = 3;
         maxSpeed = 90;
         Tractorr.brakess = false;
         front = false;
@@ -136,6 +136,16 @@ public class tractormanager : MonoBehaviour
 
     void Update()
     {
+
+
+        Debug.Log(frontLeftCollider.motorTorque);
+        Debug.Log(frontRightCollider.motorTorque);
+        Debug.Log(rearLeftCollider.motorTorque);
+        Debug.Log(rearRightCollider.motorTorque);
+
+
+
+
         Axecontroller();
         gears();
         if (GetInputFrom == GearInputType.Keyboard)
@@ -209,6 +219,15 @@ public class tractormanager : MonoBehaviour
         {
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
+
+
+            frontLeftCollider.brakeTorque = 100;
+            frontRightCollider.brakeTorque = 100;
+            rearLeftCollider.brakeTorque = 100;
+            rearRightCollider.brakeTorque = 100;
+
+
+
             GoReverse();
         }
 
@@ -226,7 +245,10 @@ public class tractormanager : MonoBehaviour
 
             TurnLeft();
         }
-
+        if (carSpeed > maxSpeed)
+        {
+            carSpeed = maxSpeed;
+        }
 
         if (gearNumber == 5)
         {
@@ -312,6 +334,11 @@ public class tractormanager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
+            Brakes();
+
+
+
+
             CancelInvoke("DecelerateCar");
             deceleratingCar = false;
             Handbrake();
@@ -417,11 +444,11 @@ public class tractormanager : MonoBehaviour
 
             else
             {
-                Debug.Log("HEHE");
-                frontLeftCollider.motorTorque += 120;
+               Debug.Log("HEHE");
+         /*       frontLeftCollider.motorTorque += 120;
                 frontRightCollider.motorTorque += 120;
                 rearLeftCollider.motorTorque += 120;
-                rearRightCollider.motorTorque += 120;
+                rearRightCollider.motorTorque += 120;*/
             }
         }
     }
@@ -482,27 +509,38 @@ public class tractormanager : MonoBehaviour
 
     public void Brakes()
     {
-        frontLeftCollider.motorTorque = 0;
-        frontRightCollider.motorTorque = 0;
-        rearLeftCollider.motorTorque = 0;
-        rearRightCollider.motorTorque = 0;
+        frontLeftCollider.motorTorque = -50;
+        frontRightCollider.motorTorque = -50;
+        rearLeftCollider.motorTorque = -50;
+        rearRightCollider.motorTorque = -50;
         accelerationMultiplier = 0;
         throttleAxis = 0;
 
-        frontLeftCollider.brakeTorque = 0;
-        frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-        frontRightCollider.brakeTorque = 0;
-        frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-        rearLeftCollider.brakeTorque = 0;
-        rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-        rearRightCollider.brakeTorque = 0;
-        rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+      
+        maxSpeed = 0;
 
 
-        frontLeftCollider.brakeTorque = brakeForce;
-        frontRightCollider.brakeTorque = brakeForce;
-        rearLeftCollider.brakeTorque = brakeForce;
-        rearRightCollider.brakeTorque = brakeForce;
+        frontLeftCollider.brakeTorque = 100;
+        frontRightCollider.brakeTorque = 100;
+        rearLeftCollider.brakeTorque = 100;
+        rearRightCollider.brakeTorque = 100;
+
+
+
+        /*    frontLeftCollider.brakeTorque = 0;
+            frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+            frontRightCollider.brakeTorque = 0;
+            frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+            rearLeftCollider.brakeTorque = 0;
+            rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+            rearRightCollider.brakeTorque = 0;
+            rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+
+
+            frontLeftCollider.brakeTorque = brakeForce;
+            frontRightCollider.brakeTorque = brakeForce;
+            rearLeftCollider.brakeTorque = brakeForce;
+            rearRightCollider.brakeTorque = brakeForce;*/
     }
 
 

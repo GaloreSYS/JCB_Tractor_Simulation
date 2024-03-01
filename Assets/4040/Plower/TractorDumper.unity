@@ -4050,7 +4050,7 @@ PrefabInstance:
     - target: {fileID: 429946140824897670, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}
       propertyPath: accelerationMultiplier
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 569792861925639394, guid: 4060741f25c4f2943b2d7a3b12b464a4,
         type: 3}

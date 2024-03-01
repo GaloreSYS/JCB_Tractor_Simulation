@@ -74,7 +74,7 @@ public class carmanager : MonoBehaviour
     float RLWextremumSlip;
     WheelFrictionCurve RRwheelFriction;
     float RRWextremumSlip;
-
+   
 
     void Start()
     {
